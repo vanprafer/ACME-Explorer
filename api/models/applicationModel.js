@@ -16,7 +16,8 @@ const ApplicationSchema = new Schema({
   status: [{
     type: String,
     required: 'Kindly enter the status of the application',
-    enum: ['PENDING', 'REJECTED', 'DUE', 'ACCEPTED', 'CANCELLED']
+    enum: ['PENDING', 'REJECTED', 'DUE', 'ACCEPTED', 'CANCELLED'],
+    default: 'PENDING'
   }],
   comments: {
     type: String

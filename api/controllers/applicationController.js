@@ -23,6 +23,16 @@ exports.list_all_applications = function (req, res) {
   })
 }
 
+exports.list_my_applications = function (req, res) {
+  Application.find({}, function (err, applications) {
+    if (err) {
+      res.send(err)
+    } else {
+      res.json(applications)
+    }
+  })
+}
+
 exports.create_an_application_v0 = function (req, res) {
   const newApplication = new Application(req.body)
   newApplication.save(function (err, application) {
@@ -81,26 +91,6 @@ exports.update_an_application = function (req, res) {
       res.send(err)
     } else {
       res.json(application)
-    }
-  })
-}
-
-exports.delete_an_application_v0 = function (req, res) {
-  Application.deleteOne({ _id: req.params.applicationId }, function (err, application) {
-    if (err) {
-      res.send(err)
-    } else {
-      res.json({ message: 'Application successfully deleted' })
-    }
-  })
-}
-
-exports.delete_an_application = function (req, res) {
-  Application.deleteOne({ _id: req.params.applicationId }, function (err, application) {
-    if (err) {
-      res.send(err)
-    } else {
-      res.json({ message: 'Application successfully deleted' })
     }
   })
 }

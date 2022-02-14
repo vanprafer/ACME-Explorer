@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const Sponsorship = mongoose.model('Sponsorships')
 
-exports.list_all_sponsorships_v0 = function (req, res) {
+exports.list_my_sponsorships_v0 = function (req, res) {
   Sponsorship.find({}, function (err, sponsorships) {
     if (err) {
       res.send(err)
@@ -13,7 +13,7 @@ exports.list_all_sponsorships_v0 = function (req, res) {
   })
 }
 
-exports.list_all_sponsorships = function (req, res) {
+exports.list_my_sponsorships = function (req, res) {
   Sponsorship.find({}, function (err, sponsorships) {
     if (err) {
       res.send(err)

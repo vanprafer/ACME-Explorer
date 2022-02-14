@@ -3,8 +3,19 @@ module.exports = function (app) {
   const applications = require('../controllers/applicationController')
 
   /**
+   * Get my applications
+   *    RequiredRoles: Explorer
+   *
+   * @section my_applications
+   * @type get
+   * @url /v1/my_applications
+  */
+  app.route('/v1/my_applications')
+    .get(applications.list_my_applications)
+
+  /**
    * Get applications
-   *    RequiredRoles: Explorer, Manager
+   *    RequiredRoles: Manager
    *
    * @section applications
    * @type get
@@ -57,18 +68,4 @@ module.exports = function (app) {
 
   app.route('/v0/applications/:applicationId')
     .put(applications.update_an_application_v0)
-
-  /**
-   * Delete an application
-   *    RequiredRoles: Administrator
-   *
-   * @section applications
-   * @type delete
-   * @url /v1/applications/:applicationId
-  */
-  app.route('/v1/applications/:applicationId')
-    .delete(applications.delete_an_application)
-
-  app.route('/v0/applications/:applicationId')
-    .delete(applications.delete_an_application_v0)
 }

@@ -17,7 +17,7 @@ const FinderSchema = new Schema({
   endDate: {
     type: Date
   }
-  // results: [TripSchema]
+  results: [TripSchema]
 }, { strict: false })
 
 module.exports = mongoose.model('Finders', FinderSchema)

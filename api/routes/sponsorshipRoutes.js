@@ -3,7 +3,7 @@ module.exports = function (app) {
   const sponsorships = require('../controllers/sponsorshipController')
 
   /**
-   * Get sponsorships
+   * Get my sponsorships
    *    RequiredRoles: Sponsor
    *
    * @section sponsorships
@@ -11,10 +11,10 @@ module.exports = function (app) {
    * @url /v1/sponsorships
   */
   app.route('/v1/sponsorships')
-    .get(sponsorships.list_all_sponsorships)
+    .get(sponsorships.list_my_sponsorships)
 
   app.route('/v0/sponsorships')
-    .get(sponsorships.list_all_sponsorships_v0)
+    .get(sponsorships.list_my_sponsorships_v0)
 
   /**
    * Get an sponsorship
