@@ -13,11 +13,11 @@ module.exports = function (app) {
    * @url /v1/finders/
   */
   app.route('/v1/finders')
-    .get(finders.read_my_finder)
+    //.get(finders.read_my_finder)
     .post(finders.create_a_finder)
 
   app.route('/v0/finders')
-    .get(finders.read_my_finder_v0)
+   // .get(finders.read_my_finder_v0)
     .post(finders.create_a_finder_v0)
 
   /**

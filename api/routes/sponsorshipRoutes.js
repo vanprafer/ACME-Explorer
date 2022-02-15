@@ -35,7 +35,7 @@ module.exports = function (app) {
 
   app.route('/v1/sponsorships/:sponsorshipId')
     .get(sponsorships.read_a_sponsorship)
-    .put(sponsorships.update_a_sponsorship)
+    // .put(sponsorships.update_a_sponsorship)
     .delete(sponsorships.delete_a_sponsorship)
 
   app.route('/v0/sponsorships/:sponsorshipId')
@@ -52,5 +52,5 @@ module.exports = function (app) {
   * @url /v1/sponsorships/:sponsorshipId
  */
   app.route('/v0/sponsorships/:sponsorshipId/pay')
-    .patch(sponsorships.pay_a_sponsorship_v0)
+  // .patch(sponsorships.pay_a_sponsorship_v0)
 }
