@@ -2,6 +2,12 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 8080
 const mongoose = require('mongoose')
+
+const Actor = require('./api/models/actorModel')
+const Application = require('./api/models/applicationModel')
+const Configuration = require('./api/models/configurationModel')
+const Finder = require('./api/models/finderModel')
+const Sponsorship = require('./api/models/sponsorshipModel')
 const Trip = require('./api/models/tripModel')
 
 const bodyParser = require('body-parser')
@@ -9,8 +15,20 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+const routesActors = require('./api/routes/actorRoutes')
+const routesApplications = require('./api/routes/applicationRoutes')
+const routesConfigurations = require('./api/routes/configurationRoutes')
+const routesDashboard = require('./api/routes/dashboardRoutes')
+const routesFinders = require('./api/routes/finderRoutes')
+const routesSponsors = require('./api/routes/sponsorRoutes')
 const routesTrips = require('./api/routes/tripRoutes')
 
+routesActors(app)
+routesApplications(app)
+routesConfigurations(app)
+routesDashboard(app)
+routesFinders(app)
+routesSponsors(app)
 routesTrips(app)
 
 // MongoDB URI building

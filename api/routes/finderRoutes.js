@@ -3,32 +3,22 @@ module.exports = function (app) {
   const finders = require('../controllers/finderController')
 
   /**
-   * Get a finder
+   * Get the explorer finder
    *    RequiredRoles: Explorer
-   *
-   * @section finders
-   * @type get
-   * @url /v1/finders/:finderId
-  */
-  app.route('/v1/finders/:finderId')
-    .get(finders.read_an_finder)
-
-  app.route('/v0/finders/:finderId')
-    .get(finders.read_an_finder_v0)
-
-  /**
    * Create a finder
    *    RequiredRoles: Explorer
-   *
+   * 
    * @section finders
-   * @type post
-   * @url /v1/finders
+   * @type get post
+   * @url /v1/finders/
   */
   app.route('/v1/finders')
-    .post(finders.create_an_finder)
+    .get(finders.read_my_finder)
+    .post(finders.create_a_finder)
 
   app.route('/v0/finders')
-    .post(finders.create_an_finder_v0)
+    .get(finders.read_my_finder_v0)
+    .post(finders.create_a_finder_v0)
 
   /**
    * Modify a finder
@@ -39,8 +29,8 @@ module.exports = function (app) {
    * @url /v1/finders/:finderId
   */
   app.route('/v1/finders/:finderId')
-    .put(finders.update_an_finder)
+    .put(finders.update_a_finder)
 
   app.route('/v0/finders/:finderId')
-    .put(finders.update_an_finder_v0)
+    .put(finders.update_a_finder_v0)
 }

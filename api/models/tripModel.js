@@ -18,6 +18,10 @@ const StageSchema = new Schema({
   price: {
     type: Number,
     min: 0
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 }, { strict: false })
 
@@ -75,14 +79,17 @@ const TripSchema = new mongoose.Schema({
   stages: [{
     contentType: StageSchema, 
     validate: [minArraySize, 'The trip must have at least one stage']
-  }]
+  }],
+  created: {
+    type: Date,
+    default: Date.now
+  }
 }, { strict: false })
 
 function minArraySize(val) {
   return val.length >= 1;
 }
 
-// Execute before each trip.save() call
 TripSchema.pre('save', function (callback) {
   const newTrip = this
   const day = dateFormat(new Date(), 'yymmdd')
@@ -93,7 +100,6 @@ TripSchema.pre('save', function (callback) {
   callback()
 })
 
-// Execute after each trip.save() call
 TripSchema.pre('save', function(callback){
   const trip = this
   trip.price = trip.stages.reduce((a, b) => a.price + b.price, 0)
@@ -102,7 +108,7 @@ TripSchema.pre('save', function(callback){
 
 TripSchema.pre('save', function(callback){
   const trip = this
-  if(trip.dateEnd > dateStart){
+  if(trip.dateEnd > trip.dateStart){
     throw error("Start date must be before the end date of the trip.")
   }else{
     callback()

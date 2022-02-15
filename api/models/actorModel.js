@@ -15,7 +15,8 @@ const ActorSchema = new Schema(
     },
     email: {
       type: String,
-      required: 'Kindly enter the actor email'
+      required: 'Kindly enter the actor email',
+      match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     password: {
       type: String,
@@ -27,7 +28,8 @@ const ActorSchema = new Schema(
     },
     language: {
       type: String,
-      default: 'en'
+      default: 'en',
+      required: 'Kindly enter the preferred language'
     },
     address: {
       type: String
@@ -39,9 +41,10 @@ const ActorSchema = new Schema(
         enum: ['EXPLORER', 'MANAGER', 'ADMINISTRATOR', 'SPONSOR']
       }
     ],
-    validated: {
+    banned: {
       type: Boolean,
-      default: false
+      default: false,
+      required: 'Kindly enter if the banned condition of the actor'
     },
     created: {
       type: Date,

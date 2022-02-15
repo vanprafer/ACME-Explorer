@@ -12,12 +12,14 @@ const ConfigurationSchema = new Schema(
       type: Number,
       default: 1,
       min: 1,
-      max: 24
+      max: 24,
+      required: 'Kindly enter the value of the cache'
     },
     finderResults: {
       type: Number,
       default: 10,
-      max: 100
+      max: 100,
+      required: 'Kindly enter the value of the results size'
     },
     created: {
       type: Date,

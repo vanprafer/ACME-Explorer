@@ -16,13 +16,26 @@ const FinderSchema = new Schema({
   },
   endDate: {
     type: Date
+  },  
+  cachedDataDate: {
+    type: Date
+  },
+  results: [TripSchema],
+  explorer: {
+    type: Schema.Types.ObjectId,
+    required: 'Explorer id required',
+    ref: 'Actor'
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
-  results: [TripSchema]
+
 }, { strict: false })
 
 FinderSchema.pre('save', function(callback){
   const finder = this
-  if(finder.endDate > startDate){
+  if(finder.endDate > finder.startDate){
     throw error("The start date must be before the end date of the finder.")
   }else{
     callback()

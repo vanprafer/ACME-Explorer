@@ -5,71 +5,54 @@ module.exports = function (app) {
   /**
    * Get my sponsorships
    *    RequiredRoles: Sponsor
+   * Create a sponsorship
+   *    RequiredRoles: Sponsor
    *
    * @section sponsorships
-   * @type get
+   * @type get post
    * @url /v1/sponsorships
   */
   app.route('/v1/sponsorships')
     .get(sponsorships.list_my_sponsorships)
+    .post(sponsorships.create_a_sponsorship)
 
   app.route('/v0/sponsorships')
     .get(sponsorships.list_my_sponsorships_v0)
+    .post(sponsorships.create_a_sponsorship_v0)
+
 
   /**
-   * Get an sponsorship
+   * Get a sponsorship
    *    RequiredRoles: Sponsor
-   *
+   * Modify a sponsorship
+   *    RequiredRoles: Sponsor
+   * Delete a sponsorship
+   *    RequiredRoles: Sponsor
+   * 
    * @section sponsorships
-   * @type get
+   * @type get put delete
    * @url /v1/sponsorships/:sponsorshipId
   */
 
   app.route('/v1/sponsorships/:sponsorshipId')
-    .get(sponsorships.read_an_application)
+    .get(sponsorships.read_a_sponsorship)
+    .put(sponsorships.update_a_sponsorship)
+    .delete(sponsorships.delete_a_sponsorship)
 
   app.route('/v0/sponsorships/:sponsorshipId')
-    .get(sponsorships.read_an_application_v0)
+    .get(sponsorships.read_a_sponsorship_v0)
+    .put(sponsorships.update_a_sponsorship_v0)
+    .delete(sponsorships.delete_a_sponsorship_v0)
 
-  /**
-  * Create an sponsorship
+/**
+  * Pay a sponsorship which has not been paid yet
   *    RequiredRoles: Sponsor
   *
   * @section sponsorships
-  * @type post
-  * @url /v1/sponsorships
- */
-  app.route('/v1/sponsorships')
-    .post(sponsorships.create_an_sponsorship)
-
-  app.route('/v0/sponsorships')
-    .post(sponsorships.create_an_sponsorship_v0)
-
-  /**
-  * Modify an sponsorship
-  *    RequiredRoles: Sponsor
-  *
-  * @section sponsorships
-  * @type put
+  * @type patch
   * @url /v1/sponsorships/:sponsorshipId
  */
-  app.route('/v1/sponsorships/:sponsorshipId')
-    .put(sponsorships.update_an_sponsorship)
+  app.route('/v0/sponsorships/:sponsorshipId/pay')
+    .patch(sponsorships.pay_a_sponsorship_v0)
 
-  app.route('/v0/sponsorships/:sponsorshipId')
-    .put(sponsorships.update_an_sponsorship_v0)
-
-  /**
-  * Delete an sponsorship
-  *    RequiredRoles: Sponsor
-  *
-  * @section sponsorships
-  * @type delete
-  * @url /v1/sponsorships/:sponsorshipId
- */
-  app.route('/v1/sponsorships/:sponsorshipId')
-    .delete(sponsorships.delete_an_sponsorship)
-
-  app.route('/v0/sponsorships/:sponsorshipId')
-    .delete(sponsorships.delete_an_sponsorship_v0)
 }
