@@ -37,7 +37,7 @@ module.exports = function (app) {
    *
    * Modify an application
    *    RequiredRoles: Explorer, Manager
-   * 
+   *
    * @section applications
    * @type get put
    * @url /v1/applications/:applicationId
@@ -50,34 +50,31 @@ module.exports = function (app) {
     .get(applications.read_an_application_v0)
     .put(applications.update_an_application_v0)
 
-
   /**
    * Reject an application
    *    RequiredRoles: Manager
   */
   app.route('/v0/applications/:applicationId/reject')
-   .patch(applications.reject_an_application_v0)
+    .patch(applications.reject_an_application_v0)
 
   /**
    * Manager accepts an application (is DUE)
    *    RequiredRoles: Manager
   */
   app.route('/v0/applications/:applicationId/due')
-   .patch(applications.due_an_application_v0)
+    .patch(applications.due_an_application_v0)
 
   /**
    * Accept an application which has been PAID by the Explorer
    *    RequiredRoles: Explorer
   */
   app.route('/v0/applications/:applicationId/accept')
-  .patch(applications.accept_an_application_v0)
-   
+    .patch(applications.accept_an_application_v0)
+
   /**
    * Cancel an application by the creator Explorer. It must have an status "PENDING" or "ACCEPTED"
    *    RequiredRoles: Explorer
   */
   app.route('/v0/applications/:applicationId/cancel')
-   .patch(applications.cancel_an_application_v0)
-
-  
+    .patch(applications.cancel_an_application_v0)
 }

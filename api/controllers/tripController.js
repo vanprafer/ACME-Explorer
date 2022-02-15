@@ -103,7 +103,7 @@ exports.update_a_trip_v0 = function (req, res) {
 
 exports.update_a_trip = function (req, res) {
   // Check if the trip has not been previously published or not
-  // Check if the user is a Manager and is the 
+  // Check if the user is a Manager and is the
   // creator of the trip and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
   Trip.findById(req.params.tripId, function (err, trip) {
@@ -149,7 +149,7 @@ exports.delete_an_order = function (req, res) {
 }
 
 exports.publish_a_trip_v0 = function (req, res) {
-  // Check if the user is a Manager and is the 
+  // Check if the user is a Manager and is the
   // creator of the trip and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
   Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { published: 'true' } }, { new: true }, function (err, trip) {
@@ -189,7 +189,7 @@ exports.cancel_a_trip_v0 = function (req, res) {
 
 exports.cancel_a_trip = function (req, res) {
   // Check whether the trip has not started and has not any applications
-  // Check if the user is a Manager and is the 
+  // Check if the user is a Manager and is the
   // creator of the trip and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
   Trip.findById(req.params.tripId, function (err, trip) {

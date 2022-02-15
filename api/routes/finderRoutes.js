@@ -7,7 +7,7 @@ module.exports = function (app) {
    *    RequiredRoles: Explorer
    * Create a finder
    *    RequiredRoles: Explorer
-   * 
+   *
    * @section finders
    * @type get post
    * @url /v1/finders/

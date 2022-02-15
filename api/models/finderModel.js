@@ -2,6 +2,8 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const TripSchema = require('Trips').Schema
+
 const FinderSchema = new Schema({
   keyword: {
     type: String,
@@ -16,7 +18,7 @@ const FinderSchema = new Schema({
   },
   endDate: {
     type: Date
-  },  
+  },
   cachedDataDate: {
     type: Date
   },
@@ -33,11 +35,11 @@ const FinderSchema = new Schema({
 
 }, { strict: false })
 
-FinderSchema.pre('save', function(callback){
+FinderSchema.pre('save', function (callback) {
   const finder = this
-  if(finder.endDate > finder.startDate){
-    throw error("The start date must be before the end date of the finder.")
-  }else{
+  if (finder.endDate > finder.startDate) {
+    throw Error('The start date must be before the end date of the finder.')
+  } else {
     callback()
   }
 })

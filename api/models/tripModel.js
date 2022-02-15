@@ -62,14 +62,14 @@ const TripSchema = new mongoose.Schema({
     type: Date,
     required: 'Trip end date required'
   },
-  pictures: [{data: Buffer, contentType: String}],
+  pictures: [{ data: Buffer, contentType: String }],
   cancelationReason: {
-    type: String,
+    type: String
   },
   published: {
     type: Boolean,
     required: 'Trip published state required',
-    default: False
+    default: false
   },
   manager: {
     type: Schema.Types.ObjectId,
@@ -77,7 +77,7 @@ const TripSchema = new mongoose.Schema({
     ref: 'Actor'
   },
   stages: [{
-    contentType: StageSchema, 
+    contentType: StageSchema,
     validate: [minArraySize, 'The trip must have at least one stage']
   }],
   created: {
@@ -86,8 +86,8 @@ const TripSchema = new mongoose.Schema({
   }
 }, { strict: false })
 
-function minArraySize(val) {
-  return val.length >= 1;
+function minArraySize (val) {
+  return val.length >= 1
 }
 
 TripSchema.pre('save', function (callback) {
@@ -100,19 +100,18 @@ TripSchema.pre('save', function (callback) {
   callback()
 })
 
-TripSchema.pre('save', function(callback){
+TripSchema.pre('save', function (callback) {
   const trip = this
   trip.price = trip.stages.reduce((a, b) => a.price + b.price, 0)
   callback()
 })
 
-TripSchema.pre('save', function(callback){
+TripSchema.pre('save', function (callback) {
   const trip = this
-  if(trip.dateEnd > trip.dateStart){
-    throw error("Start date must be before the end date of the trip.")
-  }else{
+  if (trip.dateEnd > trip.dateStart) {
+    throw Error('Start date must be before the end date of the trip.')
+  } else {
     callback()
   }
 })
 module.exports = mongoose.model('Trips', TripSchema)
-

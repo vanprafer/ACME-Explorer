@@ -15,8 +15,8 @@ const SponsorshipSchema = new Schema({
   },
   isPaid: {
     type: Boolean,
-    default: false, 
-    required: "Kindly enter the paid condition of the banner"
+    default: false,
+    required: 'Kindly enter the paid condition of the banner'
   },
   trip: {
     type: Schema.Types.ObjectId,

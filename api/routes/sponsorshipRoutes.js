@@ -20,7 +20,6 @@ module.exports = function (app) {
     .get(sponsorships.list_my_sponsorships_v0)
     .post(sponsorships.create_a_sponsorship_v0)
 
-
   /**
    * Get a sponsorship
    *    RequiredRoles: Sponsor
@@ -28,7 +27,7 @@ module.exports = function (app) {
    *    RequiredRoles: Sponsor
    * Delete a sponsorship
    *    RequiredRoles: Sponsor
-   * 
+   *
    * @section sponsorships
    * @type get put delete
    * @url /v1/sponsorships/:sponsorshipId
@@ -44,7 +43,7 @@ module.exports = function (app) {
     .put(sponsorships.update_a_sponsorship_v0)
     .delete(sponsorships.delete_a_sponsorship_v0)
 
-/**
+  /**
   * Pay a sponsorship which has not been paid yet
   *    RequiredRoles: Sponsor
   *
@@ -54,5 +53,4 @@ module.exports = function (app) {
  */
   app.route('/v0/sponsorships/:sponsorshipId/pay')
     .patch(sponsorships.pay_a_sponsorship_v0)
-
 }

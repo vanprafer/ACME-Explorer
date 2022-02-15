@@ -13,8 +13,6 @@ module.exports = function (app) {
     .put(actors.update_an_actor_v0)
     .delete(actors.delete_an_actor_v0)
 
-  
-
   /**
    * Required Role: Administrator
    */
