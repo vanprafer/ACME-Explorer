@@ -94,3 +94,67 @@ exports.update_an_application = function (req, res) {
     }
   })
 }
+
+exports.reject_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'REJECTED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.due_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'DUE' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.accept_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'ACCEPTED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.cancel_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'CANCELLED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}

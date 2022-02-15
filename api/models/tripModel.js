@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const dateFormat = require('dateformat')
+const dateFormat = require('moment')
 const customAlphabet = require('nanoid').customAlphabet
 const idGenerator = customAlphabet('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 4)
 
@@ -50,10 +50,10 @@ const TripSchema = new mongoose.Schema({
     type: Number,
     min: 0
   },
-  requirements: [{
-    contentType: String,
-    required: 'Trip list of requirements required'
-  }],
+  requirements: {
+    type: [String],
+    validate: v => Array.isArray(v) && v.length > 0
+  },
   dateStart: {
     type: Date,
     required: 'Trip start date required'
@@ -76,10 +76,10 @@ const TripSchema = new mongoose.Schema({
     required: 'Manager id required',
     ref: 'Actor'
   },
-  stages: [{
-    contentType: StageSchema,
+  stages: {
+    type: [StageSchema],
     validate: [minArraySize, 'The trip must have at least one stage']
-  }],
+  },
   created: {
     type: Date,
     default: Date.now

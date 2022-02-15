@@ -20,7 +20,7 @@ const routesApplications = require('./api/routes/applicationRoutes')
 const routesConfigurations = require('./api/routes/configurationRoutes')
 const routesDashboard = require('./api/routes/dashboardRoutes')
 const routesFinders = require('./api/routes/finderRoutes')
-const routesSponsors = require('./api/routes/sponsorRoutes')
+const routesSponships = require('./api/routes/sponsorshipRoutes')
 const routesTrips = require('./api/routes/tripRoutes')
 
 routesActors(app)
@@ -28,7 +28,7 @@ routesApplications(app)
 routesConfigurations(app)
 routesDashboard(app)
 routesFinders(app)
-routesSponsors(app)
+routesSponships(app)
 routesTrips(app)
 
 // MongoDB URI building

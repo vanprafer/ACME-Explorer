@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const TripSchema = require('Trips').Schema
+const TripSchema = require('./tripModel').schema
 
 const FinderSchema = new Schema({
   keyword: {
