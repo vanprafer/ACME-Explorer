@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const dateFormat = require('dateformat')
+const dateFormat = require('moment')
 const customAlphabet = require('nanoid').customAlphabet
 const idGenerator = customAlphabet('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 4)
 
