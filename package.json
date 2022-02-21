@@ -1,4 +1,22 @@
 {
+  "name": "acme-explorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanprafer/ACME-Explorer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanprafer/ACME-Explorer/issues"
+  },
+  "homepage": "https://github.com/vanprafer/ACME-Explorer#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dateformat": "^5.0.2",
