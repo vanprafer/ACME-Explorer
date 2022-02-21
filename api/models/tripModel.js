@@ -92,7 +92,7 @@ function minArraySize (val) {
 
 TripSchema.pre('save', function (callback) {
   const newTrip = this
-  const day = dateFormat(new Date(), 'yymmdd')
+  const day = dateFormat(new Date()).format('YYMMDD')
 
   const generatedTicker = [day, idGenerator()].join('-')
   newTrip.ticker = generatedTicker
