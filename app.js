@@ -3,12 +3,12 @@ const app = express()
 const port = process.env.PORT || 8080
 const mongoose = require('mongoose')
 
-// const Actor = require('./api/models/actorModel')
-// const Application = require('./api/models/applicationModel')
-// const Configuration = require('./api/models/configurationModel')
-// const Finder = require('./api/models/finderModel')
-// const Sponsorship = require('./api/models/sponsorshipModel')
-// const Trip = require('./api/models/tripModel')
+const Actor = require('./api/models/actorModel')
+const Application = require('./api/models/applicationModel')
+const Configuration = require('./api/models/configurationModel')
+const Finder = require('./api/models/finderModel')
+const Sponsorship = require('./api/models/sponsorshipModel')
+const Trip = require('./api/models/tripModel')
 
 const bodyParser = require('body-parser')
 
