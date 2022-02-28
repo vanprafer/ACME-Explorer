@@ -44,4 +44,9 @@ FinderSchema.pre('save', function (callback) {
   }
 })
 
+
+FinderSchema.index({ explorer: 1 })
+FinderSchema.index({ keyword: 1 })
+FinderSchema.index({ maxPrice: 1 })
+
 module.exports = mongoose.model('Finders', FinderSchema)

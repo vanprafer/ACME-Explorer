@@ -16,6 +16,6 @@ module.exports = function (app) {
   /**
    * Required Role: Administrator
    */
-  app.route('/v0/actors/:actorId/unban').patch(actors.unban_an_actor_v0)
-  app.route('/v0/actors/:actorId/ban').patch(actors.ban_an_actor_v0)
+  app.route('/v0/actors/unban/:actorId').patch(actors.unban_an_actor_v0)
+  app.route('/v0/actors/ban/:actorId').patch(actors.ban_an_actor_v0)
 }

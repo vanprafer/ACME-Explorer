@@ -94,4 +94,7 @@ ActorSchema.methods.verifyPassword = function (password, cb) {
   })
 }
 
+ActorSchema.index({ email: 1, password: 1 })
+ActorSchema.index({ banned: 1})
+
 module.exports = mongoose.model('Actors', ActorSchema)
