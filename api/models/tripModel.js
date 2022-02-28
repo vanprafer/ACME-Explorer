@@ -86,6 +86,10 @@ const TripSchema = new mongoose.Schema({
   }
 }, { strict: false })
 
+TripSchema.index({ ticker: 'text', title: 'text', description: 'text' })
+TripSchema.index({ manager: 1 })
+TripSchema.index({ published: 1, dateStart: 1, cancelationReason: 1 })
+
 function minArraySize (val) {
   return val.length >= 1
 }

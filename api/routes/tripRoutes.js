@@ -17,6 +17,17 @@ module.exports = function (app) {
     .post(trip.create_a_trip_v0)
 
   /**
+  * Get my trips.
+  *    RequiredRoles: to be a Manager
+  *
+  * @section mytrips
+  * @type get
+  * @url /v0/mytrips/
+  */
+  app.route('/v0/mytrips')
+    .get(trip.list_my_trips)
+
+  /**
    * Search engine for trips
    * Get trips depending on params
    *    RequiredRoles: None
@@ -25,6 +36,10 @@ module.exports = function (app) {
    * @type get
    * @url /v0/trips/search
    * @param {string} keyWord
+   * @param {string} sortedBy
+   * @param {string} reverse
+   * @param {string} startFrom
+   * @param {string} pageSize
   */
   app.route('/v0/trips/search')
     .get(trip.search_trips_v0)
