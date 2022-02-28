@@ -43,4 +43,21 @@ module.exports = function (app) {
     .get(sponsorships.read_a_sponsorship_v0)
     .put(sponsorships.update_a_sponsorship_v0)
     .delete(sponsorships.delete_a_sponsorship_v0)
+
+  /**
+   * Get a sponsorship
+   *    RequiredRoles: Sponsor
+   * Modify a sponsorship
+   *    RequiredRoles: Sponsor
+   * Delete a sponsorship
+   *    RequiredRoles: Sponsor
+   *
+   * @section sponsorships
+   * @type put
+   * @url /v1/sponsorships/:sponsorshipId/pay
+   * @param {string} sponsorshipId
+  */
+
+  app.route('/v1/sponsorships/:sponsorshipId/pay')
+    .put(sponsorships.pay_a_sponsorship)
 }
