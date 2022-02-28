@@ -27,4 +27,17 @@ const ApplicationSchema = new Schema({
   }
 }, { strict: false })
 
+ApplicationSchema.index({
+  trip_id: 1
+})
+
+ApplicationSchema.index({
+  explorer_id: 1,
+  status: 1
+})
+
+ApplicationSchema.index({
+  status: 1
+})
+
 module.exports = mongoose.model('Applications', ApplicationSchema)

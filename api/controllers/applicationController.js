@@ -16,7 +16,7 @@ exports.list_all_applications_v0 = function (req, res) {
 exports.list_all_applications = function (req, res) {
   Application.find({}, function (err, applications) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(applications)
     }
@@ -46,9 +46,14 @@ exports.create_an_application_v0 = function (req, res) {
 
 exports.create_an_application = function (req, res) {
   const newApplication = new Application(req.body)
+  newApplication.status = 'PENDING'
   newApplication.save(function (err, application) {
     if (err) {
-      res.send(err)
+      if (err.name === 'ValidationError') {
+        res.status(422).send(err)
+      } else {
+        res.status(500).send(err)
+      }
     } else {
       res.json(application)
     }
@@ -68,7 +73,7 @@ exports.read_an_application_v0 = function (req, res) {
 exports.read_an_application = function (req, res) {
   Application.findById(req.params.applicationId, function (err, application) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(application)
     }
@@ -88,9 +93,142 @@ exports.update_an_application_v0 = function (req, res) {
 exports.update_an_application = function (req, res) {
   Application.findOneAndUpdate({ _id: req.params.applicationId }, req.body, { new: true }, function (err, application) {
     if (err) {
-      res.send(err)
+      if (err.name === 'ValidationError') {
+        res.status(422).send(err)
+      } else {
+        res.status(500).send(err)
+      }
     } else {
+      application.status = req.params.status
       res.json(application)
     }
   })
+}
+
+exports.reject_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'REJECTED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.reject_an_application = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'REJECTED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.due_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'DUE' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.due_an_application = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'DUE' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.accept_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'ACCEPTED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.accept_an_application = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'ACCEPTED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.cancel_an_application_v0 = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'CANCELLED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
+}
+
+exports.cancel_an_application = function (req, res) {
+  console.log('Cancel an application with id: ' + req.params.applicationId)
+  Application.findOneAndUpdate(
+    { _id: req.params.applicationId },
+    { $set: { status: 'CANCELLED' } },
+    { new: true },
+    function (err, application) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.json(application)
+      }
+    }
+  )
 }

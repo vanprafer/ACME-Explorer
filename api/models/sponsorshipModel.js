@@ -19,4 +19,13 @@ const SponsorshipSchema = new Schema({
   }
 }, { strict: false })
 
+SponsorshipSchema.index({
+  sponsor_id: 1
+})
+
+SponsorshipSchema.index({
+  trip_id: 1,
+  isPaid: 1
+})
+
 module.exports = mongoose.model('Sponsorships', SponsorshipSchema)

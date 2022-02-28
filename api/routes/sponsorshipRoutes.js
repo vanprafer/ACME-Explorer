@@ -23,10 +23,13 @@ module.exports = function (app) {
    * @section sponsorships
    * @type get
    * @url /v1/sponsorships/:sponsorshipId
+   * @param {string} sponsorshipId
   */
 
   app.route('/v1/sponsorships/:sponsorshipId')
-    .get(sponsorships.read_an_application)
+    .get(sponsorships.read_a_sponsorship)
+    .put(sponsorships.update_a_sponsorship)
+    .delete(sponsorships.delete_a_sponsorship)
 
   app.route('/v0/sponsorships/:sponsorshipId')
     .get(sponsorships.read_an_application_v0)
@@ -53,23 +56,9 @@ module.exports = function (app) {
   * @type put
   * @url /v1/sponsorships/:sponsorshipId
  */
-  app.route('/v1/sponsorships/:sponsorshipId')
-    .put(sponsorships.update_an_sponsorship)
+  app.route('/v1/sponsorships/:sponsorshipId/pay')
+    .patch(sponsorships.pay_a_sponsorship)
 
-  app.route('/v0/sponsorships/:sponsorshipId')
-    .put(sponsorships.update_an_sponsorship_v0)
-
-  /**
-  * Delete an sponsorship
-  *    RequiredRoles: Sponsor
-  *
-  * @section sponsorships
-  * @type delete
-  * @url /v1/sponsorships/:sponsorshipId
- */
-  app.route('/v1/sponsorships/:sponsorshipId')
-    .delete(sponsorships.delete_an_sponsorship)
-
-  app.route('/v0/sponsorships/:sponsorshipId')
-    .delete(sponsorships.delete_an_sponsorship_v0)
+  app.route('/v0/sponsorships/:sponsorshipId/pay')
+  // .patch(sponsorships.pay_a_sponsorship_v0)
 }
