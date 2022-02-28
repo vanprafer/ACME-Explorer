@@ -7,7 +7,7 @@ const ApplicationSchema = new Schema({
     type: Date,
     default: Date.now,
     validate: function (date) {
-      return Date.now() >= date
+      return Date.now() <= date
     },
     message: function (date) {
       return `The given date (${date}) must not be future`
@@ -24,6 +24,20 @@ const ApplicationSchema = new Schema({
   },
   cancelationReason: {
     type: String
+  },
+  explorer: {
+    type: Schema.Types.ObjectId,
+    required: 'Explorer id required',
+    ref: 'Actor'
+  },
+  trip: {
+    type: Schema.Types.ObjectId,
+    required: 'Trip id required',
+    ref: 'Trip'
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 }, { strict: false })
 
