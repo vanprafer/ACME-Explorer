@@ -31,11 +31,13 @@ module.exports = function (app) {
    * @section sponsorships
    * @type get put delete
    * @url /v1/sponsorships/:sponsorshipId
+   * @param {string} sponsorshipId
   */
 
   app.route('/v1/sponsorships/:sponsorshipId')
     .get(sponsorships.read_a_sponsorship)
-    // .put(sponsorships.update_a_sponsorship)
+    .put(sponsorships.update_a_sponsorship)
+
     .delete(sponsorships.delete_a_sponsorship)
 
   app.route('/v0/sponsorships/:sponsorshipId')
@@ -51,6 +53,9 @@ module.exports = function (app) {
   * @type patch
   * @url /v1/sponsorships/:sponsorshipId
  */
+  app.route('/v1/sponsorships/:sponsorshipId/pay')
+    .patch(sponsorships.pay_a_sponsorship)
+
   app.route('/v0/sponsorships/:sponsorshipId/pay')
   // .patch(sponsorships.pay_a_sponsorship_v0)
 }
