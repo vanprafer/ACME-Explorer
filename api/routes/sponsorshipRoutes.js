@@ -32,33 +32,7 @@ module.exports = function (app) {
     .delete(sponsorships.delete_a_sponsorship)
 
   app.route('/v0/sponsorships/:sponsorshipId')
-    .get(sponsorships.read_an_application_v0)
-
-  /**
-  * Create an sponsorship
-  *    RequiredRoles: Sponsor
-  *
-  * @section sponsorships
-  * @type post
-  * @url /v1/sponsorships
- */
-  app.route('/v1/sponsorships')
-    .post(sponsorships.create_an_sponsorship)
-
-  app.route('/v0/sponsorships')
-    .post(sponsorships.create_an_sponsorship_v0)
-
-  /**
-  * Modify an sponsorship
-  *    RequiredRoles: Sponsor
-  *
-  * @section sponsorships
-  * @type put
-  * @url /v1/sponsorships/:sponsorshipId
- */
-  app.route('/v1/sponsorships/:sponsorshipId/pay')
-    .patch(sponsorships.pay_a_sponsorship)
-
-  app.route('/v0/sponsorships/:sponsorshipId/pay')
-  // .patch(sponsorships.pay_a_sponsorship_v0)
+    .get(sponsorships.read_a_sponsorship_v0)
+    .put(sponsorships.update_a_sponsorship_v0)
+    .delete(sponsorships.delete_a_sponsorship_v0)
 }

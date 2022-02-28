@@ -112,13 +112,3 @@ exports.delete_a_sponsorship = function (req, res) {
     }
   })
 }
-
-exports.pay_a_sponsorship = function (req, res) {
-  Sponsorship.findByIdAndUpdate({ _id: req.params.sponsorshipId }, function (err, sponsorship) {
-    if (err) {
-      res.status(500).send(err)
-    } else {
-      res.json(sponsorship)
-    }
-  })
-}
