@@ -7,7 +7,7 @@ const ApplicationSchema = new Schema({
     type: Date,
     default: Date.now,
     validate: function (date) {
-      return Date.now() <= date
+      return Date.now() >= date
     },
     message: function (date) {
       return `The given date (${date}) must not be future`

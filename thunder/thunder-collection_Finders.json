@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "f8e56a8b-d80e-4d72-989a-d529dcf2febb",
+		"name": "Finder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create finder",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"621e19253aa978cde857fedd\",\r\n    \"explorer\": \"621d26b90ba6a368db153d3e\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/finders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"finders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List finders",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"maxPrice\": 100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/finders/621e19253aa978cde857fedd",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"finders",
+						"621e19253aa978cde857fedd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
