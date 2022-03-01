@@ -59,5 +59,5 @@ module.exports = function (app) {
   */
 
   app.route('/v1/sponsorships/:sponsorshipId/pay')
-    .put(sponsorships.pay_a_sponsorship)
+    .patch(sponsorships.pay_a_sponsorship)
 }
