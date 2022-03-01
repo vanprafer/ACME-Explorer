@@ -26,12 +26,22 @@ exports.list_all_configurations = function (req, res) {
 }
 
 exports.create_a_configuration_v0 = function (req, res) {
-  const newConfiguration = new Configuration(req.body)
-  newConfiguration.save(function (err, configuration) {
+  Configuration.find({}, function (err, configuration) {
     if (err) {
       res.send(err)
     } else {
-      res.json(configuration)
+      if (configuration.length > 0) {
+        res.status(405).send('There is already a configuration in the database')
+      } else {
+        const newConfiguration = new Configuration(req.body)
+        newConfiguration.save(function (err, configuration) {
+          if (err) {
+            res.send(err)
+          } else {
+            res.json(configuration)
+          }
+        })
+      }
     }
   })
 }
@@ -39,6 +49,26 @@ exports.create_a_configuration_v0 = function (req, res) {
 exports.create_a_configuration = function (req, res) {
   // Check if the user is an administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
+
+  Configuration.find({}, function (err, configuration) {
+    if (err) {
+      res.send(err)
+    } else {
+      if (configuration.length > 0) {
+        res.status(405).send('There is already a configuration in the database')
+      } else {
+        const newConfiguration = new Configuration(req.body)
+        newConfiguration.save(function (err, configuration) {
+          if (err) {
+            res.send(err)
+          } else {
+            res.json(configuration)
+          }
+        })
+      }
+    }
+  })
+
   const newConfiguration = new Configuration(req.body)
   newConfiguration.save(function (err, configuration) {
     if (err) {

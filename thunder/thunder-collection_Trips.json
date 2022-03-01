@@ -1,0 +1,855 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Trips",
+    "dateExported": "2022-03-01T00:58:38.027Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 5000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE MANAGER",
+            "url": "http://localhost:8080/v0/actors",
+            "method": "POST",
+            "modified": "2022-02-28T23:24:55.983Z",
+            "created": "2022-02-28T21:57:51.855Z",
+            "_id": "f94b5983-3d40-457e-8e41-20edd0e20aef",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d26b90ba6a368db153d3f\",\n  \"name\": \"Alfredo\",\n  \"surname\": \"Moreno\",\n  \"email\": \"alfredoManager@gmail.com\",\n  \"password\": \"12345\",\n  \"role\": \"MANAGER\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "10"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:41:01.942Z",
+            "created": "2022-02-28T21:53:54.836Z",
+            "_id": "7d9cf9ee-302e-4ecd-b7f9-eeb607f3aad6",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra Nevada\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "14"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 10312.5,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP2",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-03-01T00:06:19.615Z",
+            "created": "2022-02-28T23:58:57.002Z",
+            "_id": "ef2f282a-07e6-406a-b72a-606f25f23d66",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827df\",\n  \"title\": \"Multiaventura en Granada centro\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra Nevada\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "14"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 10625,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP NO MANAGER",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:55:18.943Z",
+            "created": "2022-02-28T23:54:51.394Z",
+            "_id": "87738e68-2b67-41d9-b8f2-f62afe0dce18",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra Nevada\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Trips validation failed: manager: Manager id required"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 11250,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP NO REQUIREMENTS",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:54:23.169Z",
+            "created": "2022-02-28T23:50:14.825Z",
+            "_id": "e60b814a-50e1-4dbf-981a-cfeef48731d0",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra Nevada\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Trips validation failed: requirements: The trip must have at least one"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 11875,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP EMPTY REQUIREMENTS",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-03-01T00:01:40.358Z",
+            "created": "2022-02-28T23:52:15.994Z",
+            "_id": "c61f9379-7161-4751-9beb-476e1aa2c8e5",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra Nevada\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Trips validation failed: requirements: The trip must have at least one"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 12500,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP NO STAGE TITLE",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:48:45.489Z",
+            "created": "2022-02-28T23:47:55.506Z",
+            "_id": "8ea94097-1802-47e4-88e6-3ca99f57b654",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Trips validation failed: stages.0.title: Stage title required"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 13750,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP NO STAGE DESCRIPTION",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:49:30.280Z",
+            "created": "2022-02-28T23:48:50.306Z",
+            "_id": "6c87089f-2be8-4334-82ba-f8c5a7c3d325",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n      \"title\":\"Snowboard en Sierra Nevada\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Trips validation failed: stages.0.description: Stage description required"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 15000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP NO STAGES",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:47:45.382Z",
+            "created": "2022-02-28T23:46:35.690Z",
+            "_id": "e21e2dc9-1602-401a-9739-5c90f4a47cb2",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827de\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Trips validation failed: stages: The trip must have at least one stage"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CREATE TRIP START DATE AFTER END DATE",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "POST",
+            "modified": "2022-02-28T23:45:34.193Z",
+            "created": "2022-02-28T22:43:03.650Z",
+            "_id": "c0bb56d0-f4d8-4185-8c88-fb54f9ee963e",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d4e6350f1264bc7f827df\",\n  \"title\": \"Multiaventura en Granada\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-05-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra Nevada\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "422"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Start date must be before the end date of the trip."
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "LIST TRIPS",
+            "url": "http://127.0.0.1:8080/v0/trips",
+            "method": "GET",
+            "modified": "2022-02-28T23:59:33.567Z",
+            "created": "2022-02-28T23:57:41.286Z",
+            "_id": "a97a6b0d-564b-483d-9d15-60ae5887a572",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "SEARCH TRIPS",
+            "url": "http://127.0.0.1:8080/v0/trips/search?keyword=centro",
+            "method": "GET",
+            "modified": "2022-03-01T00:08:38.850Z",
+            "created": "2022-03-01T00:02:07.794Z",
+            "_id": "b4575253-200c-48b0-a6c0-3bf1898b41b6",
+            "params": [
+                {
+                    "name": "keyword",
+                    "value": "centro",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "GET A TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de",
+            "method": "GET",
+            "modified": "2022-03-01T00:54:16.102Z",
+            "created": "2022-03-01T00:09:08.625Z",
+            "_id": "b3c8cff1-0db6-4fb9-bdc0-192d4a912fb5",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "14"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 56250,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "UPDATE A TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de",
+            "method": "PUT",
+            "modified": "2022-03-01T00:25:53.509Z",
+            "created": "2022-03-01T00:10:44.683Z",
+            "_id": "00544be4-e094-411d-b11e-603de5b32995",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Multiaventura en Córdoba\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra de Córdoba\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "14"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 56875,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "PUBLISH A TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de/publish",
+            "method": "PATCH",
+            "modified": "2022-03-01T00:42:44.582Z",
+            "created": "2022-03-01T00:24:55.467Z",
+            "_id": "9c324cf2-6d0c-43c4-b905-2fb08be244bc",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "14"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 57500,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "UPDATE A PUBLISHED TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de",
+            "method": "PUT",
+            "modified": "2022-03-01T00:44:21.572Z",
+            "created": "2022-03-01T00:12:09.233Z",
+            "_id": "bfa6e0e4-da99-4db9-9f8a-992ce2ed8ae4",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Multiaventura en Córdoba\",\n  \"description\": \"Tremenda multiaventura súper disfrutable.\",\n  \"requirements\": [\"Ser mayor de edad\", \"Medir más de 1,70\"],\n  \"dateStart\": \"2022-03-28T21:59:33.923Z\",\n  \"dateEnd\": \"2022-04-04T21:59:33.923Z\",\n  \"manager\": \"621d26b90ba6a368db153d3f\",\n  \"stages\": [\n      {\n        \"title\":\"Snowboard en Sierra de Córdoba\",\n        \"description\":\"Disfruta de un día de nieve\",\n        \"price\":20.0\n      },\n      {\n          \"title\": \"Descenso por el río\",\n          \"description\": \"Descenso súper divertido.\",\n          \"price\": 15\n      }\n    ]\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Trip already published"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 67500,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CANCEL A TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de/cancel",
+            "method": "PUT",
+            "modified": "2022-03-01T00:34:21.618Z",
+            "created": "2022-03-01T00:26:00.922Z",
+            "_id": "684780d8-f072-4ee4-b75e-b43d947034a6",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"cancelationReason\": \"Mal tiempo\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "15"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 77500,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "CANCEL A TRIP MISSING CANCELATIONREASON",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de/cancel",
+            "method": "PUT",
+            "modified": "2022-03-01T00:54:50.712Z",
+            "created": "2022-03-01T00:31:20.395Z",
+            "_id": "7811e83a-82ed-4ea2-896e-cc044dcd1619",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Missing cancelation reason."
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 87500,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "DELETE A PUBLISHED TRIP",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827de",
+            "method": "DELETE",
+            "modified": "2022-03-01T00:38:36.606Z",
+            "created": "2022-03-01T00:37:38.819Z",
+            "_id": "56e33099-59ed-48a5-8bcc-c30a244066a7",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "Trip already published"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 97500,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "85f60bba-e97a-4592-92b8-f229798497eb",
+            "name": "DELETE A TRIP ",
+            "url": "http://127.0.0.1:8080/v0/trips/621d4e6350f1264bc7f827df",
+            "method": "DELETE",
+            "modified": "2022-03-01T00:46:05.775Z",
+            "created": "2022-03-01T00:38:48.730Z",
+            "_id": "11fffbbe-b852-409e-9d75-ed95f86afb90",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "204"
+                }
+            ]
+        }
+    ]
+}

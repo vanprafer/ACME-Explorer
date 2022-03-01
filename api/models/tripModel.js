@@ -29,7 +29,7 @@ const TripSchema = new mongoose.Schema({
   ticker: {
     type: String,
     unique: true,
-    required: 'Trip ticker required',
+    // required: 'Trip ticker required', -> It is not necessary because it is auto-generated
     // This validation does not run after middleware pre-save
     validate: {
       validator: function (v) {
@@ -52,7 +52,7 @@ const TripSchema = new mongoose.Schema({
   },
   requirements: {
     type: [String],
-    validate: v => Array.isArray(v) && v.length > 0
+    validate: [v => Array.isArray(v) && v.length > 0, 'The trip must have at least one requirement']
   },
   dateStart: {
     type: Date,
@@ -86,6 +86,10 @@ const TripSchema = new mongoose.Schema({
   }
 }, { strict: false })
 
+TripSchema.index({ ticker: 'text', title: 'text', description: 'text' })
+TripSchema.index({ manager: 1 })
+TripSchema.index({ published: 1, dateStart: 1, cancelationReason: 1 })
+
 function minArraySize (val) {
   return val.length >= 1
 }
@@ -102,14 +106,20 @@ TripSchema.pre('save', function (callback) {
 
 TripSchema.pre('save', function (callback) {
   const trip = this
-  trip.price = trip.stages.reduce((a, b) => a.price + b.price, 0)
+  let sum = 0
+  for (let i = 0; i < trip.stages.length; i++) {
+    sum = sum + trip.stages[i].price
+  }
+  trip.price = sum
   callback()
 })
 
 TripSchema.pre('save', function (callback) {
   const trip = this
-  if (trip.dateEnd > trip.dateStart) {
-    throw Error('Start date must be before the end date of the trip.')
+  if (trip.dateEnd < trip.dateStart) {
+    const error = Error('Start date must be before the end date of the trip.')
+    error.name = 'ValidationError'
+    return callback(error)
   } else {
     callback()
   }

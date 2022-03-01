@@ -56,10 +56,7 @@ const ActorSchema = new Schema(
 
 ActorSchema.pre('save', function (callback) {
   const actor = this
-  // Break out if the password hasn't changed
-  // if (!actor.isModified('password')) return callback()
 
-  // Password changed so we need to hash it
   bcrypt.genSalt(5, function (err, salt) {
     if (err) return callback(err)
 
@@ -73,7 +70,10 @@ ActorSchema.pre('save', function (callback) {
 
 ActorSchema.pre('findOneAndUpdate', function (callback) {
   const actor = this._update
+  // Break out if the password hasn't changed
+  if (!actor.password) return callback()
 
+  // Password changed so we need to hash it
   bcrypt.genSalt(5, function (err, salt) {
     if (err) return callback(err)
 
