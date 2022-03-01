@@ -6,7 +6,7 @@ const Trip = mongoose.model('Trips')
 exports.list_all_trips_v0 = function (req, res) {
   Trip.find({}, function (err, trips) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(trips)
     }
@@ -32,9 +32,9 @@ exports.create_a_trip_v0 = function (req, res) {
   newTrip.save(function (err, trip) {
     if (err) {
       if (err.name === 'ValidationError') {
-        res.status(422).send(err)
+        res.status(422).send(err.message)
       } else {
-        res.status(500).send(err)
+        res.status(500).send(err.message)
       }
     } else {
       res.json(trip)
@@ -100,33 +100,53 @@ exports.update_a_trip_v0 = function (req, res) {
   // "an access token is valid, but requires more privileges"
   Trip.findById(req.params.tripId, function (err, trip) {
     if (err) {
-      if (err.name === 'ValidationError') {
-        res.status(422).send(err)
-      } else if (trip.published === true) {
-        res.status(400).send('Trip already published')
-      } else {
-        res.status(500).send(err)
-      }
+      res.status(500).send(err)
     } else {
-      Trip.findOneAndUpdate({ _id: req.params.tripId }, req.body, { new: true }, function (err, trip) {
-        if (err) {
-          res.status(500).send(err)
+      if (trip != null) {
+        if (trip.published === true) {
+          res.status(400).send('Trip already published')
         } else {
-          res.json(trip)
+          Trip.findOneAndUpdate({ _id: req.params.tripId }, req.body, { new: true }, function (err, trip) {
+            if (err) {
+              if (err.name === 'ValidationError') {
+                res.status(422).send(err.message)
+              } else {
+                res.status(500).send(err)
+              }
+            } else {
+              res.json(trip)
+            }
+          })
         }
-      })
+      } else {
+        res.status(404).send('Trip not found')
+      }
     }
   })
 }
 
 exports.delete_a_trip_v0 = function (req, res) {
-  Trip.deleteOne({
-    _id: req.params.tripId
-  }, function (err, trip) {
+  Trip.findById(req.params.tripId, function (err, trip) {
     if (err) {
       res.status(500).send(err)
     } else {
-      res.json({ message: 'Trip successfully deleted' })
+      if (trip != null) {
+        if (trip.published === true) {
+          res.status(400).send('Trip already published')
+        } else {
+          Trip.deleteOne({
+            _id: req.params.tripId
+          }, function (err, trip) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              res.status(204).send('Trip deleted')
+            }
+          })
+        }
+      } else {
+        res.status(404).send('Trip not found')
+      }
     }
   })
 }
@@ -145,20 +165,27 @@ exports.publish_a_trip_v0 = function (req, res) {
 }
 
 exports.cancel_a_trip_v0 = function (req, res) {
+  // cancel the trip if has not started and has not any accepted applications
+  // RequiredRoles: to be the Manager that posted the trip
   if (!req.body.cancelationReason) {
     res.status(400).send('Missing cancelation reason.')
-  }
-  Trip.findById(req.params.tripId, function (err, trip) {
-    if (err) {
-      res.status(500).send(err)
-    } else {
-      Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { cancelationReason: req.body.cancelationReason } }, { new: true }, function (err, trip) {
-        if (err) {
-          res.status(500).send(err)
+  } else {
+    Trip.findById(req.params.tripId, function (err, trip) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (trip != null) {
+          Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { cancelationReason: req.body.cancelationReason } }, { new: true }, function (err, trip) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              res.json(trip)
+            }
+          })
         } else {
-          res.json(trip)
+          res.status(404).send('Trip not found')
         }
-      })
-    }
-  })
+      }
+    })
+  }
 }

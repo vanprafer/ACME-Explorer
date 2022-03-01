@@ -1,1 +1,265 @@
-{"client":"Thunder Client","collectionName":"Actors","dateExported":"2022-02-28T19:20:39.910Z","version":"1.1","folders":[],"requests":[{"containerId":"","sortNum":10000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"CREATE ACTOR","url":"http://localhost:8080/v0/actors","method":"POST","modified":"2022-02-28T19:12:03.940Z","created":"2022-02-28T19:00:07.612Z","_id":"757c8140-9172-4322-b281-d140f2f2f9fd","params":[],"body":{"type":"json","raw":"{\n  \"name\": \"Raúl\",\n  \"surname\": \"garcia\",\n  \"email\": \"raulExplorer@gmail.com\",\n  \"password\": 12345,\n  \"role\": \"EXPLORER\"\n}","form":[]},"tests":[]},{"containerId":"","sortNum":20000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"GET ALL ACTORS","url":"http://localhost:8080/v0/actors","method":"GET","modified":"2022-02-28T18:49:32.070Z","created":"2022-02-28T18:49:13.677Z","_id":"9891dd91-febe-458c-bbaa-1b4b475e57b4","params":[],"tests":[]},{"containerId":"","sortNum":30000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"GET ACTOR BY ID","url":"http://localhost:8080/v0/actors/621d1cd0f865a98177daab6e","method":"GET","modified":"2022-02-28T19:05:36.765Z","created":"2022-02-28T18:50:01.469Z","_id":"0e99640d-ddfe-4a14-9cb8-01c3e631f155","params":[],"tests":[]},{"containerId":"","sortNum":35000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"UPDATE ACTOR","url":"http://localhost:8080/v0/actors/621d1cd0f865a98177daab6e","method":"PUT","modified":"2022-02-28T19:12:51.130Z","created":"2022-02-28T19:10:00.935Z","_id":"3598d072-b4f0-4e2f-ae7c-ede0407bfe20","params":[],"body":{"type":"json","raw":"{\n  \"name\": \"Javi\",\n  \"surname\": \"Garcia\",\n  \"email\": \"pacoExplorer@gmail.com\",\n  \"password\": 12345,\n  \"role\": \"EXPLORER\"\n}","form":[]},"tests":[]},{"containerId":"","sortNum":40000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"BAN ACTOR","url":"http://localhost:8080/ban/621d1cd0f865a98177daab6e","method":"PATCH","modified":"2022-02-28T19:07:43.885Z","created":"2022-02-28T18:51:09.137Z","_id":"86a652f6-fcaf-463e-8de2-5a527585615c","params":[],"tests":[]},{"containerId":"","sortNum":50000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"UNBAN ACTOR","url":"http://localhost:8080/621d1cd0f865a98177daab6e/unban","method":"PATCH","modified":"2022-02-28T19:06:59.585Z","created":"2022-02-28T18:51:51.611Z","_id":"1a36c4fc-939c-4821-b068-f1f036c603af","params":[],"tests":[]},{"containerId":"","sortNum":80000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"723cf3c5-3f85-4b9e-bb2b-3b7de5408bc5","name":"DELETE ACTOR","url":"http://localhost:8080/v0/actors/621d1cd0f865a98177daab6e","method":"DELETE","modified":"2022-02-28T19:14:47.433Z","created":"2022-02-28T19:14:22.840Z","_id":"ea9849c4-8d11-49c7-bd77-37847a6d08de","params":[],"tests":[]}]}
+{
+    "client": "Thunder Client",
+    "collectionName": "Actors",
+    "dateExported": "2022-02-28T23:20:25.177Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "CREATE ACTOR",
+            "url": "http://localhost:8080/v0/actors",
+            "method": "POST",
+            "modified": "2022-02-28T23:02:56.751Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "5a3e5515-0bfa-4ad9-8abb-4e8b7b19b741",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"621d26b90ba6a368db153d3e\",\n  \"name\": \"Raúl\",\n  \"surname\": \"garcia\",\n  \"email\": \"raulExplorer@gmail.com\",\n  \"password\": \"12345\",\n  \"role\": \"EXPLORER\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "GET ALL ACTORS",
+            "url": "http://localhost:8080/v0/actors",
+            "method": "GET",
+            "modified": "2022-02-28T22:44:11.144Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "42c27234-8e61-4dc6-9723-79328aa50fc0",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "GET ACTOR BY ID",
+            "url": "http://localhost:8080/v0/actors/621d26b90ba6a368db153d3e",
+            "method": "GET",
+            "modified": "2022-02-28T22:45:47.442Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "77104d89-7350-4134-94d2-b1430881007a",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "10"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 35000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "UPDATE ACTOR",
+            "url": "http://localhost:8080/v0/actors/621d26b90ba6a368db153d3e",
+            "method": "PUT",
+            "modified": "2022-02-28T23:08:53.642Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "8552ae50-631c-4ec1-ae02-e544008e0292",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Javier\",\n  \"surname\": \"Garcia\",\n  \"email\": \"pacoExplorer@gmail.com\",\n  \"password\": \"12345\",\n  \"role\": \"EXPLORER\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "10"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "BAN ACTOR",
+            "url": "http://localhost:8080/v0/actors/ban/621d26b90ba6a368db153d3e",
+            "method": "PATCH",
+            "modified": "2022-02-28T23:13:31.678Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "c1c0a8aa-e847-434d-a9e0-317f7a9fda79",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "10"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "UNBAN ACTOR",
+            "url": "http://localhost:8080/v0/actors/unban/621d26b90ba6a368db153d3e",
+            "method": "PATCH",
+            "modified": "2022-02-28T23:13:48.686Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "6bf633a4-edcc-4a9a-848e-cb043ce72dec",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "10"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 80000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "fb1458ee-6089-40e1-aa6a-dfc383d4f7b5",
+            "name": "DELETE ACTOR",
+            "url": "http://localhost:8080/v0/actors/621d26b90ba6a368db153d3e",
+            "method": "DELETE",
+            "modified": "2022-02-28T23:14:20.664Z",
+            "created": "2022-02-28T19:46:29.685Z",
+            "_id": "711201ae-b368-4dfd-b626-ef8615dfc606",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Actor successfully deleted"
+                }
+            ]
+        }
+    ]
+}

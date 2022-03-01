@@ -1,1 +1,127 @@
-{"client":"Thunder Client","collectionName":"Configuration","dateExported":"2022-02-28T19:21:00.310Z","version":"1.1","folders":[],"requests":[{"containerId":"","sortNum":10000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"ab3d0f27-d91b-4d97-8c77-35be5f348e37","name":"GET CONFIGURATION","url":"http://localhost:8080/v0/configurations","method":"GET","modified":"2022-02-28T19:16:52.630Z","created":"2022-02-28T18:52:51.261Z","_id":"4ba5f311-aca0-4b03-9291-a1299ee9569f","params":[],"tests":[]},{"containerId":"","sortNum":20000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"ab3d0f27-d91b-4d97-8c77-35be5f348e37","name":"CREATE CONFIGURATION","url":"http://localhost:8080/v0/configurations","method":"POST","modified":"2022-02-28T19:19:16.748Z","created":"2022-02-28T19:17:09.765Z","_id":"cb36d3c8-9926-484b-bebc-42a04f4b8368","params":[],"body":{"type":"json","raw":"{\n  \"flatRate\": 10\n}","form":[]},"tests":[]},{"containerId":"","sortNum":30000,"headers":[{"name":"Accept","value":"*/*"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)"}],"colId":"ab3d0f27-d91b-4d97-8c77-35be5f348e37","name":"UPDATE CONFIGURATION","url":"http://localhost:8080/v0/configurations/621d2034c9b57df0049b3dd7","method":"GET","modified":"2022-02-28T19:20:22.159Z","created":"2022-02-28T19:17:33.847Z","_id":"b9064450-0d81-4606-82c3-9a23909f2ca0","params":[],"body":{"type":"json","raw":"{\n  \"_id\": \"621d2034c9b57df0049b3dd7\",\n  \"flatRate\": 20,\n  \"finderCache\": 1,\n  \"finderResults\": 10,\n  \"created\": \"2022-02-28T19:19:16.729Z\",\n  \"__v\": 0\n}","form":[]},"tests":[]}]}
+{
+    "client": "Thunder Client",
+    "collectionName": "Configuration",
+    "dateExported": "2022-02-28T23:20:13.171Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 5000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "b9aa4a37-4ccc-412b-a474-c853b0ef9f58",
+            "name": "CREATE CONFIGURATION",
+            "url": "http://localhost:8080/v0/configurations",
+            "method": "POST",
+            "modified": "2022-02-28T23:19:16.939Z",
+            "created": "2022-02-28T19:46:43.177Z",
+            "_id": "74c12c4d-9902-4d74-bc76-5e6bce0b3b5e",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"_id\": \"621d57b550e385bceba7feb6\",\n  \"flatRate\": 10\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "6"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "b9aa4a37-4ccc-412b-a474-c853b0ef9f58",
+            "name": "GET CONFIGURATION",
+            "url": "http://localhost:8080/v0/configurations",
+            "method": "GET",
+            "modified": "2022-02-28T23:18:40.740Z",
+            "created": "2022-02-28T19:46:43.177Z",
+            "_id": "2763dd88-da74-42c1-8f6d-b9642c577f79",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "b9aa4a37-4ccc-412b-a474-c853b0ef9f58",
+            "name": "UPDATE CONFIGURATION",
+            "url": "http://localhost:8080/v0/configurations/621d57b550e385bceba7feb6",
+            "method": "PUT",
+            "modified": "2022-02-28T23:20:05.309Z",
+            "created": "2022-02-28T19:46:43.177Z",
+            "_id": "9b2202e3-a2b4-4ec3-a210-d0bb9967b4d7",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"_id\": \"621d57b550e385bceba7feb6\",\n  \"flatRate\": 20,\n  \"finderCache\": 1,\n  \"finderResults\": 10,\n  \"created\": \"2022-02-28T19:19:16.729Z\",\n  \"__v\": 0\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "6"
+                }
+            ]
+        }
+    ]
+}

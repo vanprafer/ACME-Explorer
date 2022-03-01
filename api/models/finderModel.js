@@ -37,13 +37,12 @@ const FinderSchema = new Schema({
 
 FinderSchema.pre('save', function (callback) {
   const finder = this
-  if (finder.endDate > finder.startDate) {
+  if (finder.endDate < finder.startDate) {
     throw Error('The start date must be before the end date of the finder.')
   } else {
     callback()
   }
 })
-
 
 FinderSchema.index({ explorer: 1 })
 FinderSchema.index({ keyword: 1 })
