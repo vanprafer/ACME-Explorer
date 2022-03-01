@@ -1,0 +1,147 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Dashboard",
+    "dateExported": "2022-03-01T15:34:47.405Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "9a09af62-3979-4f0b-a5ca-9e1efa9e88b8",
+            "name": "TRIP STATISTICS",
+            "url": "http://127.0.0.1:8080/v0/dashboard/tripsPerManager",
+            "method": "GET",
+            "modified": "2022-03-01T11:29:19.641Z",
+            "created": "2022-03-01T10:58:30.425Z",
+            "_id": "47749711-403c-4a95-bf86-0cfb93521868",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "9a09af62-3979-4f0b-a5ca-9e1efa9e88b8",
+            "name": "APPLICATIONS PER TRIP",
+            "url": "http://127.0.0.1:8080/v0/dashboard/applicationsPerTrip",
+            "method": "GET",
+            "modified": "2022-03-01T11:30:19.890Z",
+            "created": "2022-03-01T11:29:57.785Z",
+            "_id": "c1b3ea19-8901-4fd6-8107-7d3ed3d635eb",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "9a09af62-3979-4f0b-a5ca-9e1efa9e88b8",
+            "name": "TRIPS PRICES",
+            "url": "http://127.0.0.1:8080/v0/dashboard/tripPrices",
+            "method": "GET",
+            "modified": "2022-03-01T11:39:58.445Z",
+            "created": "2022-03-01T11:39:40.416Z",
+            "_id": "ab6e52b4-428b-4e84-8b38-096773f945df",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "9a09af62-3979-4f0b-a5ca-9e1efa9e88b8",
+            "name": "APPLICATIONS RATIO",
+            "url": "http://127.0.0.1:8080/v0/dashboard/applicationsRatio",
+            "method": "GET",
+            "modified": "2022-03-01T11:42:49.033Z",
+            "created": "2022-03-01T11:42:27.120Z",
+            "_id": "d0a1e3bd-1cf8-4149-8d0f-95c44657e1f6",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "9a09af62-3979-4f0b-a5ca-9e1efa9e88b8",
+            "name": "FINDERS PRICE RANGE",
+            "url": "http://127.0.0.1:8080/v0/dashboard/findersPriceRange",
+            "method": "GET",
+            "modified": "2022-03-01T12:37:01.984Z",
+            "created": "2022-03-01T12:36:26.993Z",
+            "_id": "bc2a1fef-74fb-4ccc-9524-eaee2eea8058",
+            "params": [],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 60000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "9a09af62-3979-4f0b-a5ca-9e1efa9e88b8",
+            "name": "FINDERS TOP KEYWORDS",
+            "url": "http://127.0.0.1:8080/v0/dashboard/topKeywords",
+            "method": "GET",
+            "modified": "2022-03-01T12:47:22.185Z",
+            "created": "2022-03-01T12:47:04.816Z",
+            "_id": "848730da-e590-43c5-9715-7467dcfb9d9e",
+            "params": [],
+            "tests": []
+        }
+    ]
+}
