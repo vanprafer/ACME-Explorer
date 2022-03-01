@@ -1,0 +1,214 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Sponsorship",
+    "dateExported": "2022-03-01T15:57:09.282Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "c2a538ea-0487-4c32-9164-9365caf9fd4a",
+            "name": "Create sponsorship",
+            "url": "localhost:8080/v1/sponsorships",
+            "method": "POST",
+            "modified": "2022-03-01T15:55:46.691Z",
+            "created": "2022-03-01T15:45:16.532Z",
+            "_id": "d5cdff35-1838-4e6f-a9ff-163716528f68",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"_id\": \"621e2136ddac2de8ae292a46\",\n    \"banner\": \"https://fotografias.lasexta.com/clipping/cmsimages02/2020/09/21/86828440-B1FB-43AC-9E9C-A94AC6A4B8BD/default.jpg?crop=1300,731,x0,y0&width=1900&height=1069&optimize=low\",\n    \"landingPage\": \"https://fotografias.lasexta.com/clipping/cmsimages02/2020/09/21/86828440-B1FB-43AC-9E9C-A94AC6A4B8BD/default.jpg?crop=1300,731,x0,y0&width=1900&height=1069&optimize=low\",\n    \"isPaid\": false,\n    \"trip\": \"621d4e6350f1264bc7f827df\",\n    \"sponsor\": \"621d26b90ba6a368db153aaa\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "c2a538ea-0487-4c32-9164-9365caf9fd4a",
+            "name": "List sponsorships",
+            "url": "localhost:8080/v1/sponsorships",
+            "method": "GET",
+            "modified": "2022-03-01T15:54:58.338Z",
+            "created": "2022-03-01T15:45:16.532Z",
+            "_id": "422b7c13-bc39-4539-ba38-8774e30ee673",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"banner\": \"https://fotografias.lasexta.com/clipping/cmsimages02/2020/09/21/86828440-B1FB-43AC-9E9C-A94AC6A4B8BD/default.jpg?crop=1300,731,x0,y0&width=1900&height=1069&optimize=low\",\n    \"landingPage\": \"https://fotografias.lasexta.com/clipping/cmsimages02/2020/09/21/86828440-B1FB-43AC-9E9C-A94AC6A4B8BD/default.jpg?crop=1300,731,x0,y0&width=1900&height=1069&optimize=low\",\n    \"isPaid\": false,\n    \"trip\": \"621d4e6350f1264bc7f827df\",\n    \"sponsor\": \"621d26b90ba6a368db153aaa\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "c2a538ea-0487-4c32-9164-9365caf9fd4a",
+            "name": "Get sponsorship by Id",
+            "url": "localhost:8080/v1/sponsorships/621e2136ddac2de8ae292a46",
+            "method": "GET",
+            "modified": "2022-03-01T15:55:13.955Z",
+            "created": "2022-03-01T15:45:16.532Z",
+            "_id": "ddc1b092-3c4d-48d8-8a20-b949b7b375dd",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"banner\": \"https://fotografias.lasexta.com/clipping/cmsimages02/2020/09/21/86828440-B1FB-43AC-9E9C-A94AC6A4B8BD/default.jpg?crop=1300,731,x0,y0&width=1900&height=1069&optimize=low\",\n    \"landingPage\": \"https://fotografias.lasexta.com/clipping/cmsimages02/2020/09/21/86828440-B1FB-43AC-9E9C-A94AC6A4B8BD/default.jpg?crop=1300,731,x0,y0&width=1900&height=1069&optimize=low\",\n    \"isPaid\": false,\n    \"trip\": \"621d4e6350f1264bc7f827df\",\n    \"sponsor\": \"621d26b90ba6a368db153aaa\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "c2a538ea-0487-4c32-9164-9365caf9fd4a",
+            "name": "Update sponsorship by Id",
+            "url": "localhost:8080/v1/sponsorships/621e2136ddac2de8ae292a46",
+            "method": "PUT",
+            "modified": "2022-03-01T15:56:05.084Z",
+            "created": "2022-03-01T15:45:16.532Z",
+            "_id": "d8c2e4f4-d320-47d0-a3e8-fce73c3fece5",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"banner\": \"https://www.google.com/search?q=img&client=firefox-b-d&channel=trow5&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiX7If_hKX2AhUHz4UKHbk0Dh8Q_AUoAXoECAIQAw&biw=1920&bih=955&dpr=1\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "c2a538ea-0487-4c32-9164-9365caf9fd4a",
+            "name": "Pay sponsorship by Id",
+            "url": "localhost:8080/v1/sponsorships/621e2136ddac2de8ae292a46/pay",
+            "method": "PATCH",
+            "modified": "2022-03-01T15:56:35.507Z",
+            "created": "2022-03-01T15:45:16.532Z",
+            "_id": "9a802ccf-a56b-4030-b9f4-67c937e16a89",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"isPaid\": true\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        }
+    ]
+}

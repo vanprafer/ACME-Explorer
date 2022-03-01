@@ -1,237 +1,351 @@
 {
-	"info": {
-		"_postman_id": "cc96936d-f083-49d3-aa9d-bb0fda9bac12",
-		"name": "Application",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Create application PENDING",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-type": true
-				}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"_id\": \"621a26a90ba6a368db153b4a\",\r\n    \"explorer\": \"621d26b90ba6a368db153d3e\",\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications?content-type=text/json",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications"
-					],
-					"query": [
-						{
-							"key": "content-type",
-							"value": "text/json"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "List applications",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get application by id",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications",
-						"621a26a90ba6a368db153b4a"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update application by id",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-type": true
-				}
-			},
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"status\": [\r\n        \"PENDING\"\r\n    ],\r\n    \"explorer\": \"621d26b90ba6a368db153d3e\",\r\n    \"trip\": \"621d4e6350f1264bc7f827df\",\r\n    \"comments\": \"Hello, I am a comment\",\r\n    \"_id\": \"621a26a90ba6a368db153b4a\",\r\n    \"moment\": \"2022-03-01T12:35:57.318Z\",\r\n    \"created\": \"2022-03-01T12:35:57.318Z\",\r\n    \"__v\": 0\r\n}"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications",
-						"621a26a90ba6a368db153b4a"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Reject application by id",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/due",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications",
-						"621a26a90ba6a368db153b4a",
-						"due"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Due application by id",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/due",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications",
-						"621a26a90ba6a368db153b4a",
-						"due"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Accept application by id",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/accept",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications",
-						"621a26a90ba6a368db153b4a",
-						"accept"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Cancel application by id",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"trip\": \"621d4e6350f1264bc7f827df\"\r\n}\r\n"
-				},
-				"url": {
-					"raw": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/cancel",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"applications",
-						"621a26a90ba6a368db153b4a",
-						"cancel"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+    "client": "Thunder Client",
+    "collectionName": "Application",
+    "dateExported": "2022-03-01T15:51:17.409Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Create application PENDING",
+            "url": "localhost:8080/v1/applications?content-type=text/json",
+            "method": "POST",
+            "modified": "2022-03-01T15:47:39.884Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "3608157a-b822-478c-b0ec-10e5e5503c7c",
+            "params": [
+                {
+                    "name": "content-type",
+                    "value": "text/json",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"_id\": \"621a26a90ba6a368db153b4a\",\n    \"explorer\": \"621d26b90ba6a368db153d3e\",\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "7"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "List applications",
+            "url": "localhost:8080/v1/applications",
+            "method": "GET",
+            "modified": "2022-03-01T15:48:35.083Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "2ee5153e-74f8-4172-acd6-bae1d617c546",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Get application by id",
+            "url": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a",
+            "method": "GET",
+            "modified": "2022-03-01T15:49:23.762Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "379f9e79-9d31-4038-a792-fbec13697e00",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "7"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Update application by id",
+            "url": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a",
+            "method": "PUT",
+            "modified": "2022-03-01T15:49:45.991Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "4cbc808c-96fb-47dc-bbc1-ba6c295209cf",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"status\": [\n        \"PENDING\"\n    ],\n    \"explorer\": \"621d26b90ba6a368db153d3e\",\n    \"trip\": \"621d4e6350f1264bc7f827df\",\n    \"comments\": \"Hello, I am a comment\",\n    \"_id\": \"621a26a90ba6a368db153b4a\",\n    \"moment\": \"2022-03-01T12:35:57.318Z\",\n    \"created\": \"2022-03-01T12:35:57.318Z\",\n    \"__v\": 0\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "7"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 50000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Reject application by id",
+            "url": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/due",
+            "method": "PATCH",
+            "modified": "2022-03-01T15:50:13.259Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "7483add8-af1d-4e61-81d9-1c489b954c04",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 60000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Due application by id",
+            "url": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/due",
+            "method": "PATCH",
+            "modified": "2022-03-01T15:50:27.111Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "f8964400-f584-4aaa-a9b2-67f48feea0af",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 70000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Accept application by id",
+            "url": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/accept",
+            "method": "PATCH",
+            "modified": "2022-03-01T15:50:42.574Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "5c16312b-cb21-4676-9d27-c867ca83c129",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 80000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "3fd3f6e0-b2eb-4299-9c70-25fbf83911a7",
+            "name": "Cancel application by id",
+            "url": "localhost:8080/v1/applications/621a26a90ba6a368db153b4a/cancel",
+            "method": "PATCH",
+            "modified": "2022-03-01T15:50:56.837Z",
+            "created": "2022-03-01T15:44:55.870Z",
+            "_id": "7844152d-7c98-42f6-836f-c0fab4221a14",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"trip\": \"621d4e6350f1264bc7f827df\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "8"
+                }
+            ]
+        }
+    ]
 }

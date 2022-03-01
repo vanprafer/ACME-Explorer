@@ -1,72 +1,91 @@
 {
-	"info": {
-		"_postman_id": "f8e56a8b-d80e-4d72-989a-d529dcf2febb",
-		"name": "Finder",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Create finder",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"_id\": \"621e19253aa978cde857fedd\",\r\n    \"explorer\": \"621d26b90ba6a368db153d3e\"\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/v1/finders",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"finders"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "List finders",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {}
-			},
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"maxPrice\": 100\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/v1/finders/621e19253aa978cde857fedd",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"finders",
-						"621e19253aa978cde857fedd"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+    "client": "Thunder Client",
+    "collectionName": "Finder",
+    "dateExported": "2022-03-01T15:54:13.659Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "cc4fbf9c-81bf-4932-9bf3-de01dc713f31",
+            "name": "Create finder",
+            "url": "localhost:8080/v1/finders",
+            "method": "POST",
+            "modified": "2022-03-01T15:53:11.699Z",
+            "created": "2022-03-01T15:45:11.139Z",
+            "_id": "0209705d-9c70-46b0-a472-227073f6f4fe",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"_id\": \"621e19253aa978cde857fedd\",\n    \"explorer\": \"621d26b90ba6a368db153d3e\"\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "5"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "cc4fbf9c-81bf-4932-9bf3-de01dc713f31",
+            "name": "Update finder",
+            "url": "localhost:8080/v1/finders/621e19253aa978cde857fedd",
+            "method": "PUT",
+            "modified": "2022-03-01T15:54:06.198Z",
+            "created": "2022-03-01T15:45:11.139Z",
+            "_id": "49ab466c-0ee5-45a3-82b5-c4ac09c6a0e6",
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"maxPrice\": 100\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "6"
+                }
+            ]
+        }
+    ]
 }
