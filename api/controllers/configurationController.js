@@ -56,6 +56,15 @@ exports.create_a_configuration = function (req, res) {
     } else {
       if (configuration.length > 0) {
         res.status(405).send('There is already a configuration in the database')
+      } else {
+        const newConfiguration = new Configuration(req.body)
+        newConfiguration.save(function (err, configuration) {
+          if (err) {
+            res.send(err)
+          } else {
+            res.json(configuration)
+          }
+        })
       }
     }
   })
