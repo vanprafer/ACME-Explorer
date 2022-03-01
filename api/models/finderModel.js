@@ -2,8 +2,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const TripSchema = require('./tripModel').schema
-
 const FinderSchema = new Schema({
   keyword: {
     type: String,
@@ -22,7 +20,10 @@ const FinderSchema = new Schema({
   cachedDataDate: {
     type: Date
   },
-  results: [TripSchema],
+  results: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Trip'
+  }],
   explorer: {
     type: Schema.Types.ObjectId,
     required: 'Explorer id required',
