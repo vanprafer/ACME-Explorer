@@ -6,7 +6,7 @@ const Actor = mongoose.model('Actors')
 exports.list_all_actors_v0 = function (req, res) {
   Actor.find({}, function (err, actors) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(actors)
     }
@@ -23,7 +23,7 @@ exports.list_all_actors = function (req, res) {
   // Adapt to find the actors with the specified role
   Actor.find({}, function (err, actors) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(actors)
     }
@@ -34,7 +34,7 @@ exports.create_an_actor_v0 = function (req, res) {
   const newActor = new Actor(req.body)
   newActor.save(function (err, actor) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(actor)
     }
@@ -50,7 +50,7 @@ exports.create_an_actor = function (req, res) {
   }
   newActor.save(function (err, actor) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(actor)
     }
@@ -60,7 +60,7 @@ exports.create_an_actor = function (req, res) {
 exports.read_an_actor_v0 = function (req, res) {
   Actor.findById(req.params.actorId, function (err, actor) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(actor)
     }
@@ -72,7 +72,7 @@ exports.read_an_actor = function (req, res) {
   // "an access token is valid, but requires more privileges"
   Actor.findById(req.params.actorId, function (err, actor) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json(actor)
     }
@@ -86,7 +86,7 @@ exports.update_an_actor_v0 = function (req, res) {
     { new: true },
     function (err, actor) {
       if (err) {
-        res.send(err)
+        res.status(500).send(err.message)
       } else {
         res.json(actor)
       }
@@ -103,7 +103,7 @@ exports.update_an_actor = function (req, res) {
     { new: true },
     function (err, actor) {
       if (err) {
-        res.send(err)
+        res.status(500).send(err)
       } else {
         res.json(actor)
       }
@@ -115,11 +115,11 @@ exports.unban_an_actor_v0 = function (req, res) {
   console.log('Unban an actor with id: ' + req.params.actorId)
   Actor.findOneAndUpdate(
     { _id: req.params.actorId },
-    { $set: { banned: 'false' } },
+    { $set: { banned: false } },
     { new: true },
     function (err, actor) {
       if (err) {
-        res.send(err)
+        res.status(500).send(err)
       } else {
         res.json(actor)
       }
@@ -133,11 +133,11 @@ exports.unban_an_actor = function (req, res) {
   console.log('Unban an actor with id: ' + req.params.actorId)
   Actor.findOneAndUpdate(
     { _id: req.params.actorId },
-    { $set: { banned: 'false' } },
+    { $set: { banned: false } },
     { new: true },
     function (err, actor) {
       if (err) {
-        res.send(err)
+        res.status(500).send(err)
       } else {
         res.json(actor)
       }
@@ -149,11 +149,11 @@ exports.ban_an_actor_v0 = function (req, res) {
   console.log('Ban an actor with id: ' + req.params.actorId)
   Actor.findOneAndUpdate(
     { _id: req.params.actorId },
-    { $set: { banned: 'true' } },
+    { $set: { banned: true } },
     { new: true },
     function (err, actor) {
       if (err) {
-        res.send(err)
+        res.status(500).send(err)
       } else {
         res.json(actor)
       }
@@ -167,11 +167,11 @@ exports.ban_an_actor = function (req, res) {
   console.log('Ban an actor with id: ' + req.params.actorId)
   Actor.findOneAndUpdate(
     { _id: req.params.actorId },
-    { $set: { banned: 'true' } },
+    { $set: { banned: true } },
     { new: true },
     function (err, actor) {
       if (err) {
-        res.send(err)
+        res.status(500).send(err)
       } else {
         res.json(actor)
       }
@@ -182,7 +182,7 @@ exports.ban_an_actor = function (req, res) {
 exports.delete_an_actor_v0 = function (req, res) {
   Actor.deleteOne({ _id: req.params.actorId }, function (err, actor) {
     if (err) {
-      res.send(err)
+      res.status(500).send(err)
     } else {
       res.json({ message: 'Actor successfully deleted' })
     }
