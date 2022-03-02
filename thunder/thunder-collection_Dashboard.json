@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Dashboard",
-    "dateExported": "2022-03-02T10:17:30.507Z",
+    "dateExported": "2022-03-02T15:40:35.701Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -20,15 +20,15 @@
             ],
             "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
             "name": "REBUILD PERIOD",
-            "url": "http://127.0.0.1:8080/v0/dashboard?rebuildPeriod=*/30 * * * * *",
+            "url": "http://127.0.0.1:8080/v0/dashboard?rebuildPeriod=*/10 * * * * *",
             "method": "POST",
-            "modified": "2022-03-02T10:14:23.450Z",
+            "modified": "2022-03-02T15:40:05.273Z",
             "created": "2022-03-02T10:02:25.747Z",
             "_id": "3aab7009-9f92-409f-a8c6-f8f11c6faf91",
             "params": [
                 {
                     "name": "rebuildPeriod",
-                    "value": "*/30 * * * * *",
+                    "value": "*/10 * * * * *",
                     "isPath": false
                 }
             ],
@@ -43,7 +43,7 @@
                     "type": "res-body",
                     "custom": "",
                     "action": "equal",
-                    "value": "\"*/30 * * * * *\""
+                    "value": "\"*/10 * * * * *\""
                 }
             ]
         },

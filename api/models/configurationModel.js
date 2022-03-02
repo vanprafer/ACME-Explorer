@@ -21,6 +21,11 @@ const ConfigurationSchema = new Schema(
       max: 100,
       required: 'Kindly enter the value of the results size'
     },
+    rebuildPeriod: {
+      type: String,
+      default: '*/30 * * * * *',
+      required: 'Kindly enter the value of the rebuild period'
+    },
     created: {
       type: Date,
       default: Date.now

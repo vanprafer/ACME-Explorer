@@ -11,6 +11,7 @@ const Finder = require('./api/models/finderModel')
 const Sponsorship = require('./api/models/sponsorshipModel')
 const Trip = require('./api/models/tripModel')
 const DashboardTools = require('./api/controllers/dashboardController')
+const ConfigurationTools = require('./api/controllers/configurationController')
 
 const bodyParser = require('body-parser')
 
@@ -66,4 +67,7 @@ mongoose.connection.on('open', function () {
 mongoose.connection.on('error', function (err) {
   console.error('DB init error ' + err)
 })
+
+// Launch dashboard computation job and define the default configurations of the system
 DashboardTools.createDashboardJob()
+ConfigurationTools.loadDefaultConfiguration()
