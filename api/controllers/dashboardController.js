@@ -5,6 +5,7 @@ const Trip = mongoose.model('Trips')
 const Application = mongoose.model('Applications')
 const Finder = mongoose.model('Finders')
 const Dashboard = mongoose.model('Dashboards')
+const Configuration = mongoose.model('Configuration')
 const async = require('async')
 
 exports.list_all_indicators = function (req, res) {
@@ -36,20 +37,63 @@ const CronTime = require('cron').CronTime
 // '*/30 * * * * *' cada 30 segundos
 // '*/10 * * * * *' cada 10 segundos
 // '* * * * * *' cada segundo
-let rebuildPeriod = '*/10 * * * * *' // El que se usará por defecto
+let rebuildPeriod = '*/30 * * * * *' // El que se usará por defecto
 let computeDashboardJob
 
+// This endpoint function updates CronJob rebuild period when is called
+// and also puts the new value in the configuration model where it is stored
 exports.rebuildPeriod = function (req, res) {
   console.log('Updating rebuild period. Request: period: ' + req.query.rebuildPeriod)
-  rebuildPeriod = req.query.rebuildPeriod
-  computeDashboardJob.setTime(new CronTime(rebuildPeriod))
-  computeDashboardJob.start()
 
-  res.json(req.query.rebuildPeriod)
+  Configuration.find().limit(1).exec({}, function (err, configuration) {
+    if (err) {
+      console.log('Error updating rebuild period: ' + err)
+    } else {
+      // eslint-disable-next-line eqeqeq
+      Configuration.findOneAndUpdate(
+        { _id: configuration[0]._id },
+        { $set: { rebuildPeriod: req.query.rebuildPeriod } },
+        { new: true },
+        function (err, configuration) {
+          if (err) {
+            console.log('Error updating rebuild period: ' + err)
+          } else {
+            rebuildPeriod = req.query.rebuildPeriod
+            computeDashboardJob.setTime(new CronTime(req.query.rebuildPeriod))
+            computeDashboardJob.start()
+            res.json(rebuildPeriod)
+          }
+        }
+      )
+    }
+  })
+}
+
+// This function is called whenever the job executes itself and checks whether
+// the rebuild period in configuration has changed. If it did, we modify
+// the CronJob to these value.
+// In that way, if an administrator modifies the configuration, the CronJob
+// will always use this new value
+function checkConfigurationRebuildPeriod () {
+  Configuration.find().limit(1).exec({}, function (err, configuration) {
+    if (err) {
+      console.log('Error computing dashboard: ' + err)
+    } else {
+      // eslint-disable-next-line eqeqeq
+      if (configuration[0].rebuildPeriod != rebuildPeriod) {
+        console.log('Updating rebuild period from configuration. Period: ' + configuration[0].rebuildPeriod)
+        rebuildPeriod = configuration[0].rebuildPeriod
+        computeDashboardJob.setTime(new CronTime(rebuildPeriod))
+        computeDashboardJob.start()
+      }
+    }
+  })
 }
 
 function createDashboardJob () {
   computeDashboardJob = new CronJob(rebuildPeriod, function () {
+    checkConfigurationRebuildPeriod()
+
     const newDashboard = new Dashboard()
     console.log('Cron job submitted. Rebuild period: ' + rebuildPeriod)
     async.parallel([

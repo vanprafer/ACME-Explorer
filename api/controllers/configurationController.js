@@ -60,3 +60,25 @@ exports.update_configuration = function (req, res) {
     }
   })
 }
+
+// Checks whether there is a previous configuration, deletes it, and creates a default one.
+function loadDefaultConfiguration () {
+  Configuration.findOneAndDelete({}, function (err, configuration) {
+    if (err) {
+      console.log('Error loading default configuration: ' + err)
+    } else {
+      const newConfiguration = new Configuration()
+      newConfiguration.flatRate = 10
+
+      newConfiguration.save(function (err, configuration) {
+        if (err) {
+          console.log('Error loading default configuration: ' + err)
+        } else {
+          console.log('Default system configurations loaded. Date: ' + new Date())
+        }
+      })
+    }
+  })
+}
+
+module.exports.loadDefaultConfiguration = loadDefaultConfiguration
