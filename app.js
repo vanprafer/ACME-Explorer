@@ -6,9 +6,11 @@ const mongoose = require('mongoose')
 const Actor = require('./api/models/actorModel')
 const Application = require('./api/models/applicationModel')
 const Configuration = require('./api/models/configurationModel')
+const Dashboard = require('./api/models/dashboardModel')
 const Finder = require('./api/models/finderModel')
 const Sponsorship = require('./api/models/sponsorshipModel')
 const Trip = require('./api/models/tripModel')
+const DashboardTools = require('./api/controllers/dashboardController')
 
 const bodyParser = require('body-parser')
 
@@ -41,6 +43,9 @@ const mongoDBPort = process.env.mongoDBPort || '27017'
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer'
 const mongoDBURI = 'mongodb://' + mongoDBCredentials + mongoDBHostname + ':' + mongoDBPort + '/' + mongoDBName
 
+// mongoose.set('useCreateIndex', true)
+// mongoose.set('useFindAndModify', false)
+
 mongoose.connect(mongoDBURI, {
   // reconnectTries: 10,
   // reconnectInterval: 500,
@@ -61,3 +66,4 @@ mongoose.connection.on('open', function () {
 mongoose.connection.on('error', function (err) {
   console.error('DB init error ' + err)
 })
+DashboardTools.createDashboardJob()
