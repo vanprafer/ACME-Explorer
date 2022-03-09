@@ -23,7 +23,7 @@ const ConfigurationSchema = new Schema(
     },
     rebuildPeriod: {
       type: String,
-      default: '*/30 * * * * *',
+      default: '*/10 * * * * *',
       required: 'Kindly enter the value of the rebuild period'
     },
     created: {

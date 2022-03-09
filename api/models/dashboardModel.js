@@ -21,6 +21,12 @@ const DashboardSchema = new Schema({
   findersTopKeywords: {
     type: Object
   },
+  explorersExpensesCubeByYear: {
+    type: Object
+  },
+  explorersExpensesCubeByMonth: {
+    type: Object
+  },
   computationMoment: {
     type: Date,
     default: Date.now
