@@ -69,5 +69,5 @@ mongoose.connection.on('error', function (err) {
 })
 
 // Launch dashboard computation job and define the default configurations of the system
-DashboardTools.createDashboardJob()
 ConfigurationTools.loadDefaultConfiguration()
+DashboardTools.createDashboardJob()
