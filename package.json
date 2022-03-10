@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/vanprafer/ACME-Explorer#readme",
   "dependencies": {
+    "async": "^3.2.3",
     "bcrypt": "^5.0.1",
+    "cron": "^1.8.2",
     "dateformat": "^5.0.2",
     "express": "^4.17.2",
     "moment": "^2.29.1",
