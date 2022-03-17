@@ -1,0 +1,19 @@
+JG.repeat(20, 20, {
+  _id: JG.objectId(),
+  ticker: JG.integer(111111,999999)+'-'+JG.random('aaaa','bbbb','cccc'),
+  title: `${JG.loremIpsum({units: 'words', count: 4})}`,
+  description: `${JG.loremIpsum({units: 'words', count: 15})}`,
+  price: `${JG.integer(10,150)}`,
+  requirements: JG.repeat(1, 4, JG.loremIpsum({units: 'words', count: 6})),
+  dateStart: JG.date(new Date(2018, 0, 1), new Date(2020, 0, 1)),
+  dateEnd: JG.date(new Date(2021, 0, 1), new Date()),
+  published: `${JG.random('false', 'true')}`,
+  manager: JG.objectId(),
+  stages: JG.repeat(1, 4, {
+    title: `${JG.loremIpsum({units: 'words', count: 4})}`,
+  	description: `${JG.loremIpsum({units: 'words', count: 15})}`,
+  	price: `${JG.integer(10,150)}`
+  }),
+  created: JG.date(new Date(2021, 0, 1), new Date()),
+  __v: `${JG.integer(0,0)}`
+});

@@ -1,0 +1,1602 @@
+[
+    {
+      "_id": "62334a03468dac1373957bdb",
+      "name": "Schroeder",
+      "surname": "Mckinney",
+      "email": "schroeder9@frank.com",
+      "password": "2c4e3cca-10cc-42e7-9d2a-7c506a7822ed",
+      "language": "en",
+      "phone": "933119153",
+      "address": "87 Oakland Place, Nord, New York",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-11-11T07:27:39.476Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03fc9b7da32012dcb8",
+      "name": "Gordon",
+      "surname": "Wagner",
+      "email": "gordon3@mason.com",
+      "password": "00f01ba7-1505-47b8-9d07-8c2acc2c06f4",
+      "language": "en",
+      "phone": "903075650",
+      "address": "69 Engert Avenue, Saticoy, Virgin Islands",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-08-13T13:01:16.244Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a030f8a624801f90cba",
+      "name": "Lillian",
+      "surname": "Benton",
+      "email": "lillian1@brewer.com",
+      "password": "4b198d2c-1e03-4856-b637-721d2aa0eb6a",
+      "language": "en",
+      "phone": "990686170",
+      "address": "28 Will Place, Adamstown, Marshall Islands",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-06-25T22:32:33.263Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03790d3fd653568583",
+      "name": "Osborne",
+      "surname": "Hansen",
+      "email": "osborne3@guy.com",
+      "password": "258720e1-cac1-48fa-9316-eb099cb87f18",
+      "language": "es",
+      "phone": "974512968",
+      "address": "25 Huntington Street, Wakulla, Ohio",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-08-06T11:18:11.010Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03da598d414dc6850b",
+      "name": "Lynch",
+      "surname": "Burnett",
+      "email": "lynch1@nicholson.com",
+      "password": "e0058a76-82b3-4b81-b18e-24e146985f8a",
+      "language": "en",
+      "phone": "922961893",
+      "address": "5 Union Street, Bluffview, Florida",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-11-19T04:01:42.274Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a036428bad088436130",
+      "name": "Queen",
+      "surname": "Slater",
+      "email": "queen7@porter.com",
+      "password": "0e372db2-69f3-4ca8-8f10-feab16f11eb8",
+      "language": "it",
+      "phone": "989264399",
+      "address": "54 Quay Street, Brecon, North Dakota",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-05-28T19:56:20.001Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03cd1e55742a90ffc8",
+      "name": "Parks",
+      "surname": "Merrill",
+      "email": "parks7@greene.com",
+      "password": "58a331fc-261b-4d25-bf46-3aa020dda199",
+      "language": "es",
+      "phone": "985171416",
+      "address": "99 Prospect Avenue, Lumberton, New Mexico",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-11-11T12:19:31.735Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03c5d922774c1f95a9",
+      "name": "Tillman",
+      "surname": "Matthews",
+      "email": "tillman9@owen.com",
+      "password": "b5bad59a-94ab-4877-a0e9-7c13f444d910",
+      "language": "it",
+      "phone": "906886152",
+      "address": "50 Poly Place, Emison, North Carolina",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-07-03T11:30:08.305Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0311d2bfb0a2285f8d",
+      "name": "Norma",
+      "surname": "Gilliam",
+      "email": "norma7@ratliff.com",
+      "password": "bc8d906f-1e57-4679-8685-8443479b3c43",
+      "language": "en",
+      "phone": "930465188",
+      "address": "87 Fountain Avenue, Barclay, Alaska",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2022-03-03T03:06:41.294Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a039f70f3e9c79ab45d",
+      "name": "Lucy",
+      "surname": "Sullivan",
+      "email": "lucy7@ware.com",
+      "password": "07d90494-609a-4b63-bca2-475a91f76d26",
+      "language": "es",
+      "phone": "919395694",
+      "address": "60 Goodwin Place, Hollins, Nevada",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-02-01T04:59:02.156Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03ccea8410d78ef625",
+      "name": "Mary",
+      "surname": "Lambert",
+      "email": "mary9@buck.com",
+      "password": "d421eae8-7bb8-4523-b3bd-5d1c8f883bb8",
+      "language": "it",
+      "phone": "984028882",
+      "address": "39 Times Placez, Holcombe, Iowa",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-05-16T23:21:52.247Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a039d93e6797062226b",
+      "name": "Carmella",
+      "surname": "Alvarez",
+      "email": "carmella1@west.com",
+      "password": "44600620-dcd8-4ebc-8451-6732cb98f6df",
+      "language": "en",
+      "phone": "905178901",
+      "address": "70 Menahan Street, Winchester, American Samoa",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-05-20T21:06:06.133Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03586df7d7c72f8581",
+      "name": "Butler",
+      "surname": "Scott",
+      "email": "butler3@bates.com",
+      "password": "c4beb1b4-012d-4207-b010-b5e5b0e63b1e",
+      "language": "en",
+      "phone": "902404212",
+      "address": "95 Elliott Place, Spokane, New Hampshire",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-02-24T15:53:07.234Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03730e110b7df52b8b",
+      "name": "Daniels",
+      "surname": "Larson",
+      "email": "daniels10@marsh.com",
+      "password": "c92c4d56-37b9-462b-a415-53695bf4892b",
+      "language": "en",
+      "phone": "928460601",
+      "address": "60 Denton Place, Cazadero, California",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-03-29T22:55:21.803Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a035dcd38383e55d14f",
+      "name": "Alexis",
+      "surname": "Warren",
+      "email": "alexis1@vang.com",
+      "password": "e9d086f2-dce9-4a7a-bd69-ef483db4499e",
+      "language": "it",
+      "phone": "992577076",
+      "address": "67 Madeline Court, Crayne, Tennessee",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-08-12T17:44:40.240Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a030587eedce85fb202",
+      "name": "Shauna",
+      "surname": "Harris",
+      "email": "shauna5@beard.com",
+      "password": "28864892-31c8-477f-8a0f-1908602bae5b",
+      "language": "es",
+      "phone": "975178565",
+      "address": "44 Kane Street, Derwood, Washington",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-10-23T23:06:48.418Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03feddcc84c1a5bd4a",
+      "name": "Rosalyn",
+      "surname": "Meyers",
+      "email": "rosalyn4@wiggins.com",
+      "password": "c7f6f660-f0ad-4ec6-a20b-497db2203ad7",
+      "language": "es",
+      "phone": "990780459",
+      "address": "46 Portal Street, Crown, Kansas",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-11-21T08:13:11.682Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03ff8a092025c33615",
+      "name": "Stafford",
+      "surname": "Cherry",
+      "email": "stafford0@brown.com",
+      "password": "1871d126-53bd-4326-981f-da0cf2a38d70",
+      "language": "en",
+      "phone": "940658942",
+      "address": "49 Knapp Street, Wawona, Kentucky",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2021-10-28T21:09:08.802Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a035a4208ff411ac2f5",
+      "name": "Harvey",
+      "surname": "Miles",
+      "email": "harvey1@barry.com",
+      "password": "58cc1617-28ab-48fd-8f6e-9c83f51bc9a7",
+      "language": "it",
+      "phone": "953343913",
+      "address": "26 Oriental Court, Laurelton, Montana",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-12-23T12:11:02.446Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a039857dd79aff7189e",
+      "name": "Hebert",
+      "surname": "Bennett",
+      "email": "hebert10@larsen.com",
+      "password": "29513078-d67d-4d87-8cf0-671240a4b126",
+      "language": "en",
+      "phone": "944928625",
+      "address": "90 Kings Hwy, Marne, Texas",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2022-02-05T06:03:01.910Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a030eed91aaaae24ef6",
+      "name": "Leah",
+      "surname": "Morales",
+      "email": "leah4@wilder.com",
+      "password": "588cdb9e-8fe3-49fb-a70c-ab0dd60cd20f",
+      "language": "it",
+      "phone": "997606097",
+      "address": "28 Forbell Street, Delwood, Louisiana",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-07-27T07:05:28.233Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0310e78053ba728656",
+      "name": "Kirsten",
+      "surname": "Carlson",
+      "email": "kirsten3@key.com",
+      "password": "039236a1-7faa-4483-9f14-f548db486ff3",
+      "language": "es",
+      "phone": "937856350",
+      "address": "94 Johnson Street, Aguila, Maryland",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2022-02-14T23:31:40.422Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03d06edd7f403ba024",
+      "name": "Marcia",
+      "surname": "Abbott",
+      "email": "marcia9@page.com",
+      "password": "d53ffd5a-4cf2-4a01-8981-5aed7de042a8",
+      "language": "it",
+      "phone": "976220040",
+      "address": "98 Tillary Street, Dante, Connecticut",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-01-09T07:45:26.359Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03f85352a14340f493",
+      "name": "Sanchez",
+      "surname": "Trujillo",
+      "email": "sanchez1@cunningham.com",
+      "password": "7fe723a7-7a80-4055-821f-cbf4ddb20f36",
+      "language": "es",
+      "phone": "913339816",
+      "address": "78 Woodside Avenue, Dyckesville, Arizona",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-03-05T22:03:24.043Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a032f2993a54aca32e4",
+      "name": "Page",
+      "surname": "Morgan",
+      "email": "page0@shannon.com",
+      "password": "79bcdecd-09ab-412c-81c1-380cafc36efe",
+      "language": "es",
+      "phone": "940479336",
+      "address": "90 Hendrix Street, Eggertsville, Wyoming",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-06-09T01:42:18.041Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03e3247b16ca10f457",
+      "name": "Earline",
+      "surname": "Jarvis",
+      "email": "earline8@webb.com",
+      "password": "7ab04949-5e50-4767-a45b-d511951afb4b",
+      "language": "en",
+      "phone": "989596859",
+      "address": "100 Court Street, Rehrersburg, Minnesota",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-01-23T13:26:45.944Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03632bc0d3966bad3b",
+      "name": "Pope",
+      "surname": "Morrow",
+      "email": "pope9@padilla.com",
+      "password": "567f5e1a-1678-4921-81a4-f3cba6dab4e1",
+      "language": "it",
+      "phone": "939354380",
+      "address": "62 Hillel Place, Matheny, Illinois",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2022-03-17T04:53:47.831Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03a0627dc5eec1e1bf",
+      "name": "Paulette",
+      "surname": "Yang",
+      "email": "paulette4@noble.com",
+      "password": "8b834fcf-3a84-4348-9b00-77f084289727",
+      "language": "en",
+      "phone": "989819023",
+      "address": "40 Heyward Street, Dunnavant, Colorado",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-05-12T13:04:24.789Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03b64a9787a69a7256",
+      "name": "Pennington",
+      "surname": "Santiago",
+      "email": "pennington5@casey.com",
+      "password": "3c4af885-2407-44c0-924f-b1e279f1c30e",
+      "language": "it",
+      "phone": "950607462",
+      "address": "88 Prince Street, Eastmont, District Of Columbia",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2022-01-16T20:21:08.815Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03af8dc7bfd5564231",
+      "name": "Rowena",
+      "surname": "Reese",
+      "email": "rowena2@hoffman.com",
+      "password": "07f2b077-d55e-4e7c-9fb7-3cb811215f31",
+      "language": "es",
+      "phone": "932467625",
+      "address": "37 Monroe Place, Vale, Utah",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-03-12T14:04:56.619Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a032b653969b0c4fabb",
+      "name": "Charlene",
+      "surname": "Schroeder",
+      "email": "charlene10@turner.com",
+      "password": "0f391102-7b50-4e82-85a5-35625fc214e1",
+      "language": "it",
+      "phone": "936745290",
+      "address": "76 Reeve Place, Sultana, Nebraska",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-06-19T15:34:38.763Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a036c38483acc3f40ba",
+      "name": "Villarreal",
+      "surname": "Cervantes",
+      "email": "villarreal0@cooley.com",
+      "password": "76203045-2d19-4ab4-a2b5-857d6eb20f6c",
+      "language": "en",
+      "phone": "908017572",
+      "address": "71 Corbin Place, Southview, Indiana",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2022-01-29T10:49:39.205Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a035c2e20c1c7dc5298",
+      "name": "Lidia",
+      "surname": "Howe",
+      "email": "lidia3@roman.com",
+      "password": "13f6732a-2017-4e4a-9b7f-ea0c75b00a6a",
+      "language": "es",
+      "phone": "944617835",
+      "address": "3 Bushwick Avenue, Weeksville, Delaware",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2022-03-12T21:25:21.669Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a038db9ab496ca3dae2",
+      "name": "Lee",
+      "surname": "Donovan",
+      "email": "lee3@dejesus.com",
+      "password": "6c599940-55f3-4a8f-a33d-63843caffb0a",
+      "language": "en",
+      "phone": "944801220",
+      "address": "38 Montgomery Place, Santel, Arkansas",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-03-18T02:21:13.302Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03bc41c43e506ce771",
+      "name": "Benita",
+      "surname": "Mercado",
+      "email": "benita7@velazquez.com",
+      "password": "58fc2b87-f974-4e8c-9783-28dfccd44d5c",
+      "language": "es",
+      "phone": "963740374",
+      "address": "37 Garden Street, Ezel, Hawaii",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-12-11T08:53:32.919Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a037b5a7fb46ebf4fdd",
+      "name": "Natalia",
+      "surname": "Burton",
+      "email": "natalia10@grant.com",
+      "password": "164bc9e6-1dbf-4edb-b0d8-c5d68edf0bd8",
+      "language": "en",
+      "phone": "921687976",
+      "address": "8 High Street, Harrodsburg, West Virginia",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-06-24T19:39:09.687Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a030cbaddf566ac41b3",
+      "name": "Cooke",
+      "surname": "Holloway",
+      "email": "cooke3@murphy.com",
+      "password": "7a78507f-15e0-4141-ba5d-36af4ce7e2de",
+      "language": "it",
+      "phone": "922643642",
+      "address": "37 Emerald Street, Lookingglass, Georgia",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-07-15T18:19:46.232Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a034f39c748eb41301e",
+      "name": "Ramirez",
+      "surname": "Pena",
+      "email": "ramirez9@sanchez.com",
+      "password": "930a2f59-bccd-46f3-9781-d3ca7d4de05e",
+      "language": "it",
+      "phone": "907884828",
+      "address": "96 Oxford Street, Johnsonburg, Oregon",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-02-11T16:33:47.389Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a032ccbb03a4f162ff9",
+      "name": "Mendez",
+      "surname": "Solis",
+      "email": "mendez3@peck.com",
+      "password": "7a1867fe-3c7a-4402-a8a9-f4a1c557424d",
+      "language": "es",
+      "phone": "905301994",
+      "address": "91 Horace Court, National, Massachusetts",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2022-01-20T14:03:46.718Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a034c16f71e261ae561",
+      "name": "Fay",
+      "surname": "Caldwell",
+      "email": "fay7@william.com",
+      "password": "3157c4f5-c0b4-49ae-b42e-cf3df0c16c64",
+      "language": "en",
+      "phone": "928042954",
+      "address": "24 Dennett Place, Caroleen, Missouri",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-07-24T18:47:42.828Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03f33bde53c290c061",
+      "name": "Carpenter",
+      "surname": "Schwartz",
+      "email": "carpenter4@york.com",
+      "password": "9d782cdc-ef45-477b-abb9-9d23fe5f0e76",
+      "language": "it",
+      "phone": "988981396",
+      "address": "22 Waldane Court, Iberia, South Carolina",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-07-26T04:52:33.466Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03397ac219f99c1ae9",
+      "name": "Aguirre",
+      "surname": "Barton",
+      "email": "aguirre0@ryan.com",
+      "password": "1f259d62-7e67-4fcf-b876-0f9a2299aaab",
+      "language": "es",
+      "phone": "934046131",
+      "address": "66 Fane Court, Buxton, Rhode Island",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-06-13T15:34:26.478Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03242d23d3730d8638",
+      "name": "Marcella",
+      "surname": "Harmon",
+      "email": "marcella10@witt.com",
+      "password": "ec761b90-3c94-4d9b-b796-f2d00b7047b4",
+      "language": "it",
+      "phone": "937123717",
+      "address": "68 Kingston Avenue, Gibsonia, Mississippi",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2021-08-03T23:23:14.731Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a032c0c9cedbff4a05a",
+      "name": "Marianne",
+      "surname": "Avery",
+      "email": "marianne0@shepard.com",
+      "password": "d7df729b-efed-4a96-85dd-664c02cb26f4",
+      "language": "it",
+      "phone": "965726759",
+      "address": "7 Lott Avenue, Rew, Oklahoma",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-12-27T09:15:43.975Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03c6eff9c7a8805eb9",
+      "name": "Zimmerman",
+      "surname": "Lewis",
+      "email": "zimmerman10@doyle.com",
+      "password": "fd472a18-af38-472f-8d4e-76b3b0765300",
+      "language": "es",
+      "phone": "983813188",
+      "address": "65 Jodie Court, Corinne, Guam",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-07-20T22:13:48.056Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a032736aef4f1f60fd7",
+      "name": "Moon",
+      "surname": "Chapman",
+      "email": "moon3@wolf.com",
+      "password": "1c5cd671-237d-40fb-8fe4-3c8d497d0575",
+      "language": "es",
+      "phone": "955660801",
+      "address": "98 Florence Avenue, Talpa, Virginia",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2022-02-25T04:44:29.636Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03c39f9b1adad58dd3",
+      "name": "Bennett",
+      "surname": "House",
+      "email": "bennett7@oliver.com",
+      "password": "bcfee147-4b78-49bc-b343-229b71024a17",
+      "language": "it",
+      "phone": "904164046",
+      "address": "9 Chauncey Street, Graniteville, Northern Mariana Islands",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-09-29T23:09:43.916Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a038a51200a228bb11f",
+      "name": "Giles",
+      "surname": "Mathews",
+      "email": "giles7@long.com",
+      "password": "46d28283-7606-46e6-b347-433bc0f52c8f",
+      "language": "it",
+      "phone": "943267542",
+      "address": "52 Harbor Lane, Taycheedah, New Jersey",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2022-01-19T05:10:46.655Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a038e1799a2772fb452",
+      "name": "Peters",
+      "surname": "Cabrera",
+      "email": "peters4@montgomery.com",
+      "password": "343b640b-f5d7-4274-a26a-47a57be2d3cb",
+      "language": "es",
+      "phone": "945537104",
+      "address": "9 Tennis Court, Brandywine, Federated States Of Micronesia",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-12-04T00:41:57.740Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03e955f8f9fcdecbc9",
+      "name": "Goodwin",
+      "surname": "Cline",
+      "email": "goodwin6@blake.com",
+      "password": "f72996da-f722-4db1-b258-c0283f576c60",
+      "language": "it",
+      "phone": "913190902",
+      "address": "74 Belvidere Street, Vienna, Palau",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-01-20T01:12:48.935Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0345e67430ca796aae",
+      "name": "Mccormick",
+      "surname": "Sharp",
+      "email": "mccormick10@howard.com",
+      "password": "8901bbe3-cff5-48f9-a325-ac33e1eb3298",
+      "language": "es",
+      "phone": "947775240",
+      "address": "93 Bogart Street, Slovan, Wisconsin",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-06-04T09:45:46.234Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0346cce1b32f718f0a",
+      "name": "Ava",
+      "surname": "Olsen",
+      "email": "ava2@castaneda.com",
+      "password": "0362202c-fcd8-458c-a6ef-bb12b5e4d6d1",
+      "language": "it",
+      "phone": "934667226",
+      "address": "58 Stockholm Street, Dalton, Pennsylvania",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-03-19T23:31:11.184Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a037763901d7f0e9b6c",
+      "name": "Booker",
+      "surname": "Neal",
+      "email": "booker3@stuart.com",
+      "password": "5193febd-c426-42d7-9ea3-e565595f24a2",
+      "language": "en",
+      "phone": "932294686",
+      "address": "23 Ridge Boulevard, Longoria, Idaho",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-10-06T01:48:46.788Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03ceb5256cd41fde20",
+      "name": "Belinda",
+      "surname": "Humphrey",
+      "email": "belinda0@delgado.com",
+      "password": "8e355cc1-4e9a-4b0f-9ff6-cfc64321fea4",
+      "language": "es",
+      "phone": "928336060",
+      "address": "21 Sullivan Street, Leyner, Maine",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-09-10T06:05:22.717Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03fc2bcc9cfb34eb69",
+      "name": "Stanley",
+      "surname": "Craig",
+      "email": "stanley7@hernandez.com",
+      "password": "d668cd1f-861a-4055-95ed-39bc631e5544",
+      "language": "es",
+      "phone": "984448633",
+      "address": "92 Calder Place, Muse, South Dakota",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2022-03-10T20:31:33.430Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a034b1981ac1fa281ad",
+      "name": "Fuentes",
+      "surname": "Watts",
+      "email": "fuentes2@poole.com",
+      "password": "1e18dfd8-a980-4228-a9f4-47a391c1f854",
+      "language": "es",
+      "phone": "971318343",
+      "address": "36 Terrace Place, Grayhawk, Puerto Rico",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-05-09T02:57:22.320Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03fb3e17d0109c16c1",
+      "name": "Willa",
+      "surname": "Mcdonald",
+      "email": "willa0@velasquez.com",
+      "password": "7935e023-a3f6-4e3a-851a-d27bf0571d14",
+      "language": "es",
+      "phone": "967020016",
+      "address": "63 Montague Street, Canby, Michigan",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-06-12T13:09:53.561Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03a2094888baf12fe2",
+      "name": "Meyers",
+      "surname": "Trevino",
+      "email": "meyers2@parrish.com",
+      "password": "d115f6e8-0364-4fe8-8547-dffdbf03ceab",
+      "language": "es",
+      "phone": "917380505",
+      "address": "5 Bijou Avenue, Cedarville, Vermont",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-01-19T16:40:16.955Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a030f8792151c8ed9cb",
+      "name": "Zamora",
+      "surname": "Burt",
+      "email": "zamora3@booth.com",
+      "password": "21abd781-298e-4534-857f-4ef095dcd27a",
+      "language": "en",
+      "phone": "927994274",
+      "address": "93 Bond Street, Ona, Alabama",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2022-02-09T21:24:57.715Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03437fc8c5ecd095bc",
+      "name": "Cornelia",
+      "surname": "Garrett",
+      "email": "cornelia2@tate.com",
+      "password": "88ab30ec-9e03-44a6-aa78-592d31c6c8b8",
+      "language": "en",
+      "phone": "934226056",
+      "address": "84 Coventry Road, Sussex, New York",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2021-03-27T14:28:24.549Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03e86ab8db082c256b",
+      "name": "Castaneda",
+      "surname": "Stanley",
+      "email": "castaneda3@dyer.com",
+      "password": "11a94daa-56f4-4603-9866-a1303d839d73",
+      "language": "it",
+      "phone": "993309190",
+      "address": "82 Conway Street, Maybell, Virgin Islands",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2022-01-19T11:56:47.632Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03fe862724c77a5bbb",
+      "name": "Elisa",
+      "surname": "Dawson",
+      "email": "elisa6@lindsey.com",
+      "password": "b75c273f-2785-409b-862d-6aecff665534",
+      "language": "en",
+      "phone": "935409919",
+      "address": "66 Fair Street, Caledonia, Marshall Islands",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-07-12T06:50:48.275Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0335e01ab32bef5ad0",
+      "name": "Gilliam",
+      "surname": "Nelson",
+      "email": "gilliam5@gill.com",
+      "password": "e1536f05-b8ce-4ce1-acaa-006a9afa8b40",
+      "language": "it",
+      "phone": "910222312",
+      "address": "78 Lincoln Terrace, Sidman, Ohio",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-01-15T04:57:56.491Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03e46d283f8f5cade2",
+      "name": "Trudy",
+      "surname": "Merritt",
+      "email": "trudy1@savage.com",
+      "password": "3fd6372a-9571-4e7d-9674-695433f666ca",
+      "language": "en",
+      "phone": "939003384",
+      "address": "11 Royce Place, Charco, Florida",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-11-08T15:45:15.901Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03ca8eb711544135f7",
+      "name": "Kimberley",
+      "surname": "Blankenship",
+      "email": "kimberley2@clayton.com",
+      "password": "b9380e90-04f7-43f4-b618-d835b2d3f837",
+      "language": "es",
+      "phone": "955006008",
+      "address": "41 Herzl Street, Rockingham, North Dakota",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2021-10-13T16:36:16.399Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a036c774c501c47be50",
+      "name": "Lindsey",
+      "surname": "Melendez",
+      "email": "lindsey5@heath.com",
+      "password": "724de864-3e42-425a-9a3c-260d691704d0",
+      "language": "es",
+      "phone": "960801008",
+      "address": "4 Luquer Street, Rushford, New Mexico",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-04-11T19:58:51.798Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03c2f917f11a3c4c84",
+      "name": "Sherri",
+      "surname": "Dickson",
+      "email": "sherri9@blair.com",
+      "password": "bbce3701-de47-4357-9499-d3322beaa213",
+      "language": "es",
+      "phone": "976143603",
+      "address": "2 Furman Avenue, Castleton, North Carolina",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2022-01-16T15:35:07.154Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03191a6175adbaa13b",
+      "name": "Penny",
+      "surname": "Cooper",
+      "email": "penny1@robinson.com",
+      "password": "72273edc-5d65-45e2-8001-17094f4b2130",
+      "language": "it",
+      "phone": "972900240",
+      "address": "96 Colby Court, Irwin, Alaska",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-03-07T04:46:52.970Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03d85e3c6360716566",
+      "name": "Norris",
+      "surname": "Walter",
+      "email": "norris9@tran.com",
+      "password": "263fcb59-981f-440d-8cb3-91382fa823b2",
+      "language": "en",
+      "phone": "979659319",
+      "address": "16 Mill Avenue, Sunnyside, Nevada",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2022-03-08T00:43:43.690Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a038b26cd569ddcd8dd",
+      "name": "Elliott",
+      "surname": "Mills",
+      "email": "elliott1@hull.com",
+      "password": "3c38b1cd-959d-4768-8a8b-57f921ab4089",
+      "language": "es",
+      "phone": "915471932",
+      "address": "37 Union Avenue, Eagletown, Iowa",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-01-04T04:21:36.879Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a036a3047b6b772fcc8",
+      "name": "Warner",
+      "surname": "Joseph",
+      "email": "warner7@foreman.com",
+      "password": "e14f3a18-83f3-4bd3-978f-e8d93153d8af",
+      "language": "en",
+      "phone": "998096979",
+      "address": "96 Seigel Court, Axis, American Samoa",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2022-03-14T08:08:11.963Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0399c5f068afc376bc",
+      "name": "Bridgette",
+      "surname": "Kent",
+      "email": "bridgette8@delacruz.com",
+      "password": "a1a37567-e11c-47b6-8b85-dfa4d5c81d1b",
+      "language": "es",
+      "phone": "921590738",
+      "address": "50 Dahl Court, Boling, New Hampshire",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2022-01-24T21:46:36.325Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03673f1c534d30fdb5",
+      "name": "Carrie",
+      "surname": "Morris",
+      "email": "carrie7@conrad.com",
+      "password": "511dc412-073c-4b88-b371-37dfef039678",
+      "language": "it",
+      "phone": "985203092",
+      "address": "72 Ocean Avenue, Hanover, California",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-12-31T12:17:39.750Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a038406140afe9c0e77",
+      "name": "Rowland",
+      "surname": "Sanford",
+      "email": "rowland2@foley.com",
+      "password": "830232fe-46e6-4a62-b3ad-5c5de53d2b94",
+      "language": "es",
+      "phone": "946837237",
+      "address": "28 Cove Lane, Waterloo, Tennessee",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-08-09T18:03:38.004Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a031c60be6b03bcba98",
+      "name": "Massey",
+      "surname": "Farley",
+      "email": "massey1@glass.com",
+      "password": "c7967ba1-525b-41f9-acb7-99b74b01046b",
+      "language": "es",
+      "phone": "934879537",
+      "address": "80 Greenwood Avenue, Jenkinsville, Washington",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-07-24T23:45:49.695Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0330948bdbb0a381a8",
+      "name": "Ola",
+      "surname": "Charles",
+      "email": "ola5@pacheco.com",
+      "password": "db686632-9140-4ae5-81bd-324d1b5e4b8c",
+      "language": "it",
+      "phone": "926195274",
+      "address": "34 Centre Street, Roberts, Kansas",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2021-01-25T06:16:05.664Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a034a9630f13762dd1b",
+      "name": "Lila",
+      "surname": "David",
+      "email": "lila5@chen.com",
+      "password": "cc46d450-b4f4-4305-8b46-5f26e78c671a",
+      "language": "it",
+      "phone": "984469530",
+      "address": "71 Fay Court, Rockhill, Kentucky",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-06-04T05:23:16.708Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0350d43ded73924963",
+      "name": "Burnett",
+      "surname": "Osborn",
+      "email": "burnett9@knox.com",
+      "password": "c7972357-e4e5-4e24-9264-19ecb21214ed",
+      "language": "en",
+      "phone": "936841418",
+      "address": "67 Hall Street, Kanauga, Montana",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2022-03-14T22:32:25.109Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03205e52d769bada9f",
+      "name": "Mejia",
+      "surname": "Washington",
+      "email": "mejia0@macias.com",
+      "password": "76aaeac5-947b-43d8-85ae-febf8330db6a",
+      "language": "es",
+      "phone": "935239725",
+      "address": "29 Fiske Place, Kempton, Texas",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-02-07T06:28:52.474Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03dd0a7d687a4cbb7d",
+      "name": "Irwin",
+      "surname": "Hale",
+      "email": "irwin10@rodgers.com",
+      "password": "e08b16e9-933f-4c8c-8bda-d38da261ddae",
+      "language": "en",
+      "phone": "913014731",
+      "address": "58 Hart Street, Fresno, Louisiana",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-06-29T20:48:49.165Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03a42768fbbb6fd585",
+      "name": "Reynolds",
+      "surname": "Ray",
+      "email": "reynolds1@kline.com",
+      "password": "672df43c-3029-4b9d-9f01-91556eab8e95",
+      "language": "es",
+      "phone": "940388283",
+      "address": "49 Poplar Avenue, Brantleyville, Maryland",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "true",
+      "created": "2021-09-17T10:51:12.806Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03cc7bd28a04d3b08c",
+      "name": "Stephens",
+      "surname": "Underwood",
+      "email": "stephens9@mooney.com",
+      "password": "eb183c79-c763-47df-a3f3-f01635a9ddc9",
+      "language": "es",
+      "phone": "917041572",
+      "address": "25 McDonald Avenue, Nogal, Connecticut",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2022-01-16T15:33:59.666Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03588520ab9a0c56bf",
+      "name": "Tamera",
+      "surname": "Harding",
+      "email": "tamera4@lynn.com",
+      "password": "7a47553e-a34b-4be9-aa02-f049eba5d88a",
+      "language": "es",
+      "phone": "966181315",
+      "address": "40 Amherst Street, Caln, Arizona",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-02-25T17:26:44.467Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a030768a496175feeab",
+      "name": "Potts",
+      "surname": "Cameron",
+      "email": "potts0@garner.com",
+      "password": "19d14fc0-6588-4858-a177-6f61a6e392e0",
+      "language": "es",
+      "phone": "934492324",
+      "address": "59 Fillmore Place, Vaughn, Wyoming",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-09-14T04:32:47.944Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03cabc28c5d1e34079",
+      "name": "Melissa",
+      "surname": "Stevenson",
+      "email": "melissa8@wilcox.com",
+      "password": "c08eb168-cdc9-414b-8637-2d08501177c1",
+      "language": "it",
+      "phone": "931458670",
+      "address": "94 Blake Avenue, Sterling, Minnesota",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-01-31T08:43:44.130Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03f2c23b44737da50b",
+      "name": "Callahan",
+      "surname": "Byers",
+      "email": "callahan1@maxwell.com",
+      "password": "67cfc292-e90d-4afe-a34d-72e35da84757",
+      "language": "en",
+      "phone": "956620290",
+      "address": "38 Auburn Place, Galesville, Illinois",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-04-11T08:33:52.115Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a034f46c1c627b95deb",
+      "name": "Delgado",
+      "surname": "Wheeler",
+      "email": "delgado7@tyler.com",
+      "password": "5b0622d6-fd08-4e1f-a133-6e8baea306e8",
+      "language": "it",
+      "phone": "946615386",
+      "address": "21 Livonia Avenue, Southmont, Colorado",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "false",
+      "created": "2021-05-12T09:35:41.574Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03cc95aad438533637",
+      "name": "Theresa",
+      "surname": "Shaw",
+      "email": "theresa10@roth.com",
+      "password": "52d4e89a-fc20-4a0d-bbb6-137eb8fec083",
+      "language": "it",
+      "phone": "912651889",
+      "address": "24 Seigel Street, Darrtown, District Of Columbia",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2022-03-14T22:46:50.385Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a033237d208678bec75",
+      "name": "Minnie",
+      "surname": "Figueroa",
+      "email": "minnie5@blevins.com",
+      "password": "91ac9cf7-7e2a-4df1-b636-9113c08d8867",
+      "language": "it",
+      "phone": "916614170",
+      "address": "90 Woods Place, Welch, Utah",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2022-01-27T14:58:12.527Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03eb2cfafef6bdc994",
+      "name": "Amanda",
+      "surname": "Hutchinson",
+      "email": "amanda9@jefferson.com",
+      "password": "294bb4b7-5672-4014-83e7-382afd293afc",
+      "language": "it",
+      "phone": "972149244",
+      "address": "34 Devoe Street, Groveville, Nebraska",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2022-02-05T16:31:33.138Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a033ffe5054c6be8bde",
+      "name": "Diaz",
+      "surname": "Nunez",
+      "email": "diaz6@stout.com",
+      "password": "8eccaadb-f502-4134-a82f-f06d3a8041d9",
+      "language": "es",
+      "phone": "917702515",
+      "address": "22 Lee Avenue, Bloomington, Indiana",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-10-09T23:21:19.548Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a034dfdb63a5e461d38",
+      "name": "Mckinney",
+      "surname": "Acevedo",
+      "email": "mckinney6@taylor.com",
+      "password": "d74a93ed-9554-476d-b246-5ed32e7acda0",
+      "language": "es",
+      "phone": "912021775",
+      "address": "29 Randolph Street, Curtice, Delaware",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2021-01-22T06:20:34.957Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a031539e9248fe53cc6",
+      "name": "Gale",
+      "surname": "Daugherty",
+      "email": "gale0@duncan.com",
+      "password": "47e09661-da76-42de-b2f7-2702da5d45dd",
+      "language": "it",
+      "phone": "972404356",
+      "address": "73 Alton Place, Salvo, Arkansas",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2022-01-01T11:38:45.575Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a0308fcf7a3033d0a73",
+      "name": "Davis",
+      "surname": "Sears",
+      "email": "davis0@chan.com",
+      "password": "a5b8d481-6fec-4288-8cff-fdedd21a6b47",
+      "language": "it",
+      "phone": "942465731",
+      "address": "88 Pineapple Street, Chestnut, Hawaii",
+      "role": [
+        "EXPLORER"
+      ],
+      "banned": "false",
+      "created": "2022-01-07T06:06:03.302Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03d8a21e1af41c2f4d",
+      "name": "Christy",
+      "surname": "Chase",
+      "email": "christy0@stein.com",
+      "password": "ad960bc0-eda0-41a3-8346-80a5c775f925",
+      "language": "it",
+      "phone": "957240484",
+      "address": "74 Hart Place, Norfolk, West Virginia",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "false",
+      "created": "2021-03-06T02:53:36.091Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03d0ad9a16e2526be2",
+      "name": "Marietta",
+      "surname": "Gross",
+      "email": "marietta7@mccall.com",
+      "password": "bf27a153-dd3b-4570-bafb-59d9c3d148b3",
+      "language": "en",
+      "phone": "998584699",
+      "address": "89 Sunnyside Avenue, Dahlen, Georgia",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "true",
+      "created": "2021-03-04T12:56:04.824Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03d060001eb794f2f5",
+      "name": "Hickman",
+      "surname": "Price",
+      "email": "hickman2@bender.com",
+      "password": "3dd1a788-8698-47ad-b3b0-47d1a126cb7b",
+      "language": "en",
+      "phone": "966841004",
+      "address": "21 Clarendon Road, Cawood, Oregon",
+      "role": [
+        "SPONSOR"
+      ],
+      "banned": "false",
+      "created": "2021-09-03T15:07:11.827Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a035e46a6893e63339e",
+      "name": "Fisher",
+      "surname": "Patrick",
+      "email": "fisher10@pennington.com",
+      "password": "fab3aee5-3eda-48fa-9eac-5b7947d0971c",
+      "language": "en",
+      "phone": "999420561",
+      "address": "13 Everit Street, Sheatown, Massachusetts",
+      "role": [
+        "MANAGER"
+      ],
+      "banned": "true",
+      "created": "2021-10-07T22:30:17.844Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a039297f3c572a6daaa",
+      "name": "Neva",
+      "surname": "Henson",
+      "email": "neva9@mendez.com",
+      "password": "b332e09a-534e-4796-ac5c-3a5beeb99748",
+      "language": "en",
+      "phone": "966470216",
+      "address": "61 Nixon Court, Hatteras, Missouri",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-02-09T17:46:25.399Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62334a03b7dc03bfefe27a4b",
+      "name": "Garrett",
+      "surname": "Morin",
+      "email": "garrett3@fuentes.com",
+      "password": "8f0aa5a1-f0d9-4aa3-a46c-55940b3822db",
+      "language": "en",
+      "phone": "982156568",
+      "address": "55 Poplar Street, Collins, South Carolina",
+      "role": [
+        "ADMINISTRATOR"
+      ],
+      "banned": "true",
+      "created": "2021-04-14T01:21:31.720Z",
+      "__v": "0"
+    }
+  ]

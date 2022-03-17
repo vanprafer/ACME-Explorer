@@ -1,0 +1,10 @@
+JG.repeat(10, 10, {
+  _id: JG.objectId(),
+  banner: 'http://www.banner.com',
+  landingPage: 'http://www.landingpage.com',
+  isPaid: `${JG.random('false', 'true')}`,
+  trip: JG.objectId(),
+  sponsor: JG.objectId(),
+  created: JG.date(new Date(2021, 0, 1), new Date()),
+  __v: `${JG.integer(0,0)}`
+});
