@@ -10,10 +10,10 @@ module.exports = function (app) {
    *
    * @section finders
    * @type get post
-   * @url /v1/finders/
+   * @url /v0/finders/
   */
   app.route('/v0/finders')
-    // .get(finders.read_my_finder)
+    .get(finders.list_all_finders)
     .post(finders.create_a_finder)
 
   /**
@@ -22,9 +22,19 @@ module.exports = function (app) {
    *
    * @section finders
    * @type put
-   * @url /v1/finders/:finderId
+   * @url /v0/finders/:finderId
   */
   app.route('/v0/finders/:finderId')
     .put(finders.update_a_finder)
 
+  /**
+  * Get my finders.
+  *    RequiredRoles: to be a explorer
+  *
+  * @section mytrips
+  * @type get
+  * @url /v0/myfinders/
+  */
+  app.route('/v0/myfinders')
+    .get(finders.list_my_finders)
 }
