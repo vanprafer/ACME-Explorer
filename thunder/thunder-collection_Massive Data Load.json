@@ -1,0 +1,257 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Massive Data Load",
+    "dateExported": "2022-03-17T16:23:39.685Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 10000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "e9cb1595-158b-4bf5-9c1c-185923cafba0",
+            "name": "Actors",
+            "url": "http://127.0.0.1:8080/v0/storage/fs?dbURL=mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer&collection=actors&parseString=*&batchSize=100&sourceFile=json_massive_data_load/actors.json",
+            "method": "POST",
+            "modified": "2022-03-17T16:22:42.997Z",
+            "created": "2022-03-17T14:51:08.451Z",
+            "_id": "c9d76793-f738-42cf-824b-366fb04fd63c",
+            "params": [
+                {
+                    "name": "dbURL",
+                    "value": "mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer",
+                    "isPath": false
+                },
+                {
+                    "name": "collection",
+                    "value": "actors",
+                    "isPath": false
+                },
+                {
+                    "name": "parseString",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "batchSize",
+                    "value": "100",
+                    "isPath": false
+                },
+                {
+                    "name": "sourceFile",
+                    "value": "json_massive_data_load/actors.json",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "All documents stored in the collection!"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 20000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "e9cb1595-158b-4bf5-9c1c-185923cafba0",
+            "name": "Trips",
+            "url": "http://127.0.0.1:8080/v0/storage/fs?dbURL=mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer&collection=trips&parseString=*&batchSize=100&sourceFile=json_massive_data_load/trips.json",
+            "method": "POST",
+            "modified": "2022-03-17T16:23:31.782Z",
+            "created": "2022-03-17T15:21:51.772Z",
+            "_id": "332f0c6d-e91c-437f-b0dd-dde29475e9eb",
+            "params": [
+                {
+                    "name": "dbURL",
+                    "value": "mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer",
+                    "isPath": false
+                },
+                {
+                    "name": "collection",
+                    "value": "trips",
+                    "isPath": false
+                },
+                {
+                    "name": "parseString",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "batchSize",
+                    "value": "100",
+                    "isPath": false
+                },
+                {
+                    "name": "sourceFile",
+                    "value": "json_massive_data_load/trips.json",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "All documents stored in the collection!"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 30000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "e9cb1595-158b-4bf5-9c1c-185923cafba0",
+            "name": "Sponsorships",
+            "url": "http://127.0.0.1:8080/v0/storage/fs?dbURL=mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer&collection=sponsorships&parseString=*&batchSize=100&sourceFile=json_massive_data_load/sponsorships.json",
+            "method": "POST",
+            "modified": "2022-03-17T16:23:30.780Z",
+            "created": "2022-03-17T15:47:58.815Z",
+            "_id": "daea77f2-1726-4cef-9087-09728ede68f8",
+            "params": [
+                {
+                    "name": "dbURL",
+                    "value": "mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer",
+                    "isPath": false
+                },
+                {
+                    "name": "collection",
+                    "value": "sponsorships",
+                    "isPath": false
+                },
+                {
+                    "name": "parseString",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "batchSize",
+                    "value": "100",
+                    "isPath": false
+                },
+                {
+                    "name": "sourceFile",
+                    "value": "json_massive_data_load/sponsorships.json",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "All documents stored in the collection!"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 40000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "e9cb1595-158b-4bf5-9c1c-185923cafba0",
+            "name": "Applications",
+            "url": "http://127.0.0.1:8080/v0/storage/fs?dbURL=mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer&collection=applications&parseString=*&batchSize=100&sourceFile=json_massive_data_load/applications.json",
+            "method": "POST",
+            "modified": "2022-03-17T16:23:29.417Z",
+            "created": "2022-03-17T16:21:22.236Z",
+            "_id": "d6c05718-8f7f-4eda-8eba-958e363b7db8",
+            "params": [
+                {
+                    "name": "dbURL",
+                    "value": "mongodb://acmexplorer:explorador123@localhost:27017/ACME-Explorer",
+                    "isPath": false
+                },
+                {
+                    "name": "collection",
+                    "value": "applications",
+                    "isPath": false
+                },
+                {
+                    "name": "parseString",
+                    "value": "*",
+                    "isPath": false
+                },
+                {
+                    "name": "batchSize",
+                    "value": "100",
+                    "isPath": false
+                },
+                {
+                    "name": "sourceFile",
+                    "value": "json_massive_data_load/applications.json",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "All documents stored in the collection!"
+                }
+            ]
+        }
+    ]
+}

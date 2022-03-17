@@ -1,0 +1,262 @@
+[
+    {
+      "_id": "62335cf1cacc693b88d21f38",
+      "moment": "2020-07-31T23:08:09.756Z",
+      "status": [
+        "REJECTED",
+        "DUE"
+      ],
+      "comments": "velit anim laborum fugiat commodo deserunt pariatur laboris do quis aliquip officia velit incididunt et aliqua eiusmod voluptate qui minim",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cdb4c28f41331332ac",
+      "created": "2021-04-28T11:28:24.133Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1c026db30594e22ff",
+      "moment": "2020-08-22T13:51:13.301Z",
+      "status": [
+        "ACCEPTED",
+        "DUE"
+      ],
+      "comments": "non ea nisi excepteur ullamco cupidatat est qui veniam voluptate ipsum sunt elit proident occaecat et aliqua nostrud do cupidatat",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cdb4c28f41331332ac",
+      "created": "2021-10-13T20:49:13.568Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1ae8b3373ead198b9",
+      "moment": "2020-11-18T09:36:54.675Z",
+      "status": [
+        "PENDING",
+        "PENDING"
+      ],
+      "comments": "sit ea deserunt sit proident culpa adipisicing anim cupidatat fugiat aliquip anim nulla mollit nostrud officia elit magna et in",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cd040fc5a2f7fe2704",
+      "created": "2021-12-26T08:34:03.330Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1e7b759a251bc121c",
+      "moment": "2020-07-20T20:17:45.308Z",
+      "status": [
+        "REJECTED",
+        "PENDING"
+      ],
+      "comments": "mollit sit adipisicing amet dolor Lorem veniam enim qui est eu consectetur ea ullamco dolor adipisicing aliqua sint quis laborum",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cd040fc5a2f7fe2704",
+      "created": "2021-07-12T23:17:55.644Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf18c2841c60454ee0b",
+      "moment": "2020-01-14T20:34:01.680Z",
+      "status": [
+        "CANCELLED",
+        "CANCELLED"
+      ],
+      "comments": "sint ad sint nulla eiusmod officia minim non non ad reprehenderit proident eu est dolore deserunt Lorem magna non ad",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cd17a03aa5465762e7",
+      "created": "2021-08-31T08:20:12.626Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1e058f02021d5b50d",
+      "moment": "2020-10-01T12:24:49.188Z",
+      "status": [
+        "REJECTED",
+        "CANCELLED"
+      ],
+      "comments": "consequat enim laboris Lorem fugiat in tempor exercitation minim ullamco sunt nisi ut magna cillum sit do adipisicing cillum eiusmod",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cd17a03aa5465762e7",
+      "created": "2021-04-09T01:23:50.512Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf15c56d32f63045b72",
+      "moment": "2020-12-11T20:52:05.465Z",
+      "status": [
+        "PENDING",
+        "PENDING"
+      ],
+      "comments": "ad et id eiusmod Lorem ut culpa elit eu fugiat eiusmod do est mollit occaecat ullamco qui sit do elit",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cda3c2ea984e33685c",
+      "created": "2022-02-01T17:08:37.817Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1adbfc004bfa31562",
+      "moment": "2020-07-15T03:42:16.651Z",
+      "status": [
+        "CANCELLED",
+        "CANCELLED"
+      ],
+      "comments": "elit dolor aute fugiat eu laboris ea laborum excepteur cillum sunt proident occaecat amet consectetur culpa consectetur in non laborum",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cda3c2ea984e33685c",
+      "created": "2022-01-11T07:25:52.592Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1e21d5d9a615973c8",
+      "moment": "2020-05-05T09:33:28.206Z",
+      "status": [
+        "DUE",
+        "ACCEPTED"
+      ],
+      "comments": "ex veniam labore non voluptate qui veniam labore pariatur adipisicing voluptate cillum ea sit sunt sunt enim irure officia nostrud",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cd2045ce1f4968d0c5",
+      "created": "2021-01-07T00:41:53.188Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1d860211afa2f19f7",
+      "moment": "2020-02-28T06:00:28.200Z",
+      "status": [
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "comments": "pariatur labore quis minim ut dolore enim nostrud proident non dolore et anim minim mollit enim Lorem sint laboris occaecat",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cd2045ce1f4968d0c5",
+      "created": "2021-12-31T18:09:45.853Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf120eb9560b703db32",
+      "moment": "2020-01-20T03:27:50.831Z",
+      "status": [
+        "ACCEPTED",
+        "DUE"
+      ],
+      "comments": "fugiat eiusmod dolore id exercitation culpa nulla in magna proident cillum ullamco reprehenderit enim mollit pariatur commodo minim officia exercitation",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cd215e0938dd2eb17c",
+      "created": "2021-09-15T20:16:28.015Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1699b8c1556651a2e",
+      "moment": "2020-04-12T14:34:52.281Z",
+      "status": [
+        "DUE",
+        "ACCEPTED"
+      ],
+      "comments": "cillum labore cillum velit anim duis esse ad quis incididunt sit amet adipisicing in eu ipsum exercitation eiusmod cupidatat ex",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cd215e0938dd2eb17c",
+      "created": "2021-02-06T23:29:01.425Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf10ee50ddf0c270195",
+      "moment": "2020-06-17T02:33:34.720Z",
+      "status": [
+        "CANCELLED",
+        "PENDING"
+      ],
+      "comments": "ea consequat fugiat velit consequat culpa dolore tempor labore veniam ipsum id dolore do deserunt id laboris fugiat eiusmod esse",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cdc5009af95973d506",
+      "created": "2021-02-25T13:01:48.995Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1ae4246e31f0bcbd8",
+      "moment": "2020-04-11T19:47:05.297Z",
+      "status": [
+        "PENDING",
+        "DUE"
+      ],
+      "comments": "labore consectetur id consequat est duis irure velit consequat reprehenderit sit aliquip quis sint sint do id velit nulla dolor",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cdc5009af95973d506",
+      "created": "2021-11-20T01:32:56.162Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1846252c0d73d1292",
+      "moment": "2020-03-12T08:21:09.371Z",
+      "status": [
+        "DUE",
+        "DUE"
+      ],
+      "comments": "fugiat culpa fugiat deserunt consequat esse in proident sit laborum deserunt fugiat magna non commodo non ipsum esse et fugiat",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cd1d6d98edd5857c3c",
+      "created": "2021-10-24T10:59:13.714Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1ee6f4766872f7ef3",
+      "moment": "2020-02-12T04:01:43.605Z",
+      "status": [
+        "ACCEPTED",
+        "DUE"
+      ],
+      "comments": "velit est consectetur velit sunt Lorem dolore laboris est est et enim do cillum amet consectetur adipisicing elit sint sint",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cd1d6d98edd5857c3c",
+      "created": "2021-07-06T18:57:41.763Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf146ec9bd6afd97a92",
+      "moment": "2020-05-23T18:58:43.760Z",
+      "status": [
+        "CANCELLED",
+        "CANCELLED"
+      ],
+      "comments": "aute eiusmod deserunt do aute mollit id sunt commodo anim non velit tempor tempor sunt sunt commodo consectetur duis consectetur",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cd8cae2ed0e95ab8f2",
+      "created": "2021-01-23T22:25:25.843Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf1a69868e4c6eca3ed",
+      "moment": "2020-06-03T13:26:22.625Z",
+      "status": [
+        "DUE",
+        "ACCEPTED"
+      ],
+      "comments": "nulla ad irure occaecat ut consequat dolor sit labore in consectetur enim amet ex elit sit sint tempor elit ad",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cd8cae2ed0e95ab8f2",
+      "created": "2022-01-08T04:07:36.334Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf10fce58f3e5ef6860",
+      "moment": "2020-03-26T22:48:54.432Z",
+      "status": [
+        "DUE",
+        "PENDING"
+      ],
+      "comments": "esse eu sit tempor dolor ex ex sunt velit irure voluptate consequat adipisicing irure nisi excepteur velit id ullamco fugiat",
+      "explorer": "62334a03b64a9787a69a7256",
+      "trip": "623351cdf433f656d2da3172",
+      "created": "2021-09-22T08:53:58.519Z",
+      "__v": "0"
+    },
+    {
+      "_id": "62335cf14abac077142107dd",
+      "moment": "2020-08-14T19:31:32.780Z",
+      "status": [
+        "DUE",
+        "CANCELLED"
+      ],
+      "comments": "mollit in aliquip ad enim sunt mollit ex nulla quis magna Lorem irure amet aliquip enim deserunt occaecat incididunt excepteur",
+      "explorer": "62334a039857dd79aff7189e",
+      "trip": "623351cdf433f656d2da3172",
+      "created": "2021-09-10T10:48:59.707Z",
+      "__v": "0"
+    }
+  ]
