@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const Finder = mongoose.model('Finders')
 const Configuration = mongoose.model('Configuration')
 const Trip = mongoose.model('Trips')
-const moment = require('moment')
 
 exports.list_all_finders = function (req, res) {
   Finder.find({}, function (err, finders) {
@@ -24,13 +23,14 @@ exports.create_a_finder = function (req, res) {
     } else {
       const finderCache = configuration[0].finderCache
       const finderResults = configuration[0].finderResults
-      const cacheDate = moment().subtract(finderCache * 60, 'seconds').toDate()
+      const cacheDate = Date.now() - finderCache * 60 * 60 * 1000
+
       Finder.find({
         keyword: req.body.keyword,
         maxPrice: req.body.maxPrice,
-        // startDate: req.body.startDate,
-        // endDate: req.body.endDate
-        cachedDataDate: { $gte: cacheDate }
+        startDate: new Date(req.body.startDate),
+        endDate: new Date(req.body.endDate),
+        created: { $gte: new Date(cacheDate) }
       })
         .limit(1)
         .exec({}, function (err, finders) {
@@ -136,14 +136,14 @@ exports.update_a_finder = function (req, res) {
     } else {
       const finderCache = configuration[0].finderCache
       const finderResults = configuration[0].finderResults
-      const cacheDate = moment().subtract(finderCache, 'hours').toDate()
+      const cacheDate = Date.now() - finderCache * 60 * 60 * 1000
 
       Finder.find({
         keyword: req.body.keyword,
         maxPrice: req.body.maxPrice,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
-        cachedDataDate: { $gte: cacheDate }
+        startDate: new Date(req.body.startDate),
+        endDate: new Date(req.body.endDate),
+        created: { $gte: new Date(cacheDate) }
       })
         .limit(1)
         .exec({}, function (err, finders) {
