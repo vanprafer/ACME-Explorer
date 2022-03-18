@@ -15,7 +15,7 @@ module.exports = function (app) {
   * Sample 1 (actors): http://localhost:8080/v1/storage/insertMany?dbURL=mongodb://acmexplorer:explorer123@localhost:27017/ACME-Explorer&mongooseModel=Actors&sourceFile=c:/temp/Actors.json
   * Sample 2 (test):   http://localhost:8080/v1/storage/insertMany?dbURL=mongodb://acmexplorer:explorer123@localhost:27017/ACME-Explorer&mongooseModel=Test&sourceFile=c:/temp/many_npm.json
   */
-  app.route('/v1/storage/insertMany')
+  app.route('/v0/storage/insertMany')
     .post(storage.store_json_insertMany)
 
   /**
@@ -32,6 +32,6 @@ module.exports = function (app) {
    * Sample 1 (actors): http://localhost:8080/v1/storage/fs?dbURL=mongodb://acmexplorer:explorer123@localhost:27017/ACME-Explorer&collection=actors&batchSize=100&parseString=*&sourceFile=c:\temp\Actors.json
    * Sample 2 (test):   http://localhost:8080/v1/storage/fs?dbURL=mongodb://acmexplorer:explorer123@localhost:27017/ACME-Explorer&collection=test&batchSize=100&parseString=rows.*&sourceFile=c:\temp\many_npm.json
   */
-  app.route('/v1/storage/fs')
+  app.route('/v0/storage/fs')
     .post(storage.store_json_fs)
 }

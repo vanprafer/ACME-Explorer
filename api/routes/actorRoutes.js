@@ -14,8 +14,8 @@ module.exports = function (app) {
   */
   app
     .route('/v0/actors')
-    .get(actors.list_all_actors_v0)
-    .post(actors.create_an_actor_v0)
+    .get(actors.list_all_actors)
+    .post(actors.create_an_actor)
 
   /**
    * Get an actor
@@ -31,9 +31,9 @@ module.exports = function (app) {
   */
   app
     .route('/v0/actors/:actorId')
-    .get(actors.read_an_actor_v0)
-    .put(actors.update_an_actor_v0)
-    .delete(actors.delete_an_actor_v0)
+    .get(actors.read_an_actor)
+    .put(actors.update_an_actor)
+    .delete(actors.delete_an_actor)
 
   /**
    * Banor or unban an actor:
@@ -43,6 +43,6 @@ module.exports = function (app) {
    * @type patch
    * @url /v0/actors/unban/:actorId
   */
-  app.route('/v0/actors/unban/:actorId').patch(actors.unban_an_actor_v0)
-  app.route('/v0/actors/ban/:actorId').patch(actors.ban_an_actor_v0)
+  app.route('/v0/actors/unban/:actorId').patch(actors.unban_an_actor)
+  app.route('/v0/actors/ban/:actorId').patch(actors.ban_an_actor)
 }

@@ -1,86 +1,58 @@
 'use strict'
 
 module.exports = function (app) {
-//   const dashboard = require('../controllers/dashboardController')
+  const dashboard = require('../controllers/dashboardController')
 
-  //   /**
-  //    * Get the average, the minimum, the maximum, and the standard deviation of the
-  //     number of trips managed per manager
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/trips')
-  //     .get(dashboard.trips_statistics)
+  /**
+   * Get a list of all indicators or post a new computation period for rebuilding
+   * RequiredRole: Administrator
+   * @section dashboard
+   * @type get post
+   * @url /dashboard
+   * @param [string] rebuildPeriod
+  */
+  app.route('/v0/dashboard')
+    .get(dashboard.list_all_indicators)
+    .post(dashboard.rebuildPeriod)
 
-  //   app.route('/v0/dashboard/trips')
-  //     .get(dashboard.trips_statistics_v0)
+  /**
+  * Get a list of last computed indicator
+  * RequiredRole: Administrator
+  * @section dashboard
+  * @type get
+  * @url /dashboard/latest
+ */
+  app.route('/v0/dashboard/latest')
+    .get(dashboard.last_indicator)
 
-  //   /**
-  //    * Get the average, the minimum, the maximum, and the standard deviation of the
-  //     number of trips managed per manager
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/tripsPerManager')
-  //     .get(dashboard.trips_per_manager)
+  /**
+  * Returns the amount of
+    money that explorer e has spent on trips during period p, which can be M01-M36 to
+    denote any of the last 1-36 months or Y01-Y03 to denote any of the last three years
+  * RequiredRole: Administrator
+  * @section dashboard
+  * @type get
+  * @url /dashboard/explorerExpenses
+  * @param [string] explorer
+  * @param [string] period
+ */
+  app.route('/v0/dashboard/explorerExpenses')
+    .get(dashboard.explorerExpenses)
 
-  //   app.route('/v0/dashboard/tripsPerManager')
-  //     .get(dashboard.trips_per_manager_v0)
+  /**
+  * Given p, return the explorers e such that M[e, p] q v, where v denotes an arbitrary
+  amount of money and q is a comparison operator (that is, “equal”,
+  “not equal”, “greater than”, “greater than or equal”, “smaller than”, or
+  “smaller than or equal”).
 
-  //   /**
-  //    * Get the average, the minimum, the maximum, and the standard deviation of the
-  //     number of applications per trip
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/applicationsPerTrip')
-  //     .get(dashboard.applications_per_trip)
-
-  //   app.route('/v0/dashboard/applicationsPerTrip')
-  //     .get(dashboard.applications_per_trip_v0)
-
-  //   /**
-  //    * The average, the minimum, the maximum, and the standard deviation of the
-  //     price of the trips
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/tripsPrices')
-  //     .get(dashboard.trips_prices)
-
-  //   app.route('/v0/dashboard/tripPrices')
-  //     .get(dashboard.trips_prices_v0)
-
-  //   /**
-  //    * The ratio of applications grouped by status
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/applicationsRatio')
-  //     .get(dashboard.applications_ratio)
-
-  //   app.route('/v0/dashboard/applicationsRatio')
-  //     .get(dashboard.applications_ratio_v0)
-
-  //   /**
-  //    * The average price range that explorers indicate in their finders
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/findersPriceRange')
-  //     .get(dashboard.finders_average_price)
-
-  //   app.route('/v0/dashboard/findersPriceRange')
-  //     .get(dashboard.finders_average_price_v0)
-
-  //   /**
-  //    * The top 10 key words that the explorers indicate in their finders
-  //    *
-  //    *    RequiredRoles: Administrator
-  //   */
-  //   app.route('/v1/dashboard/findersTopKeywords')
-  //     .get(dashboard.finders_top_keywords)
-
-//   app.route('/v0/dashboard/topKeywords')
-//     .get(dashboard.finders_top_keywords_v0)
+  * RequiredRole: Administrator
+  * @section dashboard
+  * @type get
+  * @url /dashboard/explorerExpenses
+  * @param [string] period
+  * @param [integer] amount
+  * @param [string] operator - Values [eq, neq, gt, gte, st, ste]
+ */
+  app.route('/v0/dashboard/explorerExpensesComparison')
+    .get(dashboard.explorerExpensesComparison)
 }

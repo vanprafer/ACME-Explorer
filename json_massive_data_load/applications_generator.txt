@@ -1,0 +1,10 @@
+JG.repeat(20, 20, {
+  _id: JG.objectId(),
+  moment: JG.date(new Date(2020, 0, 1), new Date(2021, 0, 1)),
+  status: JG.repeat(2, JG.random('PENDING', 'REJECTED', 'DUE', 'ACCEPTED', 'CANCELLED')),
+  comments: `${JG.loremIpsum({units: 'words', count: 20})}`,
+  explorer: JG.objectId(),
+  trip: JG.objectId(),
+  created: JG.date(new Date(2021, 0, 1), new Date()),
+  __v: `${JG.integer(0,0)}`
+});

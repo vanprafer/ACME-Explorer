@@ -1,0 +1,655 @@
+[
+    {
+      "_id": "623351cdb4c28f41331332ac",
+      "ticker": "248231-aaaa",
+      "title": "nisi officia in velit",
+      "description": "esse occaecat laboris laboris nulla quis quis do officia laboris laboris consectetur id do pariatur",
+      "price": "79",
+      "requirements": [
+        "consequat minim irure consectetur occaecat eiusmod"
+      ],
+      "dateStart": "2019-11-12T13:12:46.249Z",
+      "dateEnd": "2021-07-21T17:50:36.824Z",
+      "published": "true",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "ad sit proident ipsum",
+          "description": "laboris ea cillum nostrud nulla in mollit qui aliqua consectetur et quis reprehenderit cillum fugiat",
+          "price": "49"
+        },
+        {
+          "title": "laborum occaecat sunt nostrud",
+          "description": "ullamco pariatur nisi ipsum consequat reprehenderit mollit excepteur aliqua labore adipisicing velit deserunt nisi laboris",
+          "price": "79"
+        },
+        {
+          "title": "tempor ipsum reprehenderit do",
+          "description": "amet in ullamco mollit cupidatat aliqua exercitation consequat mollit adipisicing duis culpa pariatur ex officia",
+          "price": "126"
+        }
+      ],
+      "created": "2021-07-08T10:55:12.385Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd040fc5a2f7fe2704",
+      "ticker": "151314-cccc",
+      "title": "sint duis in elit",
+      "description": "magna ullamco velit in esse nostrud cupidatat ea officia ipsum consectetur non deserunt amet anim",
+      "price": "99",
+      "requirements": [
+        "aliqua nostrud culpa dolore culpa cupidatat",
+        "occaecat ipsum aliqua qui mollit culpa",
+        "esse Lorem eiusmod exercitation magna incididunt",
+        "incididunt ea culpa cupidatat pariatur sunt"
+      ],
+      "dateStart": "2018-06-07T14:47:17.549Z",
+      "dateEnd": "2021-08-22T12:34:33.493Z",
+      "published": "false",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "eu aute culpa enim",
+          "description": "aute mollit laboris veniam ea consequat officia ullamco officia nostrud qui anim id exercitation voluptate",
+          "price": "149"
+        },
+        {
+          "title": "aliqua ipsum consectetur exercitation",
+          "description": "adipisicing fugiat ad velit proident est Lorem ex in esse cillum amet ad voluptate veniam",
+          "price": "141"
+        },
+        {
+          "title": "sint veniam irure enim",
+          "description": "est enim officia mollit et velit velit irure eu duis dolor amet sint incididunt eiusmod",
+          "price": "145"
+        },
+        {
+          "title": "eu ipsum irure consequat",
+          "description": "exercitation ea anim fugiat in laboris ea anim veniam dolor eiusmod ad ex non dolore",
+          "price": "71"
+        }
+      ],
+      "created": "2021-05-30T14:54:19.892Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd17a03aa5465762e7",
+      "ticker": "942873-cccc",
+      "title": "proident nostrud officia ea",
+      "description": "consequat labore commodo deserunt quis quis et voluptate pariatur labore aliqua laborum qui consequat fugiat",
+      "price": "111",
+      "requirements": [
+        "labore ullamco commodo commodo et elit",
+        "quis sunt et velit anim exercitation",
+        "sunt magna et do in nostrud",
+        "est ad dolore ut est culpa"
+      ],
+      "dateStart": "2018-04-29T18:06:04.258Z",
+      "dateEnd": "2021-07-23T00:15:39.088Z",
+      "published": "false",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "nostrud tempor exercitation Lorem",
+          "description": "consequat proident ad ex anim adipisicing culpa exercitation fugiat aliqua anim reprehenderit laborum culpa adipisicing",
+          "price": "106"
+        }
+      ],
+      "created": "2021-02-16T02:30:05.273Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cda3c2ea984e33685c",
+      "ticker": "569414-cccc",
+      "title": "occaecat anim laboris aute",
+      "description": "adipisicing amet sit qui sunt pariatur fugiat dolor culpa fugiat esse ipsum aliquip pariatur id",
+      "price": "113",
+      "requirements": [
+        "veniam cillum aute duis laborum culpa",
+        "dolore velit irure mollit labore incididunt",
+        "irure nulla aliquip do aliqua magna",
+        "mollit mollit aute mollit esse elit"
+      ],
+      "dateStart": "2018-06-04T03:15:08.227Z",
+      "dateEnd": "2021-03-23T02:13:15.426Z",
+      "published": "false",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "ut aliquip ex dolor",
+          "description": "commodo anim esse irure sunt elit ullamco eiusmod tempor eiusmod proident ipsum ea non non",
+          "price": "113"
+        },
+        {
+          "title": "eu anim ea enim",
+          "description": "laborum fugiat enim et enim consectetur eiusmod velit voluptate nisi minim voluptate ex nostrud tempor",
+          "price": "16"
+        }
+      ],
+      "created": "2021-10-23T03:35:59.807Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd2045ce1f4968d0c5",
+      "ticker": "405058-aaaa",
+      "title": "cupidatat labore id labore",
+      "description": "elit labore non velit est cupidatat veniam amet Lorem ullamco laborum velit laborum ea in",
+      "price": "93",
+      "requirements": [
+        "consectetur nisi cillum ut in elit",
+        "duis consectetur tempor duis laborum Lorem",
+        "consequat culpa ex cillum cillum nisi",
+        "id magna cillum velit veniam ullamco"
+      ],
+      "dateStart": "2019-06-16T15:17:53.837Z",
+      "dateEnd": "2021-04-27T11:47:58.390Z",
+      "published": "false",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "ipsum labore cupidatat sit",
+          "description": "elit officia mollit consequat nostrud ad labore mollit commodo amet ut tempor esse duis in",
+          "price": "88"
+        },
+        {
+          "title": "velit qui ex culpa",
+          "description": "proident dolore commodo sit minim nulla excepteur laboris magna adipisicing laboris cillum mollit et ut",
+          "price": "77"
+        },
+        {
+          "title": "enim tempor laboris sint",
+          "description": "deserunt ad officia velit id qui consequat aute reprehenderit non mollit exercitation commodo dolore irure",
+          "price": "108"
+        }
+      ],
+      "created": "2021-03-21T01:15:42.609Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd215e0938dd2eb17c",
+      "ticker": "430812-bbbb",
+      "title": "id nostrud fugiat id",
+      "description": "anim duis anim anim consectetur exercitation nisi cillum quis mollit nulla mollit sunt incididunt elit",
+      "price": "70",
+      "requirements": [
+        "nisi ut sit ea ea ut",
+        "reprehenderit nisi aliqua labore nulla commodo",
+        "mollit irure qui sit enim proident",
+        "veniam anim qui enim Lorem reprehenderit"
+      ],
+      "dateStart": "2018-08-13T07:33:01.169Z",
+      "dateEnd": "2021-12-24T16:29:16.290Z",
+      "published": "false",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "in deserunt magna incididunt",
+          "description": "laborum commodo incididunt voluptate tempor nulla do deserunt fugiat aliquip elit esse occaecat in esse",
+          "price": "52"
+        },
+        {
+          "title": "consequat esse id minim",
+          "description": "reprehenderit non non amet nostrud dolor sint minim ipsum quis aliqua excepteur enim nisi est",
+          "price": "124"
+        },
+        {
+          "title": "commodo fugiat sit Lorem",
+          "description": "dolor duis consequat sunt esse duis velit deserunt cillum ea in nisi ipsum est nulla",
+          "price": "128"
+        },
+        {
+          "title": "dolore laboris adipisicing cupidatat",
+          "description": "nisi mollit aute nostrud tempor ea eu laboris culpa culpa sint amet proident enim ea",
+          "price": "89"
+        }
+      ],
+      "created": "2021-12-07T08:51:02.761Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cdc5009af95973d506",
+      "ticker": "657320-bbbb",
+      "title": "voluptate veniam irure minim",
+      "description": "est quis officia amet pariatur et nulla aliqua consequat excepteur in nulla in quis fugiat",
+      "price": "101",
+      "requirements": [
+        "esse velit esse cupidatat Lorem est",
+        "veniam exercitation ad eu quis esse",
+        "incididunt excepteur sunt exercitation eiusmod sint",
+        "ea minim incididunt enim qui incididunt"
+      ],
+      "dateStart": "2018-05-01T19:47:44.491Z",
+      "dateEnd": "2021-09-08T09:15:11.277Z",
+      "published": "true",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "do reprehenderit reprehenderit elit",
+          "description": "eiusmod anim pariatur ut do occaecat do esse qui velit deserunt et sint laborum ad",
+          "price": "124"
+        },
+        {
+          "title": "laborum eu in irure",
+          "description": "eu ullamco Lorem quis reprehenderit reprehenderit minim occaecat incididunt incididunt amet amet elit ipsum enim",
+          "price": "48"
+        },
+        {
+          "title": "labore aliqua sint eu",
+          "description": "sunt Lorem qui occaecat pariatur fugiat elit cupidatat commodo magna deserunt Lorem ad velit cupidatat",
+          "price": "33"
+        }
+      ],
+      "created": "2021-08-08T23:29:07.548Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd1d6d98edd5857c3c",
+      "ticker": "351924-aaaa",
+      "title": "aliqua veniam adipisicing proident",
+      "description": "ea sunt ea veniam aliqua laboris consequat est nostrud nisi ex qui quis non minim",
+      "price": "58",
+      "requirements": [
+        "labore esse sit id aute irure",
+        "labore labore velit culpa sint cupidatat"
+      ],
+      "dateStart": "2019-03-12T09:52:30.227Z",
+      "dateEnd": "2021-05-08T12:10:14.435Z",
+      "published": "true",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "mollit minim enim tempor",
+          "description": "laboris ad excepteur do ad est reprehenderit excepteur occaecat pariatur dolor et adipisicing commodo pariatur",
+          "price": "28"
+        },
+        {
+          "title": "elit exercitation eu id",
+          "description": "nisi mollit tempor consequat mollit non nostrud Lorem reprehenderit velit commodo labore eu tempor veniam",
+          "price": "14"
+        },
+        {
+          "title": "magna quis cillum ea",
+          "description": "nostrud occaecat amet sint dolore nulla est exercitation sint do tempor occaecat amet voluptate cillum",
+          "price": "11"
+        },
+        {
+          "title": "exercitation laboris cupidatat mollit",
+          "description": "deserunt Lorem quis do deserunt anim proident ea fugiat adipisicing sit dolor anim consequat cupidatat",
+          "price": "87"
+        }
+      ],
+      "created": "2021-04-29T20:31:18.332Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd8cae2ed0e95ab8f2",
+      "ticker": "775327-cccc",
+      "title": "est mollit nulla adipisicing",
+      "description": "incididunt amet sint exercitation dolor duis aute nostrud adipisicing proident elit tempor voluptate amet ullamco",
+      "price": "20",
+      "requirements": [
+        "ad excepteur commodo in aute magna"
+      ],
+      "dateStart": "2018-06-02T20:41:19.175Z",
+      "dateEnd": "2021-03-10T22:48:05.153Z",
+      "published": "false",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "incididunt ea reprehenderit eu",
+          "description": "do irure ea deserunt ad voluptate quis enim adipisicing voluptate Lorem tempor nisi anim non",
+          "price": "110"
+        },
+        {
+          "title": "commodo esse elit et",
+          "description": "non sint velit anim aliqua ut minim sunt dolore eiusmod est Lorem esse consectetur labore",
+          "price": "44"
+        },
+        {
+          "title": "sit sint sint et",
+          "description": "fugiat minim commodo aliquip amet ex adipisicing ut officia irure eiusmod est nisi ut adipisicing",
+          "price": "26"
+        },
+        {
+          "title": "laboris pariatur consequat ad",
+          "description": "anim labore magna cillum aliquip velit dolor ut mollit dolore nostrud reprehenderit aliqua nostrud voluptate",
+          "price": "38"
+        }
+      ],
+      "created": "2021-01-11T07:28:34.221Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cdf433f656d2da3172",
+      "ticker": "718740-bbbb",
+      "title": "consectetur reprehenderit exercitation incididunt",
+      "description": "sint cillum reprehenderit magna mollit aliqua est tempor eu labore minim commodo ex adipisicing cupidatat",
+      "price": "96",
+      "requirements": [
+        "consequat voluptate irure duis magna Lorem",
+        "ea consectetur proident nisi ad ad",
+        "aliqua non deserunt voluptate irure ex",
+        "consectetur Lorem excepteur mollit in nulla"
+      ],
+      "dateStart": "2018-06-30T11:39:23.131Z",
+      "dateEnd": "2021-12-15T13:06:46.720Z",
+      "published": "true",
+      "manager": "62334a030f8a624801f90cba",
+      "stages": [
+        {
+          "title": "culpa ea esse laboris",
+          "description": "mollit fugiat aute pariatur et minim sint consequat anim duis occaecat aute labore sunt deserunt",
+          "price": "52"
+        },
+        {
+          "title": "Lorem occaecat ut fugiat",
+          "description": "laboris Lorem aute Lorem pariatur ex anim minim in proident ea voluptate esse irure dolore",
+          "price": "42"
+        },
+        {
+          "title": "dolore consectetur veniam incididunt",
+          "description": "culpa ea velit eiusmod anim minim consequat consequat laborum commodo in magna nulla cillum in",
+          "price": "91"
+        },
+        {
+          "title": "aliquip nulla ex qui",
+          "description": "ad nostrud dolore mollit incididunt pariatur exercitation minim esse laboris qui id aliquip laborum quis",
+          "price": "11"
+        }
+      ],
+      "created": "2022-01-14T22:08:15.362Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd9037b98fa568ae70",
+      "ticker": "466227-aaaa",
+      "title": "do aute anim nostrud",
+      "description": "commodo elit nulla eu aliqua proident exercitation id do qui esse ullamco mollit excepteur adipisicing",
+      "price": "15",
+      "requirements": [
+        "sunt sunt veniam ullamco nulla exercitation"
+      ],
+      "dateStart": "2019-03-19T08:44:06.257Z",
+      "dateEnd": "2021-05-26T20:00:48.656Z",
+      "published": "true",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "sit est excepteur occaecat",
+          "description": "nostrud nulla Lorem elit minim consequat voluptate quis exercitation culpa in ex consequat tempor aliquip",
+          "price": "100"
+        }
+      ],
+      "created": "2021-12-11T05:41:45.941Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cdd2f2fff31bfad991",
+      "ticker": "585628-aaaa",
+      "title": "irure aute ipsum fugiat",
+      "description": "officia elit Lorem deserunt cillum officia consequat labore eu labore incididunt cillum irure commodo cupidatat",
+      "price": "98",
+      "requirements": [
+        "amet mollit ipsum adipisicing do esse",
+        "ut adipisicing qui aute qui duis",
+        "mollit pariatur qui veniam est dolor"
+      ],
+      "dateStart": "2018-09-18T22:24:52.201Z",
+      "dateEnd": "2021-02-06T01:36:17.821Z",
+      "published": "true",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "minim culpa deserunt aliqua",
+          "description": "nisi anim eu cupidatat velit ex amet elit nostrud sint magna cillum enim et nisi",
+          "price": "21"
+        },
+        {
+          "title": "consequat irure eu aute",
+          "description": "esse nisi officia eiusmod labore cupidatat dolore eiusmod et nulla elit cillum sint aliquip incididunt",
+          "price": "146"
+        },
+        {
+          "title": "dolore duis aute id",
+          "description": "magna sit laboris mollit culpa magna ipsum dolor anim et eu laboris consequat duis commodo",
+          "price": "26"
+        }
+      ],
+      "created": "2021-08-15T08:27:54.770Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd468f2734d8fe4801",
+      "ticker": "406527-bbbb",
+      "title": "id dolore mollit aute",
+      "description": "ipsum ad laboris ea incididunt velit ullamco culpa Lorem occaecat aliquip do Lorem aliqua in",
+      "price": "22",
+      "requirements": [
+        "irure nostrud occaecat laboris dolore elit",
+        "incididunt non laboris amet ea veniam",
+        "sint esse pariatur do id enim",
+        "irure irure quis tempor elit nulla"
+      ],
+      "dateStart": "2019-10-19T10:07:27.586Z",
+      "dateEnd": "2022-02-14T12:26:34.846Z",
+      "published": "false",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "aliquip et laboris amet",
+          "description": "duis do dolore qui duis exercitation proident eu laboris aliqua esse mollit excepteur incididunt pariatur",
+          "price": "104"
+        },
+        {
+          "title": "amet deserunt duis id",
+          "description": "amet dolor laborum non cillum commodo laboris ad minim commodo id culpa cupidatat quis consequat",
+          "price": "44"
+        }
+      ],
+      "created": "2022-03-09T01:14:54.149Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cdc588f4fee6516b0c",
+      "ticker": "260556-cccc",
+      "title": "exercitation consequat cillum enim",
+      "description": "nulla qui enim nulla ad consequat ut irure eu pariatur minim voluptate aliqua proident occaecat",
+      "price": "39",
+      "requirements": [
+        "id quis minim eu et mollit",
+        "ut eiusmod pariatur id occaecat id",
+        "ex aliquip ex ullamco ea adipisicing"
+      ],
+      "dateStart": "2018-10-24T16:02:10.189Z",
+      "dateEnd": "2021-10-10T13:20:43.179Z",
+      "published": "true",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "ex non labore aute",
+          "description": "excepteur nisi voluptate nostrud sint cillum culpa reprehenderit voluptate cupidatat enim nisi incididunt ut id",
+          "price": "87"
+        },
+        {
+          "title": "labore in occaecat duis",
+          "description": "reprehenderit minim eiusmod duis enim incididunt voluptate adipisicing mollit in tempor proident adipisicing adipisicing cillum",
+          "price": "129"
+        }
+      ],
+      "created": "2021-03-18T07:19:44.264Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd29c3df9dc562b5dc",
+      "ticker": "806617-bbbb",
+      "title": "occaecat mollit consequat ut",
+      "description": "et nostrud deserunt amet dolor amet sit ea quis cupidatat amet nisi deserunt Lorem nostrud",
+      "price": "60",
+      "requirements": [
+        "fugiat velit tempor voluptate eiusmod voluptate"
+      ],
+      "dateStart": "2019-02-04T14:07:58.150Z",
+      "dateEnd": "2021-05-10T21:42:39.574Z",
+      "published": "false",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "sunt mollit in nostrud",
+          "description": "incididunt quis ex consequat dolor labore deserunt occaecat irure incididunt ex ipsum duis amet et",
+          "price": "80"
+        }
+      ],
+      "created": "2021-08-13T18:26:22.140Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd8b674eb2c62859a3",
+      "ticker": "345897-aaaa",
+      "title": "occaecat incididunt mollit incididunt",
+      "description": "commodo ut veniam fugiat sit et amet id dolore voluptate duis enim aliqua qui dolore",
+      "price": "35",
+      "requirements": [
+        "ullamco est qui veniam velit et"
+      ],
+      "dateStart": "2019-12-14T20:27:10.721Z",
+      "dateEnd": "2021-02-01T23:53:35.102Z",
+      "published": "false",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "deserunt irure nostrud reprehenderit",
+          "description": "laborum elit elit et ipsum cupidatat nisi aute anim reprehenderit ipsum ullamco nulla nulla laboris",
+          "price": "53"
+        }
+      ],
+      "created": "2021-08-14T01:31:17.944Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd2d9f98a8e209c23b",
+      "ticker": "745021-bbbb",
+      "title": "qui do ad adipisicing",
+      "description": "ut amet deserunt sunt consectetur sit in culpa anim officia excepteur laboris ex ex adipisicing",
+      "price": "49",
+      "requirements": [
+        "cillum qui amet exercitation nisi irure"
+      ],
+      "dateStart": "2018-01-22T20:42:57.409Z",
+      "dateEnd": "2021-02-17T15:00:15.715Z",
+      "published": "true",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "sint quis deserunt ea",
+          "description": "proident anim cillum Lorem et laboris in incididunt elit ea aliquip in sunt ad fugiat",
+          "price": "95"
+        },
+        {
+          "title": "et laborum incididunt sint",
+          "description": "in aliqua ex anim dolore non amet anim sit ex sint amet mollit commodo laboris",
+          "price": "88"
+        }
+      ],
+      "created": "2021-08-26T20:10:10.632Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cde27341351582f5f1",
+      "ticker": "804951-cccc",
+      "title": "est consectetur pariatur do",
+      "description": "velit sit reprehenderit ipsum ipsum aliqua minim ad elit proident adipisicing adipisicing pariatur non dolor",
+      "price": "84",
+      "requirements": [
+        "qui irure ut ipsum sunt sint",
+        "commodo mollit voluptate sint non laboris",
+        "irure commodo commodo sunt aute nulla",
+        "veniam laborum veniam aliqua nisi proident"
+      ],
+      "dateStart": "2018-05-13T20:28:48.241Z",
+      "dateEnd": "2021-10-13T21:46:58.640Z",
+      "published": "false",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "deserunt in exercitation deserunt",
+          "description": "ea laborum occaecat pariatur exercitation irure consequat pariatur est nisi laborum non ea et ipsum",
+          "price": "27"
+        },
+        {
+          "title": "elit commodo ad duis",
+          "description": "consectetur nulla aliqua amet do deserunt sunt magna nostrud laborum commodo elit sit in esse",
+          "price": "57"
+        }
+      ],
+      "created": "2021-03-26T03:59:15.615Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cdd00ad6a44ad53c8b",
+      "ticker": "260191-bbbb",
+      "title": "occaecat sit incididunt in",
+      "description": "do adipisicing reprehenderit magna Lorem reprehenderit officia est cillum irure laboris velit consequat elit laborum",
+      "price": "78",
+      "requirements": [
+        "sint deserunt non reprehenderit proident do",
+        "dolor commodo excepteur occaecat incididunt officia",
+        "ex laborum excepteur anim fugiat ex",
+        "culpa dolore anim sint nisi ex"
+      ],
+      "dateStart": "2018-03-22T05:47:28.472Z",
+      "dateEnd": "2021-03-30T01:05:36.801Z",
+      "published": "false",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "nostrud ullamco aliquip id",
+          "description": "quis mollit labore do tempor occaecat cillum nisi ipsum labore adipisicing culpa fugiat deserunt nostrud",
+          "price": "68"
+        },
+        {
+          "title": "excepteur irure ex aliqua",
+          "description": "cillum occaecat consequat laborum officia adipisicing laborum culpa est cupidatat sint voluptate nisi veniam voluptate",
+          "price": "108"
+        }
+      ],
+      "created": "2021-05-05T02:40:44.605Z",
+      "__v": "0"
+    },
+    {
+      "_id": "623351cd9fd69c62df7071e6",
+      "ticker": "577201-cccc",
+      "title": "enim eiusmod officia et",
+      "description": "aliqua quis in labore voluptate amet laborum labore ut do sunt id adipisicing occaecat anim",
+      "price": "18",
+      "requirements": [
+        "enim commodo dolore et veniam occaecat",
+        "ipsum adipisicing est commodo eu velit",
+        "ut elit sunt reprehenderit cillum dolore",
+        "fugiat officia non dolore pariatur sunt"
+      ],
+      "dateStart": "2018-08-17T13:25:39.177Z",
+      "dateEnd": "2021-01-12T11:56:38.424Z",
+      "published": "false",
+      "manager": "62334a03ccea8410d78ef625",
+      "stages": [
+        {
+          "title": "occaecat laboris ullamco sunt",
+          "description": "eiusmod ea laboris quis excepteur id et aliqua fugiat ut labore elit proident aliqua exercitation",
+          "price": "90"
+        },
+        {
+          "title": "fugiat aute quis aute",
+          "description": "duis minim qui ut tempor officia do do voluptate sit consectetur nulla laborum duis cupidatat",
+          "price": "13"
+        },
+        {
+          "title": "aliquip nisi sint elit",
+          "description": "velit deserunt labore incididunt irure elit nostrud amet culpa labore officia in occaecat ut voluptate",
+          "price": "77"
+        }
+      ],
+      "created": "2021-11-09T12:29:30.137Z",
+      "__v": "0"
+    }
+  ]

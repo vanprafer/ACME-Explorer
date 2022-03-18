@@ -1,0 +1,22 @@
+JG.repeat(100, 100, {
+  _id: JG.objectId(),
+  name: `${JG.firstName()}`,
+  surname: `${JG.lastName()}`,
+  email() {
+    return (
+      _.snakeCase(this.name) +
+      JG.integer() +
+      '@' +
+      JG.lastName() +
+      '.com'
+    ).toLowerCase();
+  },
+  password: `${JG.guid()}`,
+  language: `${JG.random('en', 'es', 'it')}`,
+  phone: `${JG.integer(900000000, 999999999)}`,
+  address: `${JG.integer(1, 100)} ${JG.street()}, ${JG.city()}, ${JG.state()}`,
+  role: _.uniq(JG.repeat(1, JG.random('EXPLORER', 'MANAGER', 'ADMINISTRATOR', 'SPONSOR'))),
+  banned: `${JG.random('false', 'true')}`,
+  created: JG.date(new Date(2021, 0, 1), new Date()),
+  __v: `${JG.integer(0,0)}`
+});

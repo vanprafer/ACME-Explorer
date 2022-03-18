@@ -1,51 +1,10 @@
 {
     "client": "Thunder Client",
     "collectionName": "Configuration",
-    "dateExported": "2022-02-28T23:20:13.171Z",
+    "dateExported": "2022-03-02T15:38:45.196Z",
     "version": "1.1",
     "folders": [],
     "requests": [
-        {
-            "containerId": "",
-            "sortNum": 5000,
-            "headers": [
-                {
-                    "name": "Accept",
-                    "value": "*/*"
-                },
-                {
-                    "name": "User-Agent",
-                    "value": "Thunder Client (https://www.thunderclient.com)"
-                }
-            ],
-            "colId": "b9aa4a37-4ccc-412b-a474-c853b0ef9f58",
-            "name": "CREATE CONFIGURATION",
-            "url": "http://localhost:8080/v0/configurations",
-            "method": "POST",
-            "modified": "2022-02-28T23:19:16.939Z",
-            "created": "2022-02-28T19:46:43.177Z",
-            "_id": "74c12c4d-9902-4d74-bc76-5e6bce0b3b5e",
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n    \"_id\": \"621d57b550e385bceba7feb6\",\n  \"flatRate\": 10\n}",
-                "form": []
-            },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                },
-                {
-                    "type": "res-body",
-                    "custom": "",
-                    "action": "contains",
-                    "value": "6"
-                }
-            ]
-        },
         {
             "containerId": "",
             "sortNum": 10000,
@@ -59,13 +18,13 @@
                     "value": "Thunder Client (https://www.thunderclient.com)"
                 }
             ],
-            "colId": "b9aa4a37-4ccc-412b-a474-c853b0ef9f58",
+            "colId": "a3dd0b7b-d412-43a7-b923-5a41c6f176ad",
             "name": "GET CONFIGURATION",
-            "url": "http://localhost:8080/v0/configurations",
+            "url": "http://localhost:8080/v0/configuration",
             "method": "GET",
-            "modified": "2022-02-28T23:18:40.740Z",
-            "created": "2022-02-28T19:46:43.177Z",
-            "_id": "2763dd88-da74-42c1-8f6d-b9642c577f79",
+            "modified": "2022-03-02T15:37:40.309Z",
+            "created": "2022-03-02T15:37:40.309Z",
+            "_id": "2d6147ff-e0bd-4949-9007-61e9b14c7276",
             "params": [],
             "tests": [
                 {
@@ -95,17 +54,17 @@
                     "value": "Thunder Client (https://www.thunderclient.com)"
                 }
             ],
-            "colId": "b9aa4a37-4ccc-412b-a474-c853b0ef9f58",
+            "colId": "a3dd0b7b-d412-43a7-b923-5a41c6f176ad",
             "name": "UPDATE CONFIGURATION",
-            "url": "http://localhost:8080/v0/configurations/621d57b550e385bceba7feb6",
+            "url": "http://localhost:8080/v0/configuration",
             "method": "PUT",
-            "modified": "2022-02-28T23:20:05.309Z",
-            "created": "2022-02-28T19:46:43.177Z",
-            "_id": "9b2202e3-a2b4-4ec3-a210-d0bb9967b4d7",
+            "modified": "2022-03-02T15:38:25.150Z",
+            "created": "2022-03-02T15:37:40.309Z",
+            "_id": "30ec01ae-e303-41f3-bacb-027eeed90758",
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"_id\": \"621d57b550e385bceba7feb6\",\n  \"flatRate\": 20,\n  \"finderCache\": 1,\n  \"finderResults\": 10,\n  \"created\": \"2022-02-28T19:19:16.729Z\",\n  \"__v\": 0\n}",
+                "raw": "{\n  \"finderCache\": 2,\n  \"finderResults\": 10,\n  \"created\": \"2022-02-28T19:19:16.729Z\",\n  \"__v\": 0\n}",
                 "form": []
             },
             "tests": [
@@ -119,7 +78,7 @@
                     "type": "res-body",
                     "custom": "",
                     "action": "count",
-                    "value": "6"
+                    "value": "7"
                 }
             ]
         }

@@ -1,0 +1,230 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Dashboard",
+    "dateExported": "2022-03-09T15:43:48.550Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "containerId": "",
+            "sortNum": 70000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
+            "name": "REBUILD PERIOD",
+            "url": "http://127.0.0.1:8080/v0/dashboard?rebuildPeriod=*/10 * * * * *",
+            "method": "POST",
+            "modified": "2022-03-02T15:40:05.273Z",
+            "created": "2022-03-02T10:02:25.747Z",
+            "_id": "3aab7009-9f92-409f-a8c6-f8f11c6faf91",
+            "params": [
+                {
+                    "name": "rebuildPeriod",
+                    "value": "*/10 * * * * *",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "\"*/10 * * * * *\""
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 90000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
+            "name": "LIST ALL INDICATORS",
+            "url": "http://127.0.0.1:8080/v0/dashboard",
+            "method": "GET",
+            "modified": "2022-03-02T10:15:45.855Z",
+            "created": "2022-03-02T10:13:02.881Z",
+            "_id": "a04e4bc1-8360-4c3a-8ac1-b08ae3f7ca8b",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": ">=",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 100000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
+            "name": "LAST INDICATOR",
+            "url": "http://127.0.0.1:8080/v0/dashboard/latest",
+            "method": "GET",
+            "modified": "2022-03-02T10:14:54.637Z",
+            "created": "2022-03-02T10:13:37.525Z",
+            "_id": "913a1479-983f-49ae-95da-1925c81bcd17",
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "count",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "containerId": "",
+            "sortNum": 110000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
+            "name": "EXPLORER EXPENSES BY MONTH",
+            "url": "http://127.0.0.1:8080/v0/dashboard/explorerExpenses?period=M12&explorer=621d26b90ba6a368db153d3a",
+            "method": "GET",
+            "modified": "2022-03-09T12:10:40.649Z",
+            "created": "2022-03-09T10:56:41.831Z",
+            "_id": "54d6763e-7fa0-4a55-9103-ba760aca3f54",
+            "params": [
+                {
+                    "name": "period",
+                    "value": "M12",
+                    "isPath": false
+                },
+                {
+                    "name": "explorer",
+                    "value": "621d26b90ba6a368db153d3a",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 115000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
+            "name": "EXPLORER EXPENSES COMPARISON",
+            "url": "http://127.0.0.1:8080/v0/dashboard/explorerExpensesComparison?period=Y01&amount=60&operator=eq",
+            "method": "GET",
+            "modified": "2022-03-09T15:20:00.981Z",
+            "created": "2022-03-09T14:49:29.941Z",
+            "_id": "fe5944bc-21cd-4bb8-a02f-ac10f16daf59",
+            "params": [
+                {
+                    "name": "period",
+                    "value": "Y01",
+                    "isPath": false
+                },
+                {
+                    "name": "amount",
+                    "value": "60",
+                    "isPath": false
+                },
+                {
+                    "name": "operator",
+                    "value": "eq",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "containerId": "",
+            "sortNum": 120000,
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)"
+                }
+            ],
+            "colId": "726ef8ed-35ed-4ec3-aaa2-3231bbae9c0b",
+            "name": "EXPLORER EXPENSES BY YEAR",
+            "url": "http://127.0.0.1:8080/v0/dashboard/explorerExpenses?period=Y01&explorer=621d26b90ba6a368db153d3a",
+            "method": "GET",
+            "modified": "2022-03-09T12:15:53.987Z",
+            "created": "2022-03-09T12:12:53.856Z",
+            "_id": "04ed0135-c686-4e75-b1c3-a8ae4ed30089",
+            "params": [
+                {
+                    "name": "period",
+                    "value": "Y01",
+                    "isPath": false
+                },
+                {
+                    "name": "explorer",
+                    "value": "621d26b90ba6a368db153d3a",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

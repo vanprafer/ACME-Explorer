@@ -6,9 +6,12 @@ const mongoose = require('mongoose')
 const Actor = require('./api/models/actorModel')
 const Application = require('./api/models/applicationModel')
 const Configuration = require('./api/models/configurationModel')
+const Dashboard = require('./api/models/dashboardModel')
 const Finder = require('./api/models/finderModel')
 const Sponsorship = require('./api/models/sponsorshipModel')
 const Trip = require('./api/models/tripModel')
+const DashboardTools = require('./api/controllers/dashboardController')
+const ConfigurationTools = require('./api/controllers/configurationController')
 
 const bodyParser = require('body-parser')
 
@@ -21,6 +24,7 @@ const routesConfigurations = require('./api/routes/configurationRoutes')
 const routesDashboard = require('./api/routes/dashboardRoutes')
 const routesFinders = require('./api/routes/finderRoutes')
 const routesSponships = require('./api/routes/sponsorshipRoutes')
+const routesStorage = require('./api/routes/storageRoutes')
 const routesTrips = require('./api/routes/tripRoutes')
 
 routesActors(app)
@@ -29,6 +33,7 @@ routesConfigurations(app)
 routesDashboard(app)
 routesFinders(app)
 routesSponships(app)
+routesStorage(app)
 routesTrips(app)
 
 // MongoDB URI building
@@ -40,6 +45,9 @@ const mongoDBHostname = process.env.mongoDBHostname || 'localhost'
 const mongoDBPort = process.env.mongoDBPort || '27017'
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer'
 const mongoDBURI = 'mongodb://' + mongoDBCredentials + mongoDBHostname + ':' + mongoDBPort + '/' + mongoDBName
+
+// mongoose.set('useCreateIndex', true)
+// mongoose.set('useFindAndModify', false)
 
 mongoose.connect(mongoDBURI, {
   // reconnectTries: 10,
@@ -61,3 +69,7 @@ mongoose.connection.on('open', function () {
 mongoose.connection.on('error', function (err) {
   console.error('DB init error ' + err)
 })
+
+// Launch dashboard computation job and define the default configurations of the system
+ConfigurationTools.loadDefaultConfiguration()
+DashboardTools.createDashboardJob()
