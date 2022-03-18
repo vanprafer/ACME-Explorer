@@ -53,11 +53,21 @@ exports.update_a_sponsorship = function (req, res) {
 }
 
 exports.delete_a_sponsorship = function (req, res) {
-  Sponsorship.deleteOne({ _id: req.params.sponsorshipId }, function (err, sponsorship) {
+  Sponsorship.findById(req.params.sponsorshipId, function (err, sponsorship) {
     if (err) {
       res.status(500).send(err)
     } else {
-      res.json({ message: 'Sponsorship successfully deleted' })
+      if (sponsorship) {
+        Sponsorship.deleteOne({ _id: req.params.sponsorshipId }, function (err, sponsorship) {
+          if (err) {
+            res.status(500).send(err)
+          } else {
+            res.json({ message: 'Sponsorship successfully deleted' })
+          }
+        })
+      } else {
+        res.status(404).send('Sponsorship not found')
+      }
     }
   })
 }

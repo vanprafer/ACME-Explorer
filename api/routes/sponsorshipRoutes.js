@@ -62,6 +62,6 @@ module.exports = function (app) {
    * @param {string} tripId
   */
 
-  app.route('/v0/sponsorships/random/tripId')
+  app.route('/v0/sponsorships/random/:tripId')
     .get(sponsorships.get_random_sponsorship)
 }

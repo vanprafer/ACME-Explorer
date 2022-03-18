@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose')
 const Application = mongoose.model('Applications')
+const Trip = mongoose.model('Trips')
 
 exports.list_all_applications = function (req, res) {
   Application.find({}, function (err, applications) {
@@ -29,27 +30,38 @@ exports.list_my_applications = function (req, res) {
 
 exports.create_an_application = function (req, res) {
   const newApplication = new Application(req.body)
-  const startDate = newApplication.trip.startDate
-  const cancelationReason = newApplication.trip.cancelationReason
 
-  if (Date.now() >= startDate) {
-    res.status(500).send('The trip you are applying for has already begun')
-  } else if (cancelationReason) {
-    res.status(500).send('The trip you are applying for has been cancelled')
-  } else {
-    newApplication.status = 'PENDING'
-    newApplication.save(function (err, application) {
-      if (err) {
-        if (err.name === 'ValidationError') {
-          res.status(422).send(err)
+  Trip.findById(newApplication.trip, function (err, trip) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      if (trip) {
+        const startDate = trip.dateStart
+        const cancelationReason = trip.cancelationReason
+
+        if (Date.now() >= startDate) {
+          res.status(500).send('The trip you are applying for has already begun')
+        } else if (cancelationReason) {
+          res.status(500).send('The trip you are applying for has been cancelled')
         } else {
-          res.status(500).send(err)
+          newApplication.status = 'PENDING'
+          newApplication.save(function (err, application) {
+            if (err) {
+              if (err.name === 'ValidationError') {
+                res.status(422).send(err)
+              } else {
+                res.status(500).send(err)
+              }
+            } else {
+              res.json(application)
+            }
+          })
         }
       } else {
-        res.json(application)
+        res.status(404).send('Trip not found')
       }
-    })
-  }
+    }
+  })
 }
 
 exports.read_an_application = function (req, res) {
