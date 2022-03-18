@@ -23,6 +23,7 @@
     "cron": "^1.8.2",
     "dateformat": "^5.0.2",
     "express": "^4.17.3",
+    "firebase-admin": "^10.0.2",
     "moment": "^2.29.1",
     "mongoose": "^6.2.0",
     "nanoid": "^3.3.0",
