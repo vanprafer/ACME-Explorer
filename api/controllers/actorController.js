@@ -68,6 +68,8 @@ exports.update_an_actor = function (req, res) {
 exports.unban_an_actor = function (req, res) {
   // Check that the user is an Administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
+
+  // Check if user is already unban
   console.log('Unban an actor with id: ' + req.params.actorId)
   Actor.findOneAndUpdate(
     { _id: req.params.actorId },
@@ -86,6 +88,8 @@ exports.unban_an_actor = function (req, res) {
 exports.ban_an_actor = function (req, res) {
   // Check that the user is an Administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
+
+  // Check if user is already unban
   console.log('Ban an actor with id: ' + req.params.actorId)
   Actor.findOneAndUpdate(
     { _id: req.params.actorId },
