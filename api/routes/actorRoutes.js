@@ -19,6 +19,25 @@ module.exports = function (app) {
     .post(actors.create_an_actor)
 
   /**
+   * Get actors
+   *    RequiredRoles: any
+   * Create an actor
+   *    RequiredRoles: Administrator to create manager or administrator
+   *
+   * @section actors
+   * @type get post
+   * @url /v0/actors/
+  */
+  app
+    .route('/v1/actors')
+    .get(actors.list_all_actors)
+    .post(authController.verifyUser(
+      ['EXPLORER',
+        'MANAGER',
+        'ADMINISTRATOR',
+        'SPONSOR']), actors.create_an_actor_v1)
+
+  /**
    * Get an actor
    *    RequiredRoles: any
    * Update an actor:
@@ -38,7 +57,7 @@ module.exports = function (app) {
 
   /**
    * Get an actor
-   *    RequiredRoles: -
+   *    RequiredRoles: any
    * Update an actor:
    *    RequiredRoles: Administrator or self
    *

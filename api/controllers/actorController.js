@@ -142,6 +142,43 @@ exports.update_a_verified_actor = function (req, res) {
   })
 }
 
+exports.create_an_actor_v1 = async function (req, res) {
+  const newActor = new Actor(req.body)
+
+  if (newActor.role.includes('MANAGER') || newActor.role.includes('ADMINISTRATOR')) {
+    // Check that the user is an Administrator and if not: res.status(403);
+    // "an access token is valid, but requires more privileges"
+    const idToken = req.headers.idtoken
+    const authenticatedUserId = await authController.getUserId(idToken)
+    Actor.findById(authenticatedUserId, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor.role.includes('ADMINISTRATOR')) {
+          newActor.save(function (err, actor) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              res.json(actor)
+            }
+          })
+        } else {
+          res.status(403)
+          res.json({ message: 'forbidden', error: err })
+        }
+      }
+    })
+  } else {
+    newActor.save(function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        res.json(actor)
+      }
+    })
+  }
+}
+
 exports.unban_an_actor = function (req, res) {
   // Check that the user is an Administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
