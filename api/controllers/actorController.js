@@ -6,14 +6,12 @@ const admin = require('firebase-admin')
 const authController = require('./authController')
 
 exports.list_all_actors = function (req, res) {
-  // Check if the role param exist
-  /*
+  const query = {}
   if (req.query.role) {
-    const roleName = req.query.role
+    query.role = req.query.role
   }
-  */
-  // Adapt to find the actors with the specified role
-  Actor.find({}, function (err, actors) {
+
+  Actor.find(query, function (err, actors) {
     if (err) {
       res.status(500).send(err)
     } else {
@@ -148,40 +146,58 @@ exports.unban_an_actor = function (req, res) {
   // Check that the user is an Administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
 
-  // Check if user is already unban
-  console.log('Unban an actor with id: ' + req.params.actorId)
-  Actor.findOneAndUpdate(
-    { _id: req.params.actorId },
-    { $set: { banned: false } },
-    { new: true },
-    function (err, actor) {
-      if (err) {
-        res.status(500).send(err)
+  Actor.findById(req.params.actorId, function (err, actor) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      if (actor.banned === true) {
+        console.log('Unban an actor with id: ' + req.params.actorId)
+        Actor.findOneAndUpdate(
+          { _id: req.params.actorId },
+          { $set: { banned: false } },
+          { new: true },
+          function (err, actor) {
+            if (err) {
+              res.status(500).send({ message: 'User already unbanned', error: err })
+            } else {
+              res.json(actor)
+            }
+          }
+        )
       } else {
-        res.json(actor)
+        res.status(403).send(err)
       }
     }
-  )
+  })
 }
 
 exports.ban_an_actor = function (req, res) {
   // Check that the user is an Administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
 
-  // Check if user is already unban
-  console.log('Ban an actor with id: ' + req.params.actorId)
-  Actor.findOneAndUpdate(
-    { _id: req.params.actorId },
-    { $set: { banned: true } },
-    { new: true },
-    function (err, actor) {
-      if (err) {
-        res.status(500).send(err)
+  Actor.findById(req.params.actorId, function (err, actor) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      if (actor.banned === false) {
+        console.log('ban an actor with id: ' + req.params.actorId)
+        Actor.findOneAndUpdate(
+          { _id: req.params.actorId },
+          { $set: { banned: true } },
+          { new: true },
+          function (err, actor) {
+            if (err) {
+              res.status(500).send({ message: 'User already banned', error: err })
+            } else {
+              res.json(actor)
+            }
+          }
+        )
       } else {
-        res.json(actor)
+        res.status(403).send(err)
       }
     }
-  )
+  })
 }
 
 exports.delete_an_actor = function (req, res) {

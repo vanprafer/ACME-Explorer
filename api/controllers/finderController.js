@@ -25,13 +25,22 @@ exports.create_a_finder = function (req, res) {
       const finderResults = configuration[0].finderResults
       const cacheDate = Date.now() - finderCache * 60 * 60 * 1000
 
-      Finder.find({
-        keyword: req.body.keyword,
-        maxPrice: req.body.maxPrice,
-        startDate: new Date(req.body.startDate),
-        endDate: new Date(req.body.endDate),
-        created: { $gte: new Date(cacheDate) }
-      })
+      const query = {}
+      if (req.body.keyword) {
+        query.keyword = req.body.keyword
+      }
+      if (req.body.maxPrice) {
+        query.maxPrice = req.body.maxPrice
+      }
+      if (req.body.startDate) {
+        query.startDate = new Date(req.body.startDate)
+      }
+      if (req.body.endDate) {
+        query.endDate = new Date(req.body.endDate)
+      }
+      query.created = { $gte: new Date(cacheDate) }
+
+      Finder.find(query)
         .limit(1)
         .exec({}, function (err, finders) {
           if (err) {
@@ -138,13 +147,22 @@ exports.update_a_finder = function (req, res) {
       const finderResults = configuration[0].finderResults
       const cacheDate = Date.now() - finderCache * 60 * 60 * 1000
 
-      Finder.find({
-        keyword: req.body.keyword,
-        maxPrice: req.body.maxPrice,
-        startDate: new Date(req.body.startDate),
-        endDate: new Date(req.body.endDate),
-        created: { $gte: new Date(cacheDate) }
-      })
+      const query = {}
+      if (req.body.keyword) {
+        query.keyword = req.body.keyword
+      }
+      if (req.body.maxPrice) {
+        query.maxPrice = req.body.maxPrice
+      }
+      if (req.body.startDate) {
+        query.startDate = new Date(req.body.startDate)
+      }
+      if (req.body.endDate) {
+        query.endDate = new Date(req.body.endDate)
+      }
+      query.created = { $gte: new Date(cacheDate) }
+
+      Finder.find(query)
         .limit(1)
         .exec({}, function (err, finders) {
           if (err) {
@@ -158,7 +176,7 @@ exports.update_a_finder = function (req, res) {
                 } else {
                   updatedFinder.results = finder.results
                   Finder.findOneAndUpdate(
-                    { _id: req.body._id },
+                    { _id: req.params.finderId },
                     updatedFinder,
                     { new: true },
                     function (err, finder) {
@@ -203,7 +221,7 @@ exports.update_a_finder = function (req, res) {
                   } else {
                     updatedFinder.results = trips.map(x => x._id)
                     Finder.findOneAndUpdate(
-                      { _id: req.body._id },
+                      { _id: req.params.finderId },
                       updatedFinder,
                       { new: true },
                       function (err, finder) {
@@ -214,6 +232,7 @@ exports.update_a_finder = function (req, res) {
                             res.status(500).send(err)
                           }
                         } else {
+                          console.log('updated' + finder)
                           res.json(finder)
                         }
                       }
