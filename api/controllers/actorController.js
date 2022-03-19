@@ -116,7 +116,7 @@ exports.update_a_verified_actor = function (req, res) {
       if (actor.role.includes('EXPLORER') || actor.role.includes('MANAGER') || actor.role.includes('SPONSOR')) {
         const authenticatedUserId = await authController.getUserId(idToken)
 
-        if (authenticatedUserId === req.params.actorId) {
+        if (authenticatedUserId == req.params.actorId) {
           Actor.findOneAndUpdate({ _id: req.params.actorId }, req.body, { new: true }, function (err, actor) {
             if (err) {
               res.send(err)
@@ -126,7 +126,7 @@ exports.update_a_verified_actor = function (req, res) {
           })
         } else {
           res.status(403) // Auth error
-          res.send('The Actor is trying to update an Actor that is not himself!')
+          res.send('The Actor is trying to update an Actor that is not himself!' + authenticatedUserId + ' ' + req.params.actorId)
         }
       } else if (actor.role.includes('ADMINISTRATOR')) {
         Actor.findOneAndUpdate({ _id: req.params.actorId }, req.body, { new: true }, function (err, actor) {
