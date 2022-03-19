@@ -1,6 +1,7 @@
 'use strict'
 module.exports = function (app) {
   const actors = require('../controllers/actorController')
+  const authController = require('../controllers/authController')
 
   /**
    * Get actors
@@ -19,7 +20,7 @@ module.exports = function (app) {
 
   /**
    * Get an actor
-   *    RequiredRoles: -
+   *    RequiredRoles: any
    * Update an actor:
    *    RequiredRoles: Administrator or self
    * Delete an actor:
@@ -33,7 +34,25 @@ module.exports = function (app) {
     .route('/v0/actors/:actorId')
     .get(actors.read_an_actor)
     .put(actors.update_an_actor)
-    .delete(actors.delete_an_actor)
+    // .delete(actors.delete_an_actor)
+
+  /**
+   * Get an actor
+   *    RequiredRoles: -
+   * Update an actor:
+   *    RequiredRoles: Administrator or self
+   *
+   * @section actors
+   * @type get put delete
+   * @url /v1/actors/:actorId'
+  */
+  app.route('/v1/actors/:actorId')
+    .get(actors.read_an_actor)
+    .put(authController.verifyUser(
+      ['EXPLORER',
+        'MANAGER',
+        'ADMINISTRATOR',
+        'SPONSOR']), actors.update_a_verified_actor)
 
   /**
    * Banor or unban an actor:

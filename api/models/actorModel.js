@@ -46,6 +46,9 @@ const ActorSchema = new Schema(
       default: false,
       required: 'Kindly enter if the banned condition of the actor'
     },
+    customToken: {
+      type: String
+    },
     created: {
       type: Date,
       default: Date.now

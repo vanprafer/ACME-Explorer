@@ -14,9 +14,22 @@ const DashboardTools = require('./api/controllers/dashboardController')
 const ConfigurationTools = require('./api/controllers/configurationController')
 
 const bodyParser = require('body-parser')
+const admin = require('firebase-admin')
+const serviceAccount = require('./acmeexplorerauth-88966-firebase-adminsdk-d8li5-b2ba853927.json')
+
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, idToken') // ojo, que si metemos un parametro propio por la cabecera hay que declararlo aquí para que no de el error CORS
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
+  next()
+})
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+})
 
 const routesActors = require('./api/routes/actorRoutes')
 const routesApplications = require('./api/routes/applicationRoutes')
@@ -26,6 +39,7 @@ const routesFinders = require('./api/routes/finderRoutes')
 const routesSponships = require('./api/routes/sponsorshipRoutes')
 const routesStorage = require('./api/routes/storageRoutes')
 const routesTrips = require('./api/routes/tripRoutes')
+const routesLogin = require('./api/routes/loginRoutes')
 
 routesActors(app)
 routesApplications(app)
@@ -35,6 +49,7 @@ routesFinders(app)
 routesSponships(app)
 routesStorage(app)
 routesTrips(app)
+routesLogin(app)
 
 // MongoDB URI building
 const mongoDBUser = process.env.mongoDBUser || 'acmexplorer'
