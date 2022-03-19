@@ -17,6 +17,20 @@ module.exports = function (app) {
     .post(sponsorships.create_a_sponsorship)
 
   /**
+   * Get my sponsorships
+   *    RequiredRoles: Sponsor
+   * Create a sponsorship
+   *    RequiredRoles: Sponsor
+   *
+   * @section sponsorships
+   * @type get post
+   * @url /v1/sponsorships
+  */
+  app.route('/v1/sponsorships')
+    .get(sponsorships.list_my_sponsorships_verified)
+    .post(sponsorships.create_a_sponsorship_verified)
+
+  /**
    * Get a sponsorship
    *    RequiredRoles: Sponsor
    * Modify a sponsorship
@@ -44,6 +58,25 @@ module.exports = function (app) {
    *    RequiredRoles: Sponsor
    *
    * @section sponsorships
+   * @type get put delete
+   * @url /v1/sponsorships/:sponsorshipId
+   * @param {string} sponsorshipId
+  */
+
+  app.route('/v1/sponsorships/:sponsorshipId')
+    .get(sponsorships.read_a_sponsorship_verified)
+    .put(sponsorships.update_a_sponsorship_verified)
+    .delete(sponsorships.delete_a_sponsorship_verified)
+
+  /**
+   * Get a sponsorship
+   *    RequiredRoles: Sponsor
+   * Modify a sponsorship
+   *    RequiredRoles: Sponsor
+   * Delete a sponsorship
+   *    RequiredRoles: Sponsor
+   *
+   * @section sponsorships
    * @type put
    * @url /v0/sponsorships/:sponsorshipId/pay
    * @param {string} sponsorshipId
@@ -51,6 +84,23 @@ module.exports = function (app) {
 
   app.route('/v0/sponsorships/:sponsorshipId/pay')
     .patch(sponsorships.pay_a_sponsorship)
+
+  /**
+   * Get a sponsorship
+   *    RequiredRoles: Sponsor
+   * Modify a sponsorship
+   *    RequiredRoles: Sponsor
+   * Delete a sponsorship
+   *    RequiredRoles: Sponsor
+   *
+   * @section sponsorships
+   * @type put
+   * @url /v1/sponsorships/:sponsorshipId/pay
+   * @param {string} sponsorshipId
+  */
+
+  app.route('/v1/sponsorships/:sponsorshipId/pay')
+    .patch(sponsorships.pay_a_sponsorship_verified)
 
   /**
    * Get a random sponsorship for a trip
