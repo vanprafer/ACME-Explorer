@@ -39,7 +39,9 @@ const FinderSchema = new Schema({
 FinderSchema.pre('save', function (callback) {
   const finder = this
   if (finder.endDate < finder.startDate) {
-    throw Error('The start date must be before the end date of the finder.')
+    const error = Error('The start date must be before the end date of the finder.')
+    error.name = 'ValidationError'
+    return callback(error)
   } else {
     callback()
   }

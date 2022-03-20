@@ -9,6 +9,7 @@ const authController = require('./authController')
 
 exports.create_a_finder = function (req, res) {
   const newFinder = new Finder(req.body)
+
   Configuration.find().limit(1).exec({}, function (err, configuration) {
     if (err) {
       res.send({ message: 'Failed to acces the system configuration', error: err })
@@ -30,7 +31,7 @@ exports.create_a_finder = function (req, res) {
       if (req.body.endDate) {
         query.endDate = new Date(req.body.endDate)
       }
-      query.created = { $gte: new Date(cacheDate) }
+      query.cachedDataDate = { $gte: new Date(cacheDate) }
 
       Finder.find(query)
         .limit(1)
@@ -45,6 +46,7 @@ exports.create_a_finder = function (req, res) {
                   res.status(500).send(err)
                 } else {
                   newFinder.results = finder.results
+                  newFinder.cachedDataDate = finder.cachedDataDate
                   newFinder.save(function (err, finder) {
                     if (err) {
                       if (err.name === 'ValidationError') {
@@ -86,6 +88,7 @@ exports.create_a_finder = function (req, res) {
                     res.status(500).send({ message: 'Error when searching trips', error: err })
                   } else {
                     newFinder.results = trips.map(x => x._id)
+                    newFinder.cachedDataDate = new Date()
                     newFinder.save(function (err, finder) {
                       if (err) {
                         if (err.name === 'ValidationError') {
@@ -131,7 +134,7 @@ exports.create_a_finder_verified = function (req, res) {
                   maxPrice: req.body.maxPrice,
                   startDate: new Date(req.body.startDate),
                   endDate: new Date(req.body.endDate),
-                  created: { $gte: new Date(cacheDate) }
+                  cachedDataDate: { $gte: new Date(cacheDate) }
                 })
                   .limit(1)
                   .exec({}, function (err, finders) {
@@ -145,6 +148,7 @@ exports.create_a_finder_verified = function (req, res) {
                             res.status(500).send(err)
                           } else {
                             newFinder.results = finder.results
+                            newFinder.cachedDataDate = finder.cachedDataDate
                             newFinder.save(function (err, finder) {
                               if (err) {
                                 if (err.name === 'ValidationError') {
@@ -186,6 +190,7 @@ exports.create_a_finder_verified = function (req, res) {
                               res.status(500).send({ message: 'Error when searching trips', error: err })
                             } else {
                               newFinder.results = trips.map(x => x._id)
+                              newFinder.cachedDataDate = new Date()
                               newFinder.save(function (err, finder) {
                                 if (err) {
                                   if (err.name === 'ValidationError') {
@@ -277,7 +282,7 @@ exports.update_a_finder = function (req, res) {
       if (req.body.endDate) {
         query.endDate = new Date(req.body.endDate)
       }
-      query.created = { $gte: new Date(cacheDate) }
+      query.cachedDataDate = { $gte: new Date(cacheDate) }
 
       Finder.find(query)
         .limit(1)
@@ -292,6 +297,7 @@ exports.update_a_finder = function (req, res) {
                   res.status(500).send(err)
                 } else {
                   updatedFinder.results = finder.results
+                  updatedFinder.cachedDataDate = finder.cachedDataDate
                   Finder.findOneAndUpdate(
                     { _id: req.params.finderId },
                     updatedFinder,
@@ -337,6 +343,7 @@ exports.update_a_finder = function (req, res) {
                     res.status(500).send({ message: 'Error when searching trips', error: err })
                   } else {
                     updatedFinder.results = trips.map(x => x._id)
+                    updatedFinder.cachedDataDate = new Date()
                     Finder.findOneAndUpdate(
                       { _id: req.params.finderId },
                       updatedFinder,
@@ -388,7 +395,7 @@ exports.update_a_finder_verified = function (req, res) {
                   maxPrice: req.body.maxPrice,
                   startDate: new Date(req.body.startDate),
                   endDate: new Date(req.body.endDate),
-                  created: { $gte: new Date(cacheDate) }
+                  cachedDataDate: { $gte: new Date(cacheDate) }
                 })
                   .limit(1)
                   .exec({}, function (err, finders) {
@@ -402,6 +409,7 @@ exports.update_a_finder_verified = function (req, res) {
                             res.status(500).send(err)
                           } else {
                             updatedFinder.results = finder.results
+                            updatedFinder.cachedDataDate = finder.cachedDataDate
                             Finder.findOneAndUpdate(
                               { _id: req.body._id },
                               updatedFinder,
@@ -447,6 +455,7 @@ exports.update_a_finder_verified = function (req, res) {
                               res.status(500).send({ message: 'Error when searching trips', error: err })
                             } else {
                               updatedFinder.results = trips.map(x => x._id)
+                              updatedFinder.cachedDataDate = new Date()
                               Finder.findOneAndUpdate(
                                 { _id: req.body._id },
                                 updatedFinder,
