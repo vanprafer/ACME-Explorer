@@ -6,7 +6,7 @@ const Trip = mongoose.model('Trips')
 const Actor = mongoose.model('Actors')
 const authController = require('./authController')
 
-exports.list_my_applications = function (req, res) {
+exports.list_my_applications_verified = function (req, res) {
   const idToken = req.headers.idtoken
 
   authController.getUserId(idToken).then(function (loggedUser) {
@@ -17,7 +17,7 @@ exports.list_my_applications = function (req, res) {
         if (actor) {
           if (actor.roles.includes('EXPLORER')) {
             Application.aggregate([
-              { $match: { actor: loggedUser } },
+              { $match: { explorer: loggedUser } },
               { $group: { status: 1 } }
             ], function (err, applications) {
               if (err) {
@@ -37,7 +37,7 @@ exports.list_my_applications = function (req, res) {
   })
 }
 
-exports.list_my_applications_by_trip = function (req, res) {
+exports.list_my_applications_by_trip_verified = function (req, res) {
   const trip = req.params.tripId
   const idToken = req.headers.idtoken
 

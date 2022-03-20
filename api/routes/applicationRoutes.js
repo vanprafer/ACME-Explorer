@@ -11,10 +11,10 @@ module.exports = function (app) {
    * @url /v1/my_applications
   */
   app.route('/v1/my_applications')
-    .get(applications.list_my_applications)
+    .get(applications.list_my_applications_verified)
 
   /**
-   * Get my applications - Grouped by Status
+   * Get my applications
    *    RequiredRoles: Manager
    *
    * @section my_applications
@@ -22,7 +22,7 @@ module.exports = function (app) {
    * @url /v1/my_applications
   */
   app.route('/v1/my_applications/:tripId')
-    .get(applications.list_my_applications_by_trip)
+    .get(applications.list_my_applications_by_trip_verified)
 
   /**
    * Create an application
