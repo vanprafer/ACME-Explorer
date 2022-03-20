@@ -13,12 +13,12 @@ const ApplicationSchema = new Schema({
       return `The given date (${date}) must not be future`
     }
   },
-  status: [{
+  status: {
     type: String,
     required: 'Kindly enter the status of the application',
     enum: ['PENDING', 'REJECTED', 'DUE', 'ACCEPTED', 'CANCELLED'],
     default: 'PENDING'
-  }],
+  },
   comments: {
     type: String
   },

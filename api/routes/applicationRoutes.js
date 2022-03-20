@@ -14,22 +14,53 @@ module.exports = function (app) {
     .get(applications.list_my_applications)
 
   /**
-   * Get applications
+   * Get my applications - Grouped by Status
    *    RequiredRoles: Manager
+   *
+   * @section my_applications
+   * @type get
+   * @url /v1/my_applications
+  */
+  app.route('/v1/my_applications/:tripId')
+    .get(applications.list_my_applications_by_trip)
+
+  /**
    * Create an application
    *    RequiredRoles: Explorer
    *
    * @section applications
-   * @type get post
+   * @type post
+   * @url /v0/applications
+  */
+  app.route('/v0/applications')
+    .post(applications.create_an_application)
+
+  /**
+   * Create an application
+   *    RequiredRoles: Explorer
+   *
+   * @section applications
+   * @type post
    * @url /v1/applications
   */
   app.route('/v1/applications')
-    .get(applications.list_all_applications)
-    .post(applications.create_an_application)
+    .post(applications.create_an_application_verified)
 
-  app.route('/v0/applications')
-    .get(applications.list_all_applications_v0)
-    .post(applications.create_an_application_v0)
+  /**
+   * Get an application
+   *    RequiredRoles: Explorer, Manager
+   *
+   * Modify an application
+   *    RequiredRoles: Explorer, Manager
+   *
+   * @section applications
+   * @type get put
+   * @url /v0/applications/:applicationId
+   * @param {string} applicationId
+  */
+  app.route('/v0/applications/:applicationId')
+    .get(applications.read_an_application)
+    .put(applications.update_an_application)
 
   /**
    * Get an application
@@ -44,12 +75,16 @@ module.exports = function (app) {
    * @param {string} applicationId
   */
   app.route('/v1/applications/:applicationId')
-    .get(applications.read_an_application)
-    .put(applications.update_an_application)
+    .get(applications.read_an_application_verified)
+    .put(applications.update_an_application_verified)
 
-  app.route('/v0/applications/:applicationId')
-    .get(applications.read_an_application_v0)
-    .put(applications.update_an_application_v0)
+  /**
+   * Reject an application
+   *    RequiredRoles: Manager
+   * @param {string} applicationId
+  */
+  app.route('/v0/applications/:applicationId/reject')
+    .patch(applications.reject_an_application)
 
   /**
    * Reject an application
@@ -57,10 +92,15 @@ module.exports = function (app) {
    * @param {string} applicationId
   */
   app.route('/v1/applications/:applicationId/reject')
-    .patch(applications.reject_an_application)
+    .patch(applications.reject_an_application_verified)
 
-  app.route('/v0/applications/:applicationId/reject')
-    .patch(applications.reject_an_application_v0)
+  /**
+   * Manager accepts an application (is DUE)
+   *    RequiredRoles: Manager
+   *    @param {string} applicationId
+  */
+  app.route('/v0/applications/:applicationId/due')
+    .patch(applications.due_an_application)
 
   /**
    * Manager accepts an application (is DUE)
@@ -68,10 +108,15 @@ module.exports = function (app) {
    *    @param {string} applicationId
   */
   app.route('/v1/applications/:applicationId/due')
-    .patch(applications.due_an_application)
+    .patch(applications.due_an_application_verified)
 
-  app.route('/v0/applications/:applicationId/due')
-    .patch(applications.due_an_application_v0)
+  /**
+   * Accept an application which has been PAID by the Explorer
+   *    RequiredRoles: Explorer
+   *    @param {string} applicationId
+  */
+  app.route('/v0/applications/:applicationId/accept')
+    .patch(applications.accept_an_application)
 
   /**
    * Accept an application which has been PAID by the Explorer
@@ -79,10 +124,15 @@ module.exports = function (app) {
    *    @param {string} applicationId
   */
   app.route('/v1/applications/:applicationId/accept')
-    .patch(applications.accept_an_application)
+    .patch(applications.accept_an_application_verified)
 
-  app.route('/v0/applications/:applicationId/accept')
-    .patch(applications.accept_an_application_v0)
+  /**
+   * Cancel an application by the creator Explorer. It must have an status "PENDING" or "ACCEPTED"
+   *    RequiredRoles: Explorer
+   *    @param {string} applicationId
+  */
+  app.route('/v0/applications/:applicationId/cancel')
+    .patch(applications.cancel_an_application)
 
   /**
    * Cancel an application by the creator Explorer. It must have an status "PENDING" or "ACCEPTED"
@@ -90,8 +140,5 @@ module.exports = function (app) {
    *    @param {string} applicationId
   */
   app.route('/v1/applications/:applicationId/cancel')
-    .patch(applications.cancel_an_application)
-
-  app.route('/v0/applications/:applicationId/cancel')
-    .patch(applications.cancel_an_application_v0)
+    .patch(applications.cancel_an_application_verified)
 }

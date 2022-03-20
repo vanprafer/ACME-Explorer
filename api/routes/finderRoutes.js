@@ -13,8 +13,20 @@ module.exports = function (app) {
    * @url /v0/finders/
   */
   app.route('/v0/finders')
-    .get(finders.list_all_finders)
     .post(finders.create_a_finder)
+
+  /**
+   * Get the explorer finder
+   *    RequiredRoles: Explorer
+   * Create a finder
+   *    RequiredRoles: Explorer
+   *
+   * @section finders
+   * @type get post
+   * @url /v1/finders/
+  */
+  app.route('/v1/finders')
+    .post(finders.create_a_finder_verified)
 
   /**
    * Modify a finder
@@ -28,13 +40,35 @@ module.exports = function (app) {
     .put(finders.update_a_finder)
 
   /**
-  * Get my finders.
-  *    RequiredRoles: to be a explorer
+   * Modify a finder
+   *    RequiredRoles: Explorer
+   *
+   * @section finders
+   * @type put
+   * @url /v1/finders/:finderId
+  */
+  app.route('/v1/finders/:finderId')
+    .put(finders.update_a_finder_verified)
+
+  /**
+  * Get my finder.
+  *    RequiredRoles: Explorer
   *
   * @section mytrips
   * @type get
-  * @url /v0/myfinders/
+  * @url /v0/myfinder/
   */
-  app.route('/v0/myfinders')
-    .get(finders.list_my_finders)
+  app.route('/v0/myfinder')
+    .get(finders.read_my_finder)
+
+  /**
+  * Get my finder.
+  *    RequiredRoles: Explorer
+  *
+  * @section mytrips
+  * @type get
+  * @url /v1/myfinder/
+  */
+  app.route('/v1/myfinder')
+    .get(finders.read_my_finder_verified)
 }
