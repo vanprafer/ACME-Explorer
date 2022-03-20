@@ -34,13 +34,12 @@ const ActorSchema = new Schema(
     address: {
       type: String
     },
-    role: [
-      {
-        type: String,
-        required: 'Kindly enter the user role(s)',
-        enum: ['EXPLORER', 'MANAGER', 'ADMINISTRATOR', 'SPONSOR']
-      }
-    ],
+    role: {
+      type: [String],
+      validate: [v => Array.isArray(v) && v.length > 0, 'The Actor must have at least one role'],
+      required: 'Kindly enter the user role(s)',
+      enum: ['EXPLORER', 'MANAGER', 'ADMINISTRATOR', 'SPONSOR']
+    },
     banned: {
       type: Boolean,
       default: false,
