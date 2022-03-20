@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "0af8a44a-4a7e-4296-8717-380604814668",
+		"name": "Dashboards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List dashboards admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "idToken",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aC04ODk2NiIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgtODg5NjYiLCJhdXRoX3RpbWUiOjE2NDc4MDQxMTYsInVzZXJfaWQiOiJhZG1pbjFAZ21haWwuY29tIiwic3ViIjoiYWRtaW4xQGdtYWlsLmNvbSIsImlhdCI6MTY0NzgwNDExNiwiZXhwIjoxNjQ3ODA3NzE2LCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7fSwic2lnbl9pbl9wcm92aWRlciI6ImN1c3RvbSJ9fQ.Sx-c5TqPDGVVz_uIUy5scx_k5eGMJpehDU8Eb-IzmWgwXmvyBup0eDCls9EIvVHKrszRk7IklIyB7NXSRMNxUI8LYhQguHARonsaqiK64QoqLxOJBTTZuXpXKSBUqEhzgUcxAR8ZnowbYH3PWdpCV_pUCWxiAfRI55cnmgThNlbutWx4-VQq8wwBxODPYfDixMJAVLIMvfVZWo1jEqEgwAYdJfkQsjQAzr_I7woFEj893XWRSofW3PE5k88HLFQSduLDpq5HIqJ8k3-GEfANZ6IYSQh3CpRcqm4TZxVbp2yN5Z-6JBfWvo4w5ymcg6uqwHpyZu-XufnOFJTIPw35LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"meyers2@parrish.com\",\r\n    \"password\": \"d115f6e8-0364-4fe8-8547-dffdbf03ceab\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List dashboards manager",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "idToken",
+						"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImIwNmExMTkxNThlOGIyODIxNzE0MThhNjdkZWE4Mzc0MGI1ZWU3N2UiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWNtZWV4cGxvcmVyYXV0aC04ODk2NiIsImF1ZCI6ImFjbWVleHBsb3JlcmF1dGgtODg5NjYiLCJhdXRoX3RpbWUiOjE2NDc4MDQxODksInVzZXJfaWQiOiJtYW5hZ2VyQGdtYWlsLmNvbSIsInN1YiI6Im1hbmFnZXJAZ21haWwuY29tIiwiaWF0IjoxNjQ3ODA0MTg5LCJleHAiOjE2NDc4MDc3ODksImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnt9LCJzaWduX2luX3Byb3ZpZGVyIjoiY3VzdG9tIn19.kX8uIaOcbqQnviVMLLBPFeEDJhAyHP26UiHeA9iN1P0jT4awSvq04kjFZ_UAkLpKp7K-ud_NnmEJWiPFWkA94GXJVJapC5qQxnE0gIY9Lf86YojCfs2pWNY7TUMvirIQ3vsbTALndQVkioQIcb-JLUiz21m88N8Hb01nZETDOX99aA1qw_wjl9m6OnGd01G5XWO5yyWrnrbClrB7KcfICxuS_40pUBsziEHe-XCsXiDGNAu4ltoQBMhmfdz5AiyUI7Qc1v3UX1gJ7yxBb8x4ezJHSE5YQS_XByOzPp-HOOX3NPUba1aABxVIgUX2F6Qjc6N4ONnhSdZpu8hhPAaiMw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/v1/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
