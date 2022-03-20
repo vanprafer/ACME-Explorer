@@ -4,9 +4,9 @@ module.exports = function (app) {
 
   /**
    * Get the explorer finder
-   *    RequiredRoles: Explorer
+   *    RequiredRoles: -
    * Create a finder
-   *    RequiredRoles: Explorer
+   *    RequiredRoles: -
    *
    * @section finders
    * @type get post
@@ -30,7 +30,7 @@ module.exports = function (app) {
 
   /**
    * Modify a finder
-   *    RequiredRoles: Explorer
+   *    RequiredRoles: -
    *
    * @section finders
    * @type put
@@ -52,7 +52,7 @@ module.exports = function (app) {
 
   /**
   * Get my finder.
-  *    RequiredRoles: Explorer
+  *    RequiredRoles: -
   *
   * @section mytrips
   * @type get

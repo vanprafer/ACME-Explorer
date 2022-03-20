@@ -4,9 +4,9 @@ module.exports = function (app) {
 
   /**
    * Get my sponsorships
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    * Create a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    *
    * @section sponsorships
    * @type get post
@@ -32,11 +32,11 @@ module.exports = function (app) {
 
   /**
    * Get a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    * Modify a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    * Delete a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    *
    * @section sponsorships
    * @type get put delete
@@ -70,11 +70,11 @@ module.exports = function (app) {
 
   /**
    * Get a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    * Modify a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    * Delete a sponsorship
-   *    RequiredRoles: Sponsor
+   *    RequiredRoles: -
    *
    * @section sponsorships
    * @type put
@@ -104,7 +104,7 @@ module.exports = function (app) {
 
   /**
    * Get a random sponsorship for a trip
-   *    RequiredRoles: None
+   *    RequiredRoles: -
    *
    * @section sponsorships
    * @type get

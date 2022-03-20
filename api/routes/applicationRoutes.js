@@ -26,7 +26,7 @@ module.exports = function (app) {
 
   /**
    * Create an application
-   *    RequiredRoles: Explorer
+   *    RequiredRoles: -
    *
    * @section applications
    * @type post
@@ -48,10 +48,10 @@ module.exports = function (app) {
 
   /**
    * Get an application
-   *    RequiredRoles: Explorer, Manager
+   *    RequiredRoles: -
    *
    * Modify an application
-   *    RequiredRoles: Explorer, Manager
+   *    RequiredRoles: -
    *
    * @section applications
    * @type get put
@@ -80,7 +80,7 @@ module.exports = function (app) {
 
   /**
    * Reject an application
-   *    RequiredRoles: Manager
+   *    RequiredRoles: -
    * @param {string} applicationId
   */
   app.route('/v0/applications/:applicationId/reject')
@@ -96,7 +96,7 @@ module.exports = function (app) {
 
   /**
    * Manager accepts an application (is DUE)
-   *    RequiredRoles: Manager
+   *    RequiredRoles: -
    *    @param {string} applicationId
   */
   app.route('/v0/applications/:applicationId/due')
@@ -112,7 +112,7 @@ module.exports = function (app) {
 
   /**
    * Accept an application which has been PAID by the Explorer
-   *    RequiredRoles: Explorer
+   *    RequiredRoles: -
    *    @param {string} applicationId
   */
   app.route('/v0/applications/:applicationId/accept')
@@ -128,7 +128,7 @@ module.exports = function (app) {
 
   /**
    * Cancel an application by the creator Explorer. It must have an status "PENDING" or "ACCEPTED"
-   *    RequiredRoles: Explorer
+   *    RequiredRoles: -
    *    @param {string} applicationId
   */
   app.route('/v0/applications/:applicationId/cancel')
