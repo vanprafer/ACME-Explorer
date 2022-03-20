@@ -136,16 +136,26 @@ exports.create_an_application_verified = function (req, res) {
                   } else if (cancelationReason) {
                     res.status(500).send('The trip you are applying for has been cancelled')
                   } else {
-                    newApplication.status = 'PENDING'
-                    newApplication.save(function (err, application) {
+                    Application.find({ explorer: loggedUser, trip: newApplication.trip }, function (err, application) {
                       if (err) {
-                        if (err.name === 'ValidationError') {
-                          res.status(422).send(err)
-                        } else {
-                          res.status(500).send(err)
-                        }
+                        res.status(500).send(err)
                       } else {
-                        res.json(application)
+                        if (application) {
+                          res.status(405).send('You already have an application for this trip')
+                        } else {
+                          newApplication.status = 'PENDING'
+                          newApplication.save(function (err, application) {
+                            if (err) {
+                              if (err.name === 'ValidationError') {
+                                res.status(422).send(err)
+                              } else {
+                                res.status(500).send(err)
+                              }
+                            } else {
+                              res.json(application)
+                            }
+                          })
+                        }
                       }
                     })
                   }
