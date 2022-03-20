@@ -6,14 +6,12 @@ const admin = require('firebase-admin')
 const authController = require('./authController')
 
 exports.list_all_actors = function (req, res) {
-  // Check if the role param exist
-  /*
+  const query = {}
   if (req.query.role) {
-    const roleName = req.query.role
+    query.role = req.query.role
   }
-  */
-  // Adapt to find the actors with the specified role
-  Actor.find({}, function (err, actors) {
+
+  Actor.find(query, function (err, actors) {
     if (err) {
       res.status(500).send(err)
     } else {
@@ -24,11 +22,6 @@ exports.list_all_actors = function (req, res) {
 
 exports.create_an_actor = function (req, res) {
   const newActor = new Actor(req.body)
-
-  if (newActor.role.includes('MANAGER')) {
-    // Check that the user is an Administrator and if not: res.status(403);
-    // "an access token is valid, but requires more privileges"
-  }
   newActor.save(function (err, actor) {
     if (err) {
       res.status(500).send(err)
@@ -105,7 +98,6 @@ exports.update_an_actor = function (req, res) {
 }
 
 exports.update_a_verified_actor = function (req, res) {
-  // Customer and Clerks can update theirselves, administrators can update any actor
   console.log('Starting to update the verified actor...')
   Actor.findById(req.params.actorId, async function (err, actor) {
     if (err) {
@@ -126,7 +118,7 @@ exports.update_a_verified_actor = function (req, res) {
           })
         } else {
           res.status(403) // Auth error
-          res.send('The Actor is trying to update an Actor that is not himself!' + authenticatedUserId + ' ' + req.params.actorId)
+          res.send('The Actor is trying to update an Actor that is not himself!')
         }
       } else if (actor.role.includes('ADMINISTRATOR')) {
         Actor.findOneAndUpdate({ _id: req.params.actorId }, req.body, { new: true }, function (err, actor) {
@@ -144,44 +136,99 @@ exports.update_a_verified_actor = function (req, res) {
   })
 }
 
-exports.unban_an_actor = function (req, res) {
-  // Check that the user is an Administrator and if not: res.status(403);
-  // "an access token is valid, but requires more privileges"
+exports.create_an_actor_v1 = async function (req, res) {
+  const newActor = new Actor(req.body)
 
-  // Check if user is already unban
-  console.log('Unban an actor with id: ' + req.params.actorId)
-  Actor.findOneAndUpdate(
-    { _id: req.params.actorId },
-    { $set: { banned: false } },
-    { new: true },
-    function (err, actor) {
+  if (newActor.role.includes('MANAGER') || newActor.role.includes('ADMINISTRATOR')) {
+    // Check that the user is an Administrator and if not: res.status(403);
+    // "an access token is valid, but requires more privileges"
+    const idToken = req.headers.idtoken
+    const authenticatedUserId = await authController.getUserId(idToken)
+    Actor.findById(authenticatedUserId, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor.role.includes('ADMINISTRATOR')) {
+          newActor.save(function (err, actor) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              res.json(actor)
+            }
+          })
+        } else {
+          res.status(403)
+          res.json({ message: 'forbidden', error: err })
+        }
+      }
+    })
+  } else {
+    newActor.save(function (err, actor) {
       if (err) {
         res.status(500).send(err)
       } else {
         res.json(actor)
       }
+    })
+  }
+}
+
+exports.unban_an_actor = function (req, res) {
+  // Check that the user is an Administrator and if not: res.status(403);
+  // "an access token is valid, but requires more privileges"
+
+  Actor.findById(req.params.actorId, function (err, actor) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      if (actor.banned === true) {
+        console.log('Unban an actor with id: ' + req.params.actorId)
+        Actor.findOneAndUpdate(
+          { _id: req.params.actorId },
+          { $set: { banned: false } },
+          { new: true },
+          function (err, actor) {
+            if (err) {
+              res.status(500).send({ message: 'User already unbanned', error: err })
+            } else {
+              res.json(actor)
+            }
+          }
+        )
+      } else {
+        res.status(403).send(err)
+      }
     }
-  )
+  })
 }
 
 exports.ban_an_actor = function (req, res) {
   // Check that the user is an Administrator and if not: res.status(403);
   // "an access token is valid, but requires more privileges"
 
-  // Check if user is already unban
-  console.log('Ban an actor with id: ' + req.params.actorId)
-  Actor.findOneAndUpdate(
-    { _id: req.params.actorId },
-    { $set: { banned: true } },
-    { new: true },
-    function (err, actor) {
-      if (err) {
-        res.status(500).send(err)
+  Actor.findById(req.params.actorId, function (err, actor) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      if (actor.banned === false) {
+        console.log('ban an actor with id: ' + req.params.actorId)
+        Actor.findOneAndUpdate(
+          { _id: req.params.actorId },
+          { $set: { banned: true } },
+          { new: true },
+          function (err, actor) {
+            if (err) {
+              res.status(500).send({ message: 'User already banned', error: err })
+            } else {
+              res.json(actor)
+            }
+          }
+        )
       } else {
-        res.json(actor)
+        res.status(403).send(err)
       }
     }
-  )
+  })
 }
 
 exports.delete_an_actor = function (req, res) {

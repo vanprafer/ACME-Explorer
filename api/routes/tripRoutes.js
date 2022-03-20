@@ -1,12 +1,12 @@
 'use strict'
 module.exports = function (app) {
   const trip = require('../controllers/tripController')
+  const authController = require('../controllers/authController')
 
   /**
    * Get the list of trips
-   *
+   *   RequiredRoles: None, not authenticated
    * Post a trip
-   *    RequiredRoles: to be a Manager
    *
    * @section trips
    * @type get post
@@ -24,8 +24,28 @@ module.exports = function (app) {
     .post(trip.create_a_trip_v0)
 
   /**
+   *  We do not include here Get trips because it should be available for not authenticated users too
+   *
+   * Post a trip
+   *    RequiredRoles: to be a Manager
+   *
+   * @section trips
+   * @type post
+   * @url /v1/trips
+   * @param {string} title
+   * @param {string} description
+   * @param {Array[string]} requirements
+   * @param {string} dateStart
+   * @param {string} dateEnd
+   * @param {objectId} manager
+   * @param {Array[Stage]} stages
+  */
+  app.route('/v1/trips')
+    .post(authController.verifyUser(
+      ['MANAGER']), trip.create_a_trip_verified)
+
+  /**
   * Get my trips.
-  *    RequiredRoles: to be a Manager
   *
   * @section mytrips
   * @type get
@@ -35,9 +55,20 @@ module.exports = function (app) {
     .get(trip.list_my_trips)
 
   /**
+  * Get my trips.
+  *    RequiredRoles: to be a Manager
+  *
+  * @section mytrips
+  * @type get
+  * @url /v1/mytrips/
+  */
+  app.route('/v1/mytrips')
+    .get(authController.verifyUser(
+      ['MANAGER']), trip.list_my_trips_verified)
+  /**
    * Search engine for trips
    * Get trips depending on params
-   *    RequiredRoles: None
+   *    RequiredRoles: None, not authenticated
    *
    * @section trips
    * @type get
@@ -53,12 +84,8 @@ module.exports = function (app) {
 
   /**
    * Delete a trip if it is not published
-   *    RequiredRoles: to be the Manager that posted the trip
    * Update a trip if it is not published
-   *    RequiredRoles: to be the Manager that posted the trip
-   * Get an specific trip. It has to get the trip sponsorships in order to show a
-   * banner (selected) randomly from one of the paid sponsorships
-   *    RequiredRoles: None
+   * Get an specific trip.
    *
    * @section trips
    * @type get put delete
@@ -70,17 +97,47 @@ module.exports = function (app) {
     .delete(trip.delete_a_trip_v0)
 
   /**
+   * Delete a trip if it is not published
+   *    RequiredRoles: to be the Manager that posted the trip
+   * Update a trip if it is not published
+   *    RequiredRoles: to be the Manager that posted the trip
+   *
+   * @section trips
+   * @type get put delete
+   * @url /v1/trips/:tripId
+  */
+  app.route('/v1/trips/:tripId')
+    .put(authController.verifyUser(
+      ['MANAGER']), trip.update_a_trip_verified)
+    .delete(authController.verifyUser(
+      ['MANAGER']), trip.delete_a_trip_verified)
+
+  /**
     * Patch to publish the trip.
-    *    RequiredRoles: to be the Manager that posted the trip
     *
   */
   app.route('/v0/trips/:tripId/publish')
     .patch(trip.publish_a_trip_v0)
 
   /**
+    * Patch to publish the trip.
+    *    RequiredRoles: to be the Manager that posted the trip
+    *
+  */
+  app.route('/v1/trips/:tripId/publish')
+    .patch(trip.publish_a_trip_verified)
+
+  /**
    * Put to cancel the trip if has not started and has not any accepted applications
-   *    RequiredRoles: to be the Manager that posted the trip
    */
   app.route('/v0/trips/:tripId/cancel')
     .put(trip.cancel_a_trip_v0) // This is put and not patch because we need to take the cancelation reason
+
+  /**
+   * Put to cancel the trip if has not started and has not any accepted applications
+   *    RequiredRoles: to be the Manager that posted the trip
+   */
+  app.route('/v1/trips/:tripId/cancel')
+    .put(authController.verifyUser(
+      ['MANAGER']), trip.cancel_a_trip_verified)
 }
