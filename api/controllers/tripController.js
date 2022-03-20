@@ -2,20 +2,11 @@
 
 const mongoose = require('mongoose')
 const Trip = mongoose.model('Trips')
+const authController = require('../controllers/authController')
+const Actor = mongoose.model('Actors')
+const Application = mongoose.model('Applications')
 
 exports.list_all_trips_v0 = function (req, res) {
-  Trip.find({}, function (err, trips) {
-    if (err) {
-      res.status(500).send(err)
-    } else {
-      res.json(trips)
-    }
-  })
-}
-
-exports.list_my_trips = function (req, res) {
-  // Check whether the logged user is a Manager
-  // Return trips owned by the Manager
   Trip.find({}, function (err, trips) {
     if (err) {
       res.status(500).send(err)
@@ -39,6 +30,72 @@ exports.create_a_trip_v0 = function (req, res) {
     } else {
       res.json(trip)
     }
+  })
+}
+
+exports.create_a_trip_verified = function (req, res) {
+  const idToken = req.headers.idtoken
+  const newTrip = new Trip(req.body)
+
+  authController.getUserId(idToken).then(function (loggedUser) {
+    Actor.findById(loggedUser, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor) {
+          newTrip.save(function (err, trip) {
+            if (err) {
+              if (err.name === 'ValidationError') {
+                res.status(422).send(err.message)
+              } else {
+                res.status(500).send(err.message)
+              }
+            } else {
+              res.json(trip)
+            }
+          })
+        } else {
+          res.status(404).send('Cannot find actor')
+        }
+      }
+    })
+  })
+}
+
+exports.list_my_trips = function (req, res) {
+  Trip.find({}, function (err, trips) {
+    if (err) {
+      res.status(500).send(err)
+    } else {
+      res.json(trips)
+    }
+  })
+}
+
+exports.list_my_trips_verified = function (req, res) {
+  // Check whether the logged user is a Manager
+  // Return trips owned by the Manager
+
+  const idToken = req.headers.idtoken
+
+  authController.getUserId(idToken).then(function (loggedUser) {
+    Actor.findById(loggedUser, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor) {
+          Trip.find({ manager: loggedUser }, function (err, trips) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              res.json(trips)
+            }
+          })
+        } else {
+          res.status(404).send('Cannot find actor')
+        }
+      }
+    })
   })
 }
 
@@ -94,10 +151,6 @@ exports.read_a_trip_v0 = function (req, res) {
 }
 
 exports.update_a_trip_v0 = function (req, res) {
-  // Check if the trip has not been previously published or not
-  // Check if the user is a Manager and is the
-  // creator of the trip and if not: res.status(403);
-  // "an access token is valid, but requires more privileges"
   Trip.findById(req.params.tripId, function (err, trip) {
     if (err) {
       res.status(500).send(err)
@@ -122,6 +175,56 @@ exports.update_a_trip_v0 = function (req, res) {
         res.status(404).send('Trip not found')
       }
     }
+  })
+}
+
+exports.update_a_trip_verified = function (req, res) {
+  // Check if the trip has not been previously published or not
+  // Check if the user is a Manager and is the
+  // creator of the trip and if not: res.status(403);
+  // "an access token is valid, but requires more privileges"
+
+  const idToken = req.headers.idtoken
+
+  authController.getUserId(idToken).then(function (loggedUser) {
+    Actor.findById(loggedUser, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor) {
+          Trip.findById(req.params.tripId, function (err, trip) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              if (trip != null) {
+                // eslint-disable-next-line eqeqeq
+                if (trip.manager != loggedUser) {
+                  res.status(403).send('A manager cannot update a trip which does not belong to him')
+                } else if (trip.published === true) {
+                  res.status(400).send('Trip already published')
+                } else {
+                  Trip.findOneAndUpdate({ _id: req.params.tripId }, req.body, { new: true }, function (err, trip) {
+                    if (err) {
+                      if (err.name === 'ValidationError') {
+                        res.status(422).send(err.message)
+                      } else {
+                        res.status(500).send(err)
+                      }
+                    } else {
+                      res.json(trip)
+                    }
+                  })
+                }
+              } else {
+                res.status(404).send('Trip not found')
+              }
+            }
+          })
+        } else {
+          res.status(404).send('Cannot find actor')
+        }
+      }
+    })
   })
 }
 
@@ -151,10 +254,50 @@ exports.delete_a_trip_v0 = function (req, res) {
   })
 }
 
+exports.delete_a_trip_verified = function (req, res) {
+  const idToken = req.headers.idtoken
+
+  authController.getUserId(idToken).then(function (loggedUser) {
+    Actor.findById(loggedUser, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor) {
+          Trip.findById(req.params.tripId, function (err, trip) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              if (trip != null) {
+                // eslint-disable-next-line eqeqeq
+                if (trip.manager != loggedUser) {
+                  res.status(403).send('A manager cannot delete a trip which does not belong to him')
+                } else if (trip.published === true) {
+                  res.status(400).send('Trip already published')
+                } else {
+                  Trip.deleteOne({
+                    _id: req.params.tripId
+                  }, function (err, trip) {
+                    if (err) {
+                      res.status(500).send(err)
+                    } else {
+                      res.status(204).send('Trip deleted')
+                    }
+                  })
+                }
+              } else {
+                res.status(404).send('Trip not found')
+              }
+            }
+          })
+        } else {
+          res.status(404).send('Cannot find actor')
+        }
+      }
+    })
+  })
+}
+
 exports.publish_a_trip_v0 = function (req, res) {
-  // Check if the user is a Manager and is the
-  // creator of the trip and if not: res.status(403);
-  // "an access token is valid, but requires more privileges"
   Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { published: 'true' } }, { new: true }, function (err, trip) {
     if (err) {
       res.status(500).send(err)
@@ -164,9 +307,53 @@ exports.publish_a_trip_v0 = function (req, res) {
   })
 }
 
+exports.publish_a_trip_verified = function (req, res) {
+  // Check if the user is a Manager and is the
+  // creator of the trip and if not: res.status(403);
+  // "an access token is valid, but requires more privileges"
+
+  const idToken = req.headers.idtoken
+
+  authController.getUserId(idToken).then(function (loggedUser) {
+    Actor.findById(loggedUser, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor) {
+          Trip.findById(req.params.tripId, function (err, trip) {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              if (trip != null) {
+                // eslint-disable-next-line eqeqeq
+                if (trip.manager != loggedUser) {
+                  res.status(403).send('A manager cannot publish a trip which does not belong to him')
+                } else if (trip.published === true) {
+                  res.status(400).send('Trip already published')
+                } else {
+                  Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { published: 'true' } }, { new: true }, function (err, trip) {
+                    if (err) {
+                      res.status(500).send(err)
+                    } else {
+                      res.json(trip)
+                    }
+                  })
+                }
+              } else {
+                res.status(404).send('Trip not found')
+              }
+            }
+          })
+        } else {
+          res.status(404).send('Cannot find actor')
+        }
+      }
+    })
+  })
+}
+
 exports.cancel_a_trip_v0 = function (req, res) {
   // cancel the trip if has not started and has not any accepted applications
-  // RequiredRoles: to be the Manager that posted the trip
   if (!req.body.cancelationReason) {
     res.status(400).send('Missing cancelation reason.')
   } else {
@@ -175,11 +362,19 @@ exports.cancel_a_trip_v0 = function (req, res) {
         res.status(500).send(err)
       } else {
         if (trip != null) {
-          Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { cancelationReason: req.body.cancelationReason } }, { new: true }, function (err, trip) {
+          Application.find({ trip: trip._id, status: 'ACCEPTED' }, function (err, applications) {
             if (err) {
               res.status(500).send(err)
+            } else if (applications.length > 0) {
+              res.status(400).send('Cannot cancel a trip with accepted applications')
             } else {
-              res.json(trip)
+              Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { cancelationReason: req.body.cancelationReason } }, { new: true }, function (err, trip) {
+                if (err) {
+                  res.status(500).send(err)
+                } else {
+                  res.json(trip)
+                }
+              })
             }
           })
         } else {
@@ -188,4 +383,53 @@ exports.cancel_a_trip_v0 = function (req, res) {
       }
     })
   }
+}
+
+exports.cancel_a_trip_verified = function (req, res) {
+  // cancel the trip if has not started and has not any accepted applications
+  // RequiredRoles: to be the Manager that posted the trip
+
+  const idToken = req.headers.idtoken
+
+  authController.getUserId(idToken).then(function (loggedUser) {
+    Actor.findById(loggedUser, function (err, actor) {
+      if (err) {
+        res.status(500).send(err)
+      } else {
+        if (actor) {
+          if (!req.body.cancelationReason) {
+            res.status(400).send('Missing cancelation reason.')
+          } else {
+            Trip.findById(req.params.tripId, function (err, trip) {
+              if (err) {
+                res.status(500).send(err)
+              } else {
+                if (trip != null) {
+                  Application.find({ trip: trip._id, status: 'ACCEPTED' }, function (err, applications) {
+                    if (err) {
+                      res.status(500).send(err)
+                    } else if (applications.length > 0) {
+                      res.status(400).send('Cannot cancel a trip with accepted applications')
+                    } else {
+                      Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { cancelationReason: req.body.cancelationReason } }, { new: true }, function (err, trip) {
+                        if (err) {
+                          res.status(500).send(err)
+                        } else {
+                          res.json(trip)
+                        }
+                      })
+                    }
+                  })
+                } else {
+                  res.status(404).send('Trip not found')
+                }
+              }
+            })
+          }
+        } else {
+          res.status(404).send('Cannot find actor')
+        }
+      }
+    })
+  })
 }

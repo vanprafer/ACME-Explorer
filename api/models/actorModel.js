@@ -14,6 +14,7 @@ const ActorSchema = new Schema(
       required: 'Kindly enter the actor surname'
     },
     email: {
+      unique: true,
       type: String,
       required: 'Kindly enter the actor email',
       match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
