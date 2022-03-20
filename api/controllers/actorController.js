@@ -22,11 +22,6 @@ exports.list_all_actors = function (req, res) {
 
 exports.create_an_actor = function (req, res) {
   const newActor = new Actor(req.body)
-
-  if (newActor.role.includes('MANAGER')) {
-    // Check that the user is an Administrator and if not: res.status(403);
-    // "an access token is valid, but requires more privileges"
-  }
   newActor.save(function (err, actor) {
     if (err) {
       res.status(500).send(err)
@@ -103,7 +98,6 @@ exports.update_an_actor = function (req, res) {
 }
 
 exports.update_a_verified_actor = function (req, res) {
-  // Customer and Clerks can update theirselves, administrators can update any actor
   console.log('Starting to update the verified actor...')
   Actor.findById(req.params.actorId, async function (err, actor) {
     if (err) {

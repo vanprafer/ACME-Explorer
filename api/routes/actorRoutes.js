@@ -43,7 +43,7 @@ module.exports = function (app) {
    * Update an actor:
    *    RequiredRoles: Administrator or self
    * Delete an actor:
-   *    RequiredRoles: Administrator or self
+   *    RequiredRoles: Administrator
    *
    * @section actors
    * @type get put delete
@@ -53,13 +53,15 @@ module.exports = function (app) {
     .route('/v0/actors/:actorId')
     .get(actors.read_an_actor)
     .put(actors.update_an_actor)
-    .delete(actors.delete_an_actor)
+    // .delete(actors.delete_an_actor)
 
   /**
    * Get an actor
    *    RequiredRoles: any
    * Update an actor:
    *    RequiredRoles: Administrator or self
+   * Delete an actor:
+   *    RequiredRoles: Administrator
    *
    * @section actors
    * @type get put delete
@@ -72,6 +74,8 @@ module.exports = function (app) {
         'MANAGER',
         'ADMINISTRATOR',
         'SPONSOR']), actors.update_a_verified_actor)
+    .delete(authController.verifyUser(
+      ['ADMINISTRATOR']), actors.delete_an_actor)
 
   /**
    * Banor or unban an actor:
@@ -83,4 +87,17 @@ module.exports = function (app) {
   */
   app.route('/v0/actors/unban/:actorId').patch(actors.unban_an_actor)
   app.route('/v0/actors/ban/:actorId').patch(actors.ban_an_actor)
+
+  /**
+   * Banor or unban an actor:
+   *    Required Role: Administrator
+   *
+   * @section actors
+   * @type patch
+   * @url /v1/actors/unban/:actorId
+  */
+  app.route('/v1/actors/unban/:actorId').patch(authController.verifyUser(
+    ['ADMINISTRATOR']), actors.unban_an_actor)
+  app.route('/v1/actors/ban/:actorId').patch(authController.verifyUser(
+    ['ADMINISTRATOR']), actors.ban_an_actor)
 }
